@@ -1,0 +1,14 @@
+// Badge variables overriden in _variables.scss file.
+
+.badge {
+  &.bg-secondary {
+    --bs-bg-opacity: 0.5;
+    margin-right: 5px;
+  }
+
+  &.big {
+    background-color: $color-gray-250!important;
+    font-size: 14px;
+    padding: 0.4em 0.4em 0.3em 0.4em;
+  }
+}

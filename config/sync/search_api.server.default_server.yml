@@ -1,0 +1,14 @@
+uuid: 5037c979-03fb-4a76-963c-bc98fbaf4854
+langcode: fr
+status: true
+dependencies:
+  module:
+    - search_api_db
+id: default_server
+name: 'Database Server'
+description: ''
+backend: search_api_db
+backend_config:
+  database: 'default:default'
+  min_chars: 2
+  matching: partial

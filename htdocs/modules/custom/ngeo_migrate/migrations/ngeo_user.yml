@@ -1,0 +1,78 @@
+id: ngeo_user
+label: NGEO - User
+migration_group: ngeo_lieu_geneve
+
+source:
+  plugin: d7_user
+
+destination:
+  plugin: 'entity:user'
+
+process:
+#  uid:
+#    - plugin: get
+#      source: uid
+
+  name:
+    - plugin: skip_on_empty
+      method: row
+      source: name
+      message: 'Field name is missing'
+
+  pass:
+    - plugin: get
+      source: pass
+
+  mail:
+    - plugin: get
+      source: mail
+
+  created:
+    - plugin: get
+      source: created
+
+  access:
+    - plugin: get
+      source: access
+
+  login:
+    - plugin: get
+      source: login
+
+  status:
+    - plugin: get
+      source: status
+
+  timezone:
+    - plugin: get
+      source: timezone
+
+  langcode:
+    - plugin: get
+      source: language
+
+  preferred_langcode:
+    - plugin: user_langcode
+      source: language
+      fallback_to_site_default: true
+
+  preferred_admin_langcode:
+    - plugin: user_langcode
+      source: language
+      fallback_to_site_default: true
+
+  init:
+    - plugin: get
+      source: init
+
+  roles:
+    - plugin: skip_on_empty
+      method: process
+      source: roles
+    - plugin: static_map
+      map:
+        1: anonymous
+        2: authenticated
+        3: administrator
+        4: contributeur
+      default_value: contributeur

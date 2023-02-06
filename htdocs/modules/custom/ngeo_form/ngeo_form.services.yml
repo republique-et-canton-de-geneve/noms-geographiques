@@ -1,0 +1,4 @@
+services:
+  ngeo_form.form_helper:
+    class: \Drupal\ngeo_form\Service\NgeoFormHelper
+    arguments: ['@config.factory']

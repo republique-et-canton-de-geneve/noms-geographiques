@@ -1,0 +1,311 @@
+id: ngeo_lieu_geneve_node
+label: NGEO - Lieu de Genève - Node
+migration_group: ngeo_lieu_geneve
+
+source:
+  plugin: d7_node
+  key: drupal7
+  node_type: lieu_geneve
+
+destination:
+  plugin: entity:node
+  default_bundle: lieu_geneve
+
+process:
+  uid:
+    - plugin: migration_lookup
+      migration: ngeo_user
+      source: node_uid
+    - plugin: default_value
+      default_value: 1
+
+  title: title
+  created: created
+  changed: changed
+
+  status:
+    - plugin: get
+      source: status
+
+  moderation_state:
+    - plugin: get_workbench_moderation
+      source: nid
+
+  field_code_voie: field_nomgeo_codevoie
+  field_liant: field_nomgeo_liant
+  field_is_contenu_vide: field_contenu_vide_
+  field_description_courte: field_nomgeo_descriptioncourte
+  field_definition_arrete_ce: field_nomgeo_definitionarretece
+  field_carre: field_communes_carre
+  field_longueur: field_nomgeo_longueur
+  field_commentaire_saisie: field_nomgeo_commentaires
+  field_longitude: field_nomgeo_longitude
+  field_latitude: field_nomgeo_latitude
+  field_voie_disparue: field_nomgeo_voie_disparue_
+  field_nom_complet: field_ngeo_nomcomplet
+
+  'field_anecdotes/value': field_nomgeo_anecdotes/0/value
+  'field_anecdotes/format':
+    - plugin: skip_on_value
+      method: process
+      source: field_nomgeo_anecdotes/0/format
+      value: php_code
+    - plugin: static_map
+      map:
+        filtered_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+      default_value: basic_html
+
+  'body/value': field_nomgeo_descriptionlongue/0/value
+  'body/format':
+    - plugin: skip_on_value
+      method: process
+      source: field_nomgeo_descriptionlongue/0/format
+      value: php_code
+    - plugin: static_map
+      map:
+        filtered_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+      default_value: basic_html
+
+  field_date_ac_en_vigueur:
+    - plugin: sub_process
+      source: field_nomgeo_datearreteduce
+      process:
+        value:
+          plugin: format_date
+          from_format: 'U'
+          to_format: 'Y-m-d'
+          from_timezone: 'Europe/Paris'
+          to_timezone: 'Europe/Zurich'
+          source: value
+
+  field_date_ac_originel:
+    - plugin: sub_process
+      source: field_date_ace_originel
+      process:
+        value:
+          plugin: format_date
+          from_format: 'U'
+          to_format: 'Y-m-d'
+          from_timezone: 'Europe/Paris'
+          to_timezone: 'Europe/Zurich'
+          source: value
+
+  field_date_entree_en_vigueur:
+    - plugin: sub_process
+      source: field_nomgeo_dateentreeenvigueur
+      process:
+        value:
+          plugin: format_date
+          from_format: 'U'
+          to_format: 'Y-m-d'
+          from_timezone: 'Europe/Paris'
+          to_timezone: 'Europe/Zurich'
+          source: value
+
+  field_type_de_voie_ref:
+    - plugin: sub_process
+      source: field_nomgeo_typedevoie
+      process:
+        target_id:
+          - plugin: skip_on_empty
+            method: process
+            source: tid
+          - plugin: migration_lookup
+            migration: ngeo_type_voie_term
+
+  field_communes_ref:
+    - plugin: sub_process
+      source: field_nomgeo_communes
+      process:
+        target_id:
+          - plugin: skip_on_empty
+            method: process
+            source: tid
+          - plugin: migration_lookup
+            migration: ngeo_communes_term
+
+  field_nom_de_personne_ref:
+    - plugin: sub_process
+      source: field_nomgeo_categorie_nomdepers
+      process:
+        target_id:
+          - plugin: skip_on_empty
+            method: process
+            source: tid
+          - plugin: migration_lookup
+            migration: ngeo_personnes_term
+
+  field_sexe_ref:
+    - plugin: sub_process
+      source: field_nomgeo_categorie_sexe
+      process:
+        target_id:
+          - plugin: skip_on_empty
+            method: process
+            source: tid
+          - plugin: migration_lookup
+            migration: ngeo_sexes_term
+
+  field_type_geographique_ref:
+    - plugin: sub_process
+      source: field_nomgeo_categorie_geo
+      process:
+        target_id:
+          - plugin: skip_on_empty
+            method: process
+            source: tid
+          - plugin: migration_lookup
+            migration: ngeo_geographiques_term
+
+  field_domaine_activite_ref:
+    - plugin: sub_process
+      source: field_nomgeo_categorie_metiers
+      process:
+        target_id:
+          - plugin: skip_on_empty
+            method: process
+            source: tid
+          - plugin: migration_lookup
+            migration: ngeo_domaines_activite_term
+
+  field_evenement_ref:
+    - plugin: sub_process
+      source: field_nomgeo_categorie_evenement
+      process:
+        target_id:
+          - plugin: skip_on_empty
+            method: process
+            source: tid
+          - plugin: migration_lookup
+            migration: ngeo_evenements_term
+
+  field_nature_ref:
+    - plugin: sub_process
+      source: field_nomgeo_categorie_nature
+      process:
+        target_id:
+          - plugin: skip_on_empty
+            method: process
+            source: tid
+          - plugin: migration_lookup
+            migration: ngeo_nature_term
+
+  field_theme_speciaux_ref:
+    - plugin: sub_process
+      source: field_nomgeo_categorie_themespe
+      process:
+        target_id:
+          - plugin: skip_on_empty
+            method: process
+            source: tid
+          - plugin: migration_lookup
+            migration: ngeo_themes_speciaux_term
+
+  field_illustrations:
+    - plugin: sub_process
+      source: field_nomgeo_illustrations
+      include_source: true
+      source_key: source
+      process:
+        target_id:
+          - plugin: migration_lookup
+            migration: ngeo_lieu_geneve_node_illustration
+            source:
+              - fid
+              - 'source/nid'
+        alt:
+          - plugin: d7_file_metadata
+            source: fid
+            field_d7: field_nomgeo_illustrations
+            db_connection: 'drupal7'
+          - plugin: extract
+            index:
+              - field_nomgeo_illustrations_alt
+        title:
+          - plugin: d7_file_metadata
+            source: fid
+            field_d7: field_nomgeo_illustrations
+            db_connection: 'drupal7'
+          - plugin: extract
+            index:
+              - field_nomgeo_illustrations_title
+
+  field_illustrations_anecdot:
+    - plugin: sub_process
+      source: field_illustrations_anecdotes
+      include_source: true
+      source_key: source
+      process:
+        target_id:
+          - plugin: migration_lookup
+            migration: ngeo_lieu_geneve_node_illustration_anecdote
+            source:
+              - fid
+              - 'source/nid'
+        alt:
+          - plugin: d7_file_metadata
+            source: fid
+            field_d7: field_illustrations_anecdotes
+            db_connection: 'drupal7'
+          - plugin: extract
+            index:
+              - field_illustrations_anecdotes_alt
+        title:
+          - plugin: d7_file_metadata
+            source: fid
+            field_d7: field_illustrations_anecdotes
+            db_connection: 'drupal7'
+          - plugin: extract
+            index:
+              - field_illustrations_anecdotes_title
+
+  field_documents_rev:
+    - plugin: sub_process
+      source: field_nomgeo_documents
+      include_source: true
+      source_key: source
+      process:
+        target_id:
+          - plugin: migration_lookup
+            no_stub: true
+            migration: ngeo_document_paragraph
+            source:
+              - nid
+              - 'source/nid'
+          - plugin: skip_on_empty
+            method: process
+          - plugin: extract
+            index:
+              - 0
+        target_revision_id:
+          - plugin: migration_lookup
+            migration: ngeo_document_paragraph
+            no_stub: true
+            source:
+              - nid
+              - 'source/nid'
+          - plugin: skip_on_empty
+            method: process
+          - plugin: extract
+            index:
+              - 1
+
+migration_dependencies:
+  required:
+    - ngeo_user
+    - ngeo_communes_term
+    - ngeo_type_voie_term
+    - ngeo_personnes_term
+    - ngeo_sexes_term
+    - ngeo_geographiques_term
+    - ngeo_domaines_activite_term
+    - ngeo_evenements_term
+    - ngeo_nature_term
+    - ngeo_themes_speciaux_term
+    - ngeo_lieu_geneve_node_illustration
+    - ngeo_lieu_geneve_node_illustration_anecdote
+    - ngeo_document_paragraph

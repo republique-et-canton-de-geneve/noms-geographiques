@@ -1,0 +1,38 @@
+uuid: 98afd32c-dcd3-4902-ba82-f8adbe9e6b05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_illustrations_anecdot
+    - node.type.lieu_geneve
+  module:
+    - image
+id: node.lieu_geneve.field_illustrations_anecdot
+field_name: field_illustrations_anecdot
+entity_type: node
+bundle: lieu_geneve
+label: 'Illustration(s) des anecdotes'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: '[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png gif jpg jpeg'
+  max_filesize: '5 MB'
+  max_resolution: 1200x1500
+  min_resolution: ''
+  alt_field: true
+  alt_field_required: true
+  title_field: true
+  title_field_required: false
+  default_image:
+    uuid: ''
+    alt: ''
+    title: ''
+    width: null
+    height: null
+field_type: image

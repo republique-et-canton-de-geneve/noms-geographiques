@@ -1,0 +1,173 @@
+<?php
+
+/**
+ * Implements hooks.
+ */
+
+use Drupal\Core\Link;
+use Drupal\Core\Render\Markup;
+use Drupal\Core\Url;
+use Drupal\image\Entity\ImageStyle;
+use Drupal\node\NodeInterface;
+use Drupal\taxonomy\TermInterface;
+
+
+/**
+ * Implements template_preprocess_menu_local_task().
+ *
+ * Add Bootstrap classes to display menu-local-tasks like tabs.
+ * The parent list (ul tag) is overriden directly in the template,
+ * @see /templates/navigation/menu-local-tasks.html.twig
+ */
+function gech_app_preprocess_menu_local_task(&$variables) {
+  $variables['attributes']['class'][] = 'nav-item';
+  $variables['link']['#attributes']['class'] = ['nav-link'];
+
+  if (isset($variables['is_active'])) {
+    $variables['link']['#attributes']['class'][] = 'active';
+  }
+}
+
+/**
+ * Implements hook_preprocess().
+ *
+ * We need to add 'base_path' to our variables for be able to get it in twig.
+ */
+function gech_app_preprocess(array &$variables, $hook) {
+  $variables['base_path'] = base_path();
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for html.html.twig.
+ */
+function gech_app_preprocess_html(array &$vars) {
+  // Matomo:
+  $configMatomo = \Drupal::config('matomo');
+  $vars['matomo_id'] = $configMatomo->get('site_id');
+  $vars['matomo_url'] = $configMatomo->get('url');
+}
+
+/**
+ * Implements template_preprocess_menu().
+ */
+function gech_app_preprocess_menu(array &$variables) {
+  // For front main menu:
+  if ($variables['menu_name'] == 'main') {
+    foreach ($variables['items'] as $id => $item) {
+      if (isset($item['url']) && $item['url']->isExternal()) {
+        // Add for external link the "target" attribute.
+        $variables['items'][$id]['url_attributes']['target'] = '_blank';
+      }
+    }
+  }
+}
+
+/**
+ * Implements template_preprocess_node().
+ */
+function gech_app_preprocess_node(&$variables) {
+  $node = $variables['node'];
+
+  if ($node->bundle() !== 'lieu_geneve') {
+    return;
+  }
+
+  if ($variables['elements']['#view_mode']  !== 'full') {
+    return;
+  }
+
+  if (!$node->hasField('field_code_voie') || $node->get('field_code_voie')->isEmpty()) {
+    return;
+  }
+  // Set new variable with a 5-digits code voie.
+  $variables['code_voie_5digits'] = str_pad($node->get('field_code_voie')->value, 5, '0', STR_PAD_LEFT);
+}
+
+/**
+ * Implements template_preprocess_block().
+ */
+function gech_app_preprocess_block(&$variables) {
+  // Work on the menu block in subheader to hide it on mobile.
+  if ($variables['base_plugin_id'] == 'system_menu_block') {
+    $variables['attributes']['class'][] = 'd-none';
+    $variables['attributes']['class'][] = 'd-lg-block';
+  }
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter().
+ */
+function gech_app_theme_suggestions_input_alter(array &$suggestions, array $variables) {
+  $element = $variables['element'];
+
+  if (empty($element['#type'])) {
+    return;
+  }
+
+  $clean_type = str_replace('-', '_', $element['#type']);
+  $suggestions[] = 'input__' . $clean_type;
+}
+
+/**
+ * Implements template_preprocess_input().
+ */
+function gech_app_preprocess_input(&$variables) {
+  $element = $variables['element'];
+
+  if (empty($element['#type']) || $element['#type'] !== "submit") {
+    return;
+  }
+
+  if (empty($element['#attributes']['value']) || $element['#attributes']['value'] !== 'Rechercher') {
+    return;
+  }
+
+  // If button value is "Rechercher": we want to have a loupe icon instead.
+  // It will use the template input--submit that show "children" between the button brackets.
+  // @see gech_app_theme_suggestions_input_alter() for twig suggestion.
+  $variables['children'] = Markup::create('<span class="fas fa-search"></span>');
+}
+
+/**
+ * Implements template_preprocess_image().
+ */
+function gech_app_preprocess_image(&$variables) {
+
+  // Set class in preprocess for avoid applying it to other images.
+  if ($variables['style_name'] == 'square') {
+    $variables['attributes']['class'][] = 'card';
+    $variables['attributes']['class'][] = 'with-border-bottom';
+  }
+}
+
+/**
+ * Implements hook_preprocess_field().
+ */
+function gech_app_preprocess_field(&$variable, $hook) {
+  // Add field name as attribute.
+  $variable['attributes']['class'][] = $variable['element']['#field_name'];
+
+  // For magnific popup illustration(s) fields on "Lieu de genève" content.
+  if ($variable['element']['#field_name'] == 'field_illustrations'
+    || $variable['element']['#field_name'] == 'field_illustrations_anecdot') {
+    foreach ($variable['items'] as &$illustration) {
+
+      // Retrieve the TID of illustration.
+      $image_id = $illustration['content']['#item']->getProperties()['target_id']->getValue();
+      // Retrieve the image file associated with the field.
+      $file = \Drupal::entityTypeManager()->getStorage('file')->load($image_id);
+
+      // Build a new url with the specific style we need.
+      $url = ImageStyle::load('wide')->buildUrl($file->getFileUri());
+      $illustration['popup_url'] = $url;
+    }
+  }
+}
+
+/**
+ * Implements facets_summary_preprocess_facets_summary_item_list().
+ */
+function gech_app_preprocess_facets_summary_item_list(array &$variables) {
+  $variables['attributes']['class'][] = 'facets-summary--list';
+}
+

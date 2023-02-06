@@ -1,0 +1,5 @@
+name: edg_saml_behavior
+type: module
+description: Custom module to improve specific usage of SAML in edg context from local to production environments.
+package: EDG
+core_version_requirement: ^9 || ^10

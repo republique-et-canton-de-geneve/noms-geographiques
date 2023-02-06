@@ -1,0 +1,52 @@
+id: ngeo_document_file
+label: NGEO - Document - Get files
+migration_group: ngeo_lieu_geneve
+
+source:
+  plugin: ngeo_d7_document_file
+  key: drupal7
+  constants:
+    drupal_file_dest: 'public://documents/'
+
+destination:
+  plugin: entity:file
+
+process:
+  skipped:
+    - plugin: skip_on_value
+      method: row
+      source: fid
+      value: 793
+  uid:
+    plugin: default_value
+    default_value: 1
+
+  source_url:
+    - plugin: d7_file_to_url
+      base_url: 'https://ge.ch/noms-geographiques/sites/noms-geographiques/files/'
+      source: fid
+      db_connection: 'drupal7'
+
+  destination_filename:
+    - plugin: callback
+      callable: basename
+      source: '@source_url'
+    - plugin: skip_on_empty
+      method: row
+      message: 'Cannot import empty filename.'
+
+  destination_full_path:
+    - plugin: concat
+      source:
+        - constants/drupal_file_dest
+        - '@destination_filename'
+    - plugin: urlencode
+
+  uri:
+    - plugin: file_copy
+      source:
+        - '@source_url'
+        - '@destination_full_path'
+      file_exists: 'rename'
+
+

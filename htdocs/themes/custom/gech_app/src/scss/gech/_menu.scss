@@ -1,0 +1,150 @@
+#navbarHeader {
+  left: 0;
+  top: $header-height - 1px;
+  padding-left: 0;
+  padding-right: 0;
+  border: 1px solid;
+  min-height: $header-height;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    width: 108%;
+    @include horizontal-align(absolute);
+    max-width: 798px;
+  }
+
+  @media (min-width: 992px) {
+    max-width: 1022px;
+  }
+
+  @media (min-width: 1200px) {
+    max-width: 1230px;
+  }
+
+
+  // Mobile:
+  @media (max-width: 767.98px) {
+    position: absolute;
+    top: $header-height - 2px;
+    left: 0;
+    width: 100%;
+    overflow-y: scroll;
+    height: calc(100vh - #{$header-height});
+
+    & > .container {
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    #search-wrapper,
+    #menu-wrapper {
+      max-width: 100%;
+    }
+  }
+
+  #search-wrapper {
+    padding: $margin-base;
+  }
+
+  #menu-wrapper {
+    padding-top: calc($margin-base * 2);
+    padding-bottom: calc($margin-base * 2);
+  }
+
+  .menu-col {
+    .menu-title {
+      border-bottom: 1px solid;
+      padding-bottom: 3px;
+      margin-bottom: 1rem;
+      font-weight: $font-weight-bold;
+    }
+
+    @media (max-width: 991.98px) {
+      // For the visually last menu:
+      &.order-md-3 .menu-title {
+        margin-top: $margin-base;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      // For the two last menus:
+      &:not(:first-child) .menu-title {
+        margin-top: $margin-base;
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .double-list:not(:last-child) .list-group .list-group-item:last-child {
+      border-bottom: 1px solid;
+    }
+  }
+
+  .list-group .list-group-item {
+    padding: 0;
+    border-bottom: 1px solid;
+    border-radius: 0;
+
+    a {
+      display: block;
+      padding: 7px calc($margin-base / 2) 5px;
+      @include font-size($font-size-small);
+      position: relative;
+
+      &:hover,
+      &:focus {
+        text-decoration: none;
+      }
+    }
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+// LIGHT MODE.
+#navbarHeader {
+  background-color: $color-white;
+  border-color: $color-gray-250;
+
+  #search-wrapper {
+    background-color: $color-gray-100;
+  }
+
+  #menu-wrapper {
+    background-color: $color-white;
+  }
+
+  .menu-col {
+    .menu-title {
+      border-color: $color-black;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .double-list:not(:last-child) .list-group .list-group-item:last-child {
+      border-color: $color-gray-200;
+    }
+  }
+
+  .list-group .list-group-item {
+    border-color: $color-gray-200;
+
+    a {
+      color: $color-black;
+
+      &:hover,
+      &:focus {
+        background-color: $color-gray-100;
+      }
+    }
+  }
+}
+
+// Override NGEO.
+#navbarHeader .list-group .list-group-item {
+  border: 0;
+  border-bottom: 1px solid $color-gray-200;
+  margin-bottom: 0;
+}

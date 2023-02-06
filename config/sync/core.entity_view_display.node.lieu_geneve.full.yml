@@ -1,0 +1,262 @@
+uuid: 84a645e9-95f3-45fd-9703-c7cf87407c47
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.full
+    - field.field.node.lieu_geneve.body
+    - field.field.node.lieu_geneve.field_anecdotes
+    - field.field.node.lieu_geneve.field_carre
+    - field.field.node.lieu_geneve.field_code_voie
+    - field.field.node.lieu_geneve.field_commentaire_saisie
+    - field.field.node.lieu_geneve.field_communes_ref
+    - field.field.node.lieu_geneve.field_date_ac_en_vigueur
+    - field.field.node.lieu_geneve.field_date_ac_originel
+    - field.field.node.lieu_geneve.field_date_entree_en_vigueur
+    - field.field.node.lieu_geneve.field_definition_arrete_ce
+    - field.field.node.lieu_geneve.field_description_courte
+    - field.field.node.lieu_geneve.field_documents_rev
+    - field.field.node.lieu_geneve.field_domaine_activite_ref
+    - field.field.node.lieu_geneve.field_evenement_ref
+    - field.field.node.lieu_geneve.field_illustrations
+    - field.field.node.lieu_geneve.field_illustrations_anecdot
+    - field.field.node.lieu_geneve.field_is_contenu_vide
+    - field.field.node.lieu_geneve.field_latitude
+    - field.field.node.lieu_geneve.field_liant
+    - field.field.node.lieu_geneve.field_longitude
+    - field.field.node.lieu_geneve.field_longueur
+    - field.field.node.lieu_geneve.field_nature_ref
+    - field.field.node.lieu_geneve.field_nom_complet
+    - field.field.node.lieu_geneve.field_nom_de_personne_ref
+    - field.field.node.lieu_geneve.field_sexe_ref
+    - field.field.node.lieu_geneve.field_theme_speciaux_ref
+    - field.field.node.lieu_geneve.field_type_de_voie_ref
+    - field.field.node.lieu_geneve.field_type_geographique_ref
+    - field.field.node.lieu_geneve.field_voie_disparue
+    - image.style.square
+    - node.type.lieu_geneve
+  module:
+    - datetime
+    - entity_reference_revisions
+    - field_group
+    - image
+    - text
+    - user
+third_party_settings:
+  field_group:
+    group_taxonomie:
+      children:
+        - field_domaine_activite_ref
+        - field_evenement_ref
+        - field_nature_ref
+        - field_nom_de_personne_ref
+        - field_sexe_ref
+        - field_theme_speciaux_ref
+        - field_type_geographique_ref
+      label: Taxonomie
+      parent_name: ''
+      region: content
+      weight: 13
+      format_type: fieldset
+      format_settings:
+        classes: rubrique
+        show_empty_fields: false
+        id: ''
+        description: ''
+id: node.lieu_geneve.full
+targetEntityType: node
+bundle: lieu_geneve
+mode: full
+content:
+  body:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_anecdotes:
+    type: text_default
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_code_voie:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_communes_ref:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: true
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  field_date_ac_en_vigueur:
+    type: datetime_custom
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: d.m.Y
+    third_party_settings: {  }
+    weight: 9
+    region: content
+  field_date_ac_originel:
+    type: datetime_custom
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: d.m.Y
+    third_party_settings: {  }
+    weight: 10
+    region: content
+  field_definition_arrete_ce:
+    type: basic_string
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_description_courte:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_documents_rev:
+    type: entity_reference_revisions_entity_view
+    label: above
+    settings:
+      view_mode: default
+      link: ''
+    third_party_settings: {  }
+    weight: 12
+    region: content
+  field_domaine_activite_ref:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 27
+    region: content
+  field_evenement_ref:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 28
+    region: content
+  field_illustrations:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: square
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_illustrations_anecdot:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: square
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_longueur:
+    type: number_integer
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    weight: 11
+    region: content
+  field_nature_ref:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 29
+    region: content
+  field_nom_complet:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_nom_de_personne_ref:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 30
+    region: content
+  field_sexe_ref:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 31
+    region: content
+  field_theme_speciaux_ref:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 32
+    region: content
+  field_type_geographique_ref:
+    type: entity_reference_label
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 33
+    region: content
+  field_voie_disparue:
+    type: boolean
+    label: hidden
+    settings:
+      format: boolean
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    weight: 14
+    region: content
+hidden:
+  content_moderation_control: true
+  field_carre: true
+  field_commentaire_saisie: true
+  field_date_entree_en_vigueur: true
+  field_is_contenu_vide: true
+  field_latitude: true
+  field_liant: true
+  field_longitude: true
+  field_type_de_voie_ref: true
+  langcode: true
+  links: true
+  search_api_excerpt: true

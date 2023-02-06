@@ -1,0 +1,39 @@
+{
+  "name": "gech_app",
+  "version": "1.0.0",
+  "description": "GE.ch app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "***REMOVED***/DEVELOPPEUR-PHP/1985-Zeteo"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.13.1",
+    "bootstrap": "^5.2.0",
+    "magnific-popup": "^1.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^7.2.6",
+    "browser-sync": "^2.24.7",
+    "bufferutil": "^4.0.3",
+    "del": "^3.0.0",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "3.9.4",
+    "gulp-concat": "^2.6.1",
+    "gulp-html-replace": "^1.6.2",
+    "gulp-postcss": "^8.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-scss-lint": "^1.0.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "gulp-uglify": "^3.0.0",
+    "merge-stream": "^1.0.1",
+    "sass": "^1.32.11",
+    "utf-8-validate": "^5.0.4"
+  }
+}

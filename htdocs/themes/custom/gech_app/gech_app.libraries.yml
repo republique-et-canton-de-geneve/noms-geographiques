@@ -1,0 +1,45 @@
+gech-header:
+  js:
+    js/gechLaGoutte.js: { minified: false }
+    js/gechLayout.js: { minified: false }
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/once
+
+global-scripts:
+  js:
+    js/bootstrap.bundle.min.js: { minified: true }
+    js/scripts.min.js: { minified: true }
+  dependencies:
+    - core/jquery
+
+global-styles:
+  css:
+    theme:
+      css/styles.min.css: { minified: true }
+
+ngeo-search:
+  js:
+    js/ngeoSearch.js: { minified: false }
+  dependencies:
+    - core/jquery
+
+image-popup:
+  version: 1.x
+  css:
+    component:
+      css/magnific-popup.css: {}
+  js:
+    js/jquery.magnific-popup.min.js: {minified: true}
+    js/ngeoImagePopup.js: {}
+  dependencies:
+    - core/jquery
+    - core/jquery.once
+    - core/drupal
+
+ngeo-svg-highlight:
+    js:
+      js/ngeoSvgHighlight.js: {}
+    dependencies:
+      - core/jquery

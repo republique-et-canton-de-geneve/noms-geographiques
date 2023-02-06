@@ -1,0 +1,6 @@
+
+# Custom NGEO
+# to add any stuff, use ngeo_assets/robots.txt and launch composer install to apply.
+# Report any change in ci/templates/htdocs/robots.txt
+
+Sitemap: {{ stages[stage]['url_front'] }}/sitemap.xml

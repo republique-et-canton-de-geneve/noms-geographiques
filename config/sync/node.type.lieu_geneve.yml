@@ -1,0 +1,17 @@
+uuid: 1a99a7ab-8ffe-4cf0-a51c-5d94f976b3d7
+langcode: en
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: 'Lieu de Genève'
+type: lieu_geneve
+description: ''
+help: ''
+new_revision: true
+preview_mode: 0
+display_submitted: false

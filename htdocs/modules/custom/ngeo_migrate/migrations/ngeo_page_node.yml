@@ -1,0 +1,43 @@
+id: ngeo_page_node
+label: NGEO - Page - Node
+migration_group: ngeo_page
+
+source:
+  plugin: d7_node
+  key: drupal7
+  node_type: page
+
+destination:
+  plugin: entity:node
+  default_bundle: page
+
+process:
+  uid:
+  - plugin: migration_lookup
+    migration: ngeo_user
+    source: node_uid
+
+  title:
+    plugin: get
+    source: title
+
+  status: status
+  created: created
+  changed: changed
+
+  'body/value': body/0/value
+  'body/format':
+    - plugin: skip_on_value
+      method: process
+      source: body/0/format
+      value: php_code
+    - plugin: static_map
+      map:
+        filtered_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+      default_value: basic_html
+
+migration_dependencies:
+  required:
+    - ngeo_user

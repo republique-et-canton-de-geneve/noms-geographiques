@@ -1,0 +1,85 @@
+uuid: 58b15bd2-4950-4d38-94cc-cd4dc13aecbe
+langcode: fr
+status: true
+dependencies:
+  config:
+    - filter.format.full_html
+  module:
+    - ckeditor
+_core:
+  default_config_hash: 967ijj7p6i7rwrYl7r08WQFeCY_c23YAh0h8u-w_CXM
+format: full_html
+editor: ckeditor
+settings:
+  toolbar:
+    rows:
+      -
+        -
+          name: Formatting
+          items:
+            - Bold
+            - Italic
+            - Subscript
+            - Superscript
+            - Blockquote
+            - '-'
+        -
+          name: Formatting_2
+          items:
+            - Undo
+            - Redo
+            - RemoveFormat
+        -
+          name: Media
+          items:
+            - DrupalImage
+            - Table
+            - HorizontalRule
+            - SpecialChar
+        -
+          name: Links
+          items:
+            - DrupalLink
+            - DrupalUnlink
+        -
+          name: Tools
+          items:
+            - Cut
+            - Copy
+            - Paste
+        -
+          name: Source
+          items:
+            - Source
+      -
+        -
+          name: Format
+          items:
+            - Format
+        -
+          name: Styles
+          items:
+            - CreateDiv
+            - Styles
+        -
+          name: 'Retraits and Lists'
+          items:
+            - Outdent
+            - Indent
+            - BulletedList
+            - NumberedList
+        -
+          name: Agrandir
+          items:
+            - Maximize
+  plugins:
+    stylescombo:
+      styles: 'div.exergue|Texte en exergue'
+image_upload:
+  status: true
+  scheme: public
+  directory: inline-images
+  max_size: '40 Mo'
+  max_dimensions:
+    width: 1024
+    height: null

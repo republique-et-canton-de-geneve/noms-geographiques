@@ -1,0 +1,12 @@
+uuid: b1025446-d385-4e63-a7ad-2bcd25da971f
+langcode: fr
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: sL588ui1E_8-2c_UupwyYxcqX2OVyMFp3HTLbbFqvPc
+id: global
+label: Global
+tags:
+  canonical_url: '[current-page:url]'
+  robots: 'noindex, nofollow, noarchive, nosnippet, noodp, noydir, noimageindex, notranslate'
+  title: '[current-page:title] | [site:name]'

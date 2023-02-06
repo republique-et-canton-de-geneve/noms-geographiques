@@ -1,0 +1,16 @@
+<header id="ngeo-header" role="banner">
+    <div class="container">
+        <div class="site-name">
+            {% set site_name = bamboo_config_get('system.site', 'name') %}
+            <a class="logo-link" href="{{ path('<front>') }}" rel="home">{{ site_name }}</a>
+        </div>
+        <div class="header-bottom d-flex justify-content-between align-items-end">
+            <div class="slogan-breadcrumb">
+                {{ bamboo_render_block('ngeo_breadcrumb') }}
+            </div>
+            <div>
+                {{ page.primary_menu }}
+            </div>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,42 @@
+{#
+/**
+* @file
+* Display lists of A votre Service taxonomy terms
+*
+* Available variables:
+    *   - variables
+    *
+    * @see SharingLinksBlock::build()
+    *
+    * @ingroup themeable
+    */
+#}
+{%  if links and url %}
+<div class="sharing-links aside-extra-links">
+    <h3>{{ 'Partagez cette page'|t }}</h3>
+
+    <ul class="list-inline">
+        {% for key, link in links %}
+            <li class="{{ key }} list-inline-item">
+                <a href="{{ link.href }}" class="no-external" title="{{ link.title }}" {% if link.href != '#' %}target="_blank" rel="noopener noreferer"{% endif %} {{ link.more_attributes }}>
+                    {% if link.icon is iterable %}
+                        <span class="fa-stack">
+                    {% for icon in link.icon %}
+                        <span class="{{ icon }}" aria-hidden="true"></span>
+                    {% endfor %}
+                    </span>
+                    {% else %}
+                        <span class="{{ link.icon }}" aria-hidden="true"></span>
+                    {% endif %}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div class="collapse collapse-horizontal" id="permanentLink">
+        <div class="input-group">
+            <input class="form-control" type="text" value="{{ url }}" aria-label="{{ 'Lien permanent'|t }}"/>
+        </div>
+    </div>
+</div>
+{% endif %}

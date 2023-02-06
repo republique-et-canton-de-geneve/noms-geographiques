@@ -1,0 +1,12 @@
+name: GE.ch App theme
+type: theme
+description: "Thème d'application avec charte GE.ch"
+core_version_requirement: ^8 || ^9
+base theme: stable9
+libraries:
+  - gech_app/global-styles
+  - gech_app/global-scripts
+  - gech_app/gech-header
+# regions inherited from core & stable9.
+ckeditor_stylesheets:
+  - css/ckeditor_styles.min.css

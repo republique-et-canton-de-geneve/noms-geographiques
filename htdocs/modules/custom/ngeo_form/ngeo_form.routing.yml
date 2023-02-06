@@ -1,0 +1,23 @@
+ngeo_form.contact:
+  path: '/contact'
+  defaults:
+    _controller: '\Drupal\ngeo_form\Controller\FormPageController::contact'
+    _title: 'Contact'
+  requirements:
+    _permission: 'access content'
+
+ngeo_form.anecdote:
+  path: '/anecdote'
+  defaults:
+    _controller: '\Drupal\ngeo_form\Controller\FormPageController::anecdote'
+    _title: 'Soumettre une anecdote'
+  requirements:
+    _permission: 'access content'
+
+ngeo_form.settings:
+  path: '/admin/config/system/contact-form'
+  defaults:
+    _title: 'Paramétrage de notification des formulaires'
+    _form: 'Drupal\ngeo_form\Form\SettingsForm'
+  requirements:
+    _permission: 'administer site configuration'

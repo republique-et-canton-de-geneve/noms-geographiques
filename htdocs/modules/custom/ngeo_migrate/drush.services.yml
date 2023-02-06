@@ -1,0 +1,5 @@
+services:
+  ngeo_migrate.commands:
+    class: \Drupal\ngeo_migrate\Commands\NgeoMigrateCommands
+    tags:
+      - { name: drush.command }

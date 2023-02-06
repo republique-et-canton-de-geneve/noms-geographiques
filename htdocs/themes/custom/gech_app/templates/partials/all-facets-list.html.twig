@@ -1,0 +1,31 @@
+<div class="facet-wrapper">
+    {{ bamboo_render_block('facet_block:communes') }}
+</div>
+<div class="facet-wrapper">
+    {{ bamboo_render_block('facet_block:types_voie') }}
+</div>
+<div class="facet-wrapper">
+    {{ bamboo_render_block('facet_block:types_lieu_geographique') }}
+</div>
+<div class="facet-wrapper">
+    {{ bamboo_render_block('facet_block:sexes') }}
+</div>
+<div class="facet-wrapper">
+    {{ bamboo_render_block('facet_block:personnes') }}
+</div>
+<div class="facet-wrapper">
+    {{ bamboo_render_block('facet_block:domaines_activite') }}
+</div>
+<div class="facet-wrapper">
+    {{ bamboo_render_block('facet_block:evenements') }}
+</div>
+<div class="facet-wrapper">
+    {{ bamboo_render_block('facet_block:nature') }}
+</div>
+<div class="facet-wrapper">
+    {{ bamboo_render_block('facet_block:themes_speciaux') }}
+</div>
+
+<div class="switch-wrapper">
+    {% include '@gech_app/misc/checkbox-custom--voie-disparue-search.html.twig' %}
+</div>

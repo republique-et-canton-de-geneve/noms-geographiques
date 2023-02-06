@@ -1,0 +1,8 @@
+uuid: fdcf9a92-ef48-4a27-93b0-678750b64534
+langcode: en
+status: true
+dependencies: {  }
+name: 'Types de document joint'
+vid: types_document_joint
+description: ''
+weight: 0

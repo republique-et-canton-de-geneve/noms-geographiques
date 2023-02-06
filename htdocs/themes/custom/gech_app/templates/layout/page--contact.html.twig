@@ -1,0 +1,15 @@
+{% extends '@gech_app/layout/page.html.twig' %}
+
+{% block inside_main %}
+
+    <h1 class="mt-3">{{ "Contact"|t }}</h1>
+
+    <div class="row">
+        <div class="col-md-8">
+            {% set contact_content = bamboo_config_get('ngeo_form.settings', 'contact_content') %}
+            {{ contact_content.value|raw }}
+            {{ bamboo_render_form('ngeo_form', 'ContactForm') }}
+        </div>
+    </div>
+
+{% endblock %}

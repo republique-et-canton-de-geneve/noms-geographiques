@@ -1,0 +1,17 @@
+uuid: 72e9e1fa-e8c2-45b5-88c7-e7d7cf1cf904
+langcode: fr
+status: true
+dependencies:
+  enforced:
+    module:
+      - ngeo_migrate
+_core:
+  default_config_hash: 94FmnHAeDrV-IaZL-zy9rtyKdtlnOlLkAFcwQsZ-zxc
+id: ngeo_lieu_geneve
+label: 'NGEO - Lieu de Genève'
+description: 'Migration des lieux depuis drupal7'
+source_type: 'Drupal 7'
+module: null
+shared_configuration:
+  source:
+    key: drupal7

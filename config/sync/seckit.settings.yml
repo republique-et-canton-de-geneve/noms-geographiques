@@ -1,0 +1,57 @@
+_core:
+  default_config_hash: x6bhN6WZwfVUI_LLMvRJIUW_2c26VTaBozbfXmJWmro
+langcode: fr
+seckit_xss:
+  csp:
+    checkbox: true
+    vendor-prefix:
+      x: false
+      webkit: false
+    report-only: false
+    default-src: '''self'''
+    script-src: '''self'' ''unsafe-eval'' ''unsafe-inline'' https://ge.ch *.etat-ge.ch'
+    object-src: '''self'''
+    style-src: '''self'' ''unsafe-inline'''
+    img-src: '''self'' ''unsafe-inline'' data: https://ge.ch https://*.infomaniak.com https://*.infomaniak.ch *.etat-ge.ch https://www.etat.ge.ch'
+    media-src: '''self'' https://*.infomaniak.com https://*.infomaniak.ch'
+    frame-src: '''self'' https://map.sitg.ch https://vod.infomaniak.com https://player.infomaniak.com https://*.ge.ch https://ge.ch'
+    frame-ancestors: 'https://*.ge.ch'
+    child-src: '''self'' https://vod.infomaniak.com https://*.ge.ch https://ge.ch'
+    font-src: '''self'''
+    connect-src: '''self'' *.etat-ge.ch ge.ch *.ge.ch *.geneveid.ch'
+    report-uri: /report-csp-violation
+    upgrade-req: false
+    policy-uri: ''
+  x_xss:
+    seckit_x_xss_option_disable: Disabled
+    seckit_x_xss_option_0: '0'
+    seckit_x_xss_option_1: 1;
+    seckit_x_xss_option_1_block: '1; mode=block'
+    select: 2
+seckit_csrf:
+  origin: true
+  origin_whitelist: '***REMOVED***, https://***REMOVED***, https://www.ge.ch'
+seckit_clickjacking:
+  js_css_noscript: false
+  noscript_message: 'Sorry, you need to enable JavaScript to visit this website.'
+  x_frame: '1'
+  x_frame_allow_from: ''
+seckit_ssl:
+  hsts: false
+  hsts_subdomains: false
+  hsts_max_age: 1000
+  hsts_preload: false
+seckit_ct:
+  expect_ct: false
+  max_age: 1000
+  report_uri: ''
+  enforce: false
+seckit_fp:
+  feature_policy: false
+  feature_policy_policy: ''
+seckit_various:
+  from_origin: true
+  from_origin_destination: same
+  referrer_policy: true
+  referrer_policy_policy: strict-origin
+  disable_autocomplete: false

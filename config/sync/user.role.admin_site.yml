@@ -1,0 +1,101 @@
+uuid: f82e793a-2fb5-44a7-a6c0-9fc3184d2031
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - filter.format.full_html
+    - node.type.lieu_geneve
+    - node.type.page
+    - taxonomy.vocabulary.communes
+    - taxonomy.vocabulary.domaines_activite
+    - taxonomy.vocabulary.evenements
+    - taxonomy.vocabulary.nature
+    - taxonomy.vocabulary.personnes
+    - taxonomy.vocabulary.sexes
+    - taxonomy.vocabulary.tags
+    - taxonomy.vocabulary.themes_speciaux
+    - taxonomy.vocabulary.types_document_joint
+    - taxonomy.vocabulary.types_lieu_geographique
+    - taxonomy.vocabulary.types_voie
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - filter
+    - node
+    - system
+    - taxonomy
+    - toolbar
+id: admin_site
+label: Admin-site
+weight: 4
+is_admin: null
+permissions:
+  - 'access administration pages'
+  - 'access content overview'
+  - 'access taxonomy overview'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'administer taxonomy'
+  - 'bypass node access'
+  - 'create lieu_geneve content'
+  - 'create page content'
+  - 'create terms in communes'
+  - 'create terms in domaines_activite'
+  - 'create terms in evenements'
+  - 'create terms in nature'
+  - 'create terms in personnes'
+  - 'create terms in sexes'
+  - 'create terms in tags'
+  - 'create terms in themes_speciaux'
+  - 'create terms in types_document_joint'
+  - 'create terms in types_lieu_geographique'
+  - 'create terms in types_voie'
+  - 'delete all revisions'
+  - 'delete any lieu_geneve content'
+  - 'delete any page content'
+  - 'delete own lieu_geneve content'
+  - 'delete own page content'
+  - 'delete terms in communes'
+  - 'delete terms in domaines_activite'
+  - 'delete terms in evenements'
+  - 'delete terms in nature'
+  - 'delete terms in personnes'
+  - 'delete terms in sexes'
+  - 'delete terms in tags'
+  - 'delete terms in themes_speciaux'
+  - 'delete terms in types_document_joint'
+  - 'delete terms in types_lieu_geographique'
+  - 'delete terms in types_voie'
+  - 'edit any lieu_geneve content'
+  - 'edit any page content'
+  - 'edit own lieu_geneve content'
+  - 'edit own page content'
+  - 'edit terms in communes'
+  - 'edit terms in domaines_activite'
+  - 'edit terms in evenements'
+  - 'edit terms in nature'
+  - 'edit terms in personnes'
+  - 'edit terms in sexes'
+  - 'edit terms in tags'
+  - 'edit terms in themes_speciaux'
+  - 'edit terms in types_document_joint'
+  - 'edit terms in types_lieu_geographique'
+  - 'edit terms in types_voie'
+  - 'revert all revisions'
+  - 'revert lieu_geneve revisions'
+  - 'revert page revisions'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition not_validated'
+  - 'use editorial transition publish'
+  - 'use editorial transition to_validate'
+  - 'use editorial transition validate'
+  - 'use text format basic_html'
+  - 'use text format full_html'
+  - 'view all revisions'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view lieu_geneve revisions'
+  - 'view own unpublished content'
+  - 'view page revisions'
+  - 'view the administration theme'

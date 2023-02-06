@@ -1,0 +1,33 @@
+<div class="lieu-sidebar-data card with-border-top mb-4">
+    <div class="card-body">
+
+        {# Commune section #}
+        {{ content.field_communes_ref }}
+
+        {# Badges section #}
+        {% if content.group_taxonomie is not null %}
+            <fieldset class="form-item form-wrapper">
+                <div class="fieldset-wrapper badges-wrapper">
+                    {% for item in content.group_taxonomie %}
+                        {% if item['#field_type'] == "entity_reference" %}
+                            {{ item }}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </fieldset>
+        {% endif %}
+
+        <div class="sidebar-informations">
+            {# Informations section #}
+            {{ content.field_code_voie }}
+            {{ content.field_date_ac_en_vigueur }}
+            {{ content.field_date_ac_originel }}
+            {{ content.field_longueur }}
+        </div>
+
+        <div class="sidebar-documents">
+            {# Document section #}
+            {{ content.field_documents_rev }}
+        </div>
+    </div>
+</div>

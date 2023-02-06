@@ -1,0 +1,83 @@
+<script type="application/json" data-drupal-selector="drupal-settings-json">
+  {"gech_utils": {
+    "e_demarches": {
+      "sso":1,
+      "cookie":"30",
+      "debug":0,
+      "endpoint":"https://ge.ch/ginaam2/whoami"
+    }}}
+</script>
+<div class="print-only print-logo">
+  <img src="{{ base_path ~ directory }}/images/logo.svg" alt="République et canton de Genève" title="République et canton de Genève"
+       width="100px" height="75px">
+</div>
+<header id="header" class="header" role="banner" aria-label="Entête du site">
+  <nav class="navbar">
+    <div class="container">
+      <a id="brand-logo" href="https://www.ge.ch" title="République et canton de Genève" rel="home">
+        <img src="{{ base_path ~ directory }}/images/logo_ge_big.svg" alt="République et canton de Genève">
+      </a>
+      <div id="brand-title">
+        <div id="ge-filigrane">
+          <a href="https://www.ge.ch" rel="home">ge.ch</a>
+        </div>
+      </div>
+
+      <div id="header-navigation">
+        <button class="item item-edemarches whoami" type="button" aria-label="Accéder aux e-démarches"
+                data-label="Fermer le menu e-démarches">
+          e-démarches
+          <span class="arrow"></span>
+        </button>
+        <div class="whoami-popover popover collapse" id="edemarches-popup">
+          <div class="popover-body">
+            <div class="title">
+              Connexion aux e-démarches
+            </div>
+            <div class="subtitle">
+              Liens <a href="https://www.ge.ch/node/1751">Catalogue</a> | <a href="https://www.ge.ch/taxonomy/term/1753">Blog</a>
+            </div>
+            <span class="whoami-name" style="display: none;">M. Dupont</span>
+            <span class="whoami-email" style="display: none;">dupont@dupont.com</span>
+            <a href="https://ge.ch/ginaam2/whoami/logout"
+               class="btn btn-outline-primary whoami-logout btn-block whoami-logged" style="display: none;">
+              Me déconnecter
+            </a>
+            <a href="https://ge.ch/ginapartners/home" class="btn btn-primary btn-block whoami-logged"
+               style="display: none;">
+              Mon compte
+            </a>
+            <a href="https://ge.ch/ginapartners_public/inscription-pp/choixinscription/"
+               class="btn btn-outline-primary btn-block whoami-signin">
+              M'inscrire
+            </a>
+            <a href="https://ge.ch/ginapartners/home" class="btn btn-primary btn-block whoami-signin">
+              Me connecter
+            </a>
+            <a href="#main-content" class="skip-whoami visually-hidden focusable">
+              Quitter le menu
+            </a>
+          </div>
+        </div>
+        <button class="item item-menu navbar-toggler" type="button" data-toggle="collapse"
+                aria-label="Accéder au menu" data-label="Fermer le menu">
+          Menu
+          <span class="arrow"></span>
+        </button>
+
+        <div class="navbar-collapse collapse" id="navbarHeader">
+          <div id="ngeo-mobile-menu" class="d-md-block d-lg-none">
+            <div class="container">
+              {# Custom NGEO menu #}
+              {{ bamboo_render_block('system_menu_block:main') }}
+            </div>
+          </div>
+
+          {# Get data by json. #}
+          {{ bamboo_render_block('edg_core_gech_menu_header') }}
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="overlay"></div>

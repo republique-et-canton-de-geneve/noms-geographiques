@@ -1,0 +1,10 @@
+uuid: 92656d48-28b5-4f62-b6ef-e23f54466433
+langcode: fr
+status: true
+dependencies: {  }
+id: ngeo_page
+label: ngeo_page
+description: ''
+source_type: null
+module: null
+shared_configuration: null

@@ -1,0 +1,21 @@
+uuid: f0ec7075-f207-4785-9b53-0a3ebaef5794
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_ac_originel
+    - node.type.lieu_geneve
+  module:
+    - datetime
+id: node.lieu_geneve.field_date_ac_originel
+field_name: field_date_ac_originel
+entity_type: node
+bundle: lieu_geneve
+label: 'Date de l''Arrêté du Conseil d''État originel'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

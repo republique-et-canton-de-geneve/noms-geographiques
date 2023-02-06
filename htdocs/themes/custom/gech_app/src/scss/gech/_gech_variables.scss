@@ -1,0 +1,141 @@
+// Custom variables or Bootstrap overrides for which a custom component exists.
+//
+// Note: to customize default Bootstrap components and make them use these overridden variables,
+// you'll need to create a custom component, due to how the SCSS is currently imported.
+// @see https://getbootstrap.com/docs/4.3/getting-started/theming/#variable-defaults
+$black: #333333;
+$white: #fff;
+$gray-100: #ededed;
+$gray-200: #e1e1e1;
+$gray-250: #c9c9c9;
+$gray-300: #b2b2b2;
+$gray-400: #999;
+$gray-500: #777;
+
+$green:  #5cb85c;
+$orange: #f0ad4e;
+$red:    #d9534f;
+
+// GECH Colors (the ones to use in our theme)
+$color-black: $black;
+$color-white: $white;
+
+$color-gray-50:  #f9f9f9;
+$color-gray-100: $gray-100;
+$color-gray-200: $gray-200;
+$color-gray-250: $gray-250;
+$color-gray-300: $gray-300;
+$color-gray-400: $gray-400;
+$color-gray-500: $gray-500;
+
+//$color-blue-light-rgba-50: rgba(109,166,203,0.5);
+$color-blue: #337ab7;
+//$color-blue-dark: #285f8f;
+//$color-blue-on-gray: #26689F;
+$color-blue-hover: #085A8E;
+$color-blue-focus: #6DA6CB;
+//$color-green: $green;
+$color-orange: $orange;
+$color-yellow: #ff0;
+$color-red: $red;
+$color-draft: #ffdab3;
+$color-futur: #DAF7A6;
+$color-futur-dark: #405D09;
+
+$input-disabled-bg : #e9ecef;
+
+//$theme-colors: (
+//"primary": $color-blue,
+//);
+
+// Pixel font sizes references: use with @include font-size(XXX)
+$font-size-base:   16;
+$font-size-huge:   48;
+$font-size-bigger: 28;
+$font-size-big:    22;
+$font-size-large:  18;
+$font-size-small:  14;
+$font-size-tiny:   12;
+
+//$font-size-h1:     40;
+//$font-size-h2:     34;
+//$font-size-h3:     30;
+//$font-size-h4:     26;
+//$font-size-h5:     22;
+//$font-size-h6:     20;
+
+$font-mobile-size-h1:     23;
+$font-mobile-size-h2:     21;
+$font-mobile-size-h3:     19;
+//$font-mobile-size-h4:     17;
+//$font-mobile-size-h5:     15;
+//$font-mobile-size-h6:     14;
+
+$lineheight-ratio-base:     0.73;
+$lineheight-ratio-large:    0.6;
+$lineheight-ratio-small:    0.8;
+$lineheight-ratio-tiny:     0.87;
+$lineheight-without-ratio:  21px;
+
+// Font weights
+$font-weight-base:        400;
+$font-weight-black:       700;
+$font-weight-bold:        600;
+$font-weight-light-bold:  500;
+$font-weight-light:       300;
+
+$font-weight-fa-regular:  500;
+$font-weight-fa-solid:    900;
+
+
+// Badges
+$badge-border-radius:    0;
+$badge-font-size:        $font-size-base;
+$badge-font-weight:      $font-weight-base;
+$badge-padding-y:        .6em;
+$badge-padding-x:        .8em;
+
+// Buttons
+$btn-border-radius:      0;
+$btn-border-radius-lg:   0;
+$btn-border-radius-sm:   0;
+
+// Transition
+$transition-base: all 300ms ease 0ms;
+$transition-fast: all 100ms ease 0ms;
+
+// Dimensions
+$grid-size: 22px;
+$margin-base: $grid-size;
+$margin-table: 8px;
+$header-height: 76px;
+$media-height: 324px;
+$mb-field: 7px;
+$anchor-listing-size : 42px;
+
+$sidebar-max-width: 340px;
+$fieldset-max-width: 1200px;
+
+// Screen sizes
+$screen-size-medium: 970px;
+
+// Fonts
+$font-family-sans-serif: "Roboto", "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;
+$font-family-monospace: "Roboto Slab", Roboto, sans-serif;
+$font-family-fontawesome: "Font Awesome 5 Free";
+
+$font-family-serif: $font-family-monospace;
+$font-family-base: $font-family-sans-serif;
+
+// Breadcrumb
+$breadcrumb-divider: '\e902'; // does not work, @see 'scss/components/_breadcrumb.scss'
+$breadcrumb-bg: transparent;
+
+// Navbar
+//$navbar-padding-y: 0;
+//$navbar-padding-x: 0;
+//$navbar-light-color: $color-blue;
+//$navbar-light-hover-color: $color-blue;
+//$navbar-light-active-color: $color-blue;
+//$navbar-light-disabled-color: $color-blue;
+//$navbar-light-toggler-border-color: rgba($color-blue, 0);

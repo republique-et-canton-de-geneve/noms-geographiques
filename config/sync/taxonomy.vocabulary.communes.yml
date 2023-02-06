@@ -1,0 +1,8 @@
+uuid: aaba9444-2057-44ef-9fcc-0822ddfa95b5
+langcode: en
+status: true
+dependencies: {  }
+name: Communes
+vid: communes
+description: ''
+weight: 0

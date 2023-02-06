@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Module file.
+ */
+
+/**
+ * Implements hook_page_attachments().
+ */
+function gech_browser_warning_page_attachments(array &$page) {
+  $page['#attached']['library'][] = 'gech_browser_warning/browser_detect';
+}

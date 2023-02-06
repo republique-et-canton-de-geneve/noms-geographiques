@@ -1,0 +1,45 @@
+{% extends '@gech_app/layout/page.html.twig' %}
+
+{% block inside_main %}
+
+  {{ attach_library('gech_app/ngeo-search') }}
+
+  <h1>{{ "Recherche"|t }}</h1>
+
+  <div class="row">
+    <aside class="layout-sidebar-first col-lg-4" role="complementary">
+      <div class="card with-border-top mb-4">
+        <div class="card-body">
+
+          <h2 class="card-title d-none d-lg-block">
+            {{ "Filtres"|t }}
+          </h2>
+
+          {# Affichage de l'input text et du bouton submit #}
+          {{ bamboo_render_block('views_exposed_filter_block:search-page_recherche') }}
+
+          <div class="d-grid gap-2 d-block d-lg-none mt-3">
+            <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-filters">{{ "Filtres"|t }}</button>
+          </div>
+
+          {# Affichage des filtres actifs #}
+          {{ bamboo_render_block('facets_summary_block:search_page_facets') }}
+
+          <div class="facets-listing d-none d-lg-block">
+            {% include '@gech_app/partials/all-facets-list.html.twig' %}
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    {% include '@gech_app/misc/select-custom--sort-search.html.twig' %}
+
+    <div class="layout-content col-lg-8">
+      {{ page.content }}
+    </div>
+
+    {# Filters modal #}
+    {% include '@gech_app/partials/search-filters--modal.html.twig' %}
+
+  </div>
+{% endblock %}

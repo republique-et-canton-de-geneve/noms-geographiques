@@ -1,0 +1,23 @@
+uuid: ee383dc8-d13d-4a6a-8242-3cd67e0cedb1
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_code_voie
+    - node.type.lieu_geneve
+id: node.lieu_geneve.field_code_voie
+field_name: field_code_voie
+entity_type: node
+bundle: lieu_geneve
+label: 'Code voie'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

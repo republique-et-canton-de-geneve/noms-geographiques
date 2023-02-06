@@ -1,0 +1,20 @@
+uuid: 8f2c5195-0f59-407a-b6a8-f702750343c1
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_longueur
+field_name: field_longueur
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

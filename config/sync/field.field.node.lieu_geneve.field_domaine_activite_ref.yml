@@ -1,0 +1,29 @@
+uuid: 463cf819-d7d2-41d4-8a91-0c7e34470b24
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_domaine_activite_ref
+    - node.type.lieu_geneve
+    - taxonomy.vocabulary.domaines_activite
+id: node.lieu_geneve.field_domaine_activite_ref
+field_name: field_domaine_activite_ref
+entity_type: node
+bundle: lieu_geneve
+label: 'Domaine d''activité'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      domaines_activite: domaines_activite
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

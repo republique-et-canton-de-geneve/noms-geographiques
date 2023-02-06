@@ -1,0 +1,162 @@
+/**** HTML tags ****/
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-family-sans-serif;
+  font-size: 100%;
+  font-weight: $font-weight-base;
+  background-color: inherit;
+  color: inherit;
+  margin: 0;
+}
+
+a:not(.btn) {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    transition: $transition-base;
+  }
+
+  &.breakable {
+    @include link-break;
+  }
+}
+
+// External links:
+*:not(.file-col):not(.toggle-caption) {
+  & > a:not(.btn):not(.no-external):not(.imgInto):not(.liens-images-externes)[href^="http"]:not([href*="etat-ge.ch"]):not([href*=".ge.ch"]):not([href*="//ge.ch"]) {
+    &:after {
+      @include pe-external-icon;
+    }
+  }
+}
+
+a.btn.external-link:after {
+  @include pe-external-icon;
+}
+
+img {
+  &.img-thumbnail {
+    border-bottom: $border-green;
+  }
+}
+
+figure:not(.quote) {
+  margin: 0;
+
+  & > a {
+    display: block;
+  }
+}
+
+video {
+  max-width: 100%;
+}
+
+hr {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+iframe {
+  width: 100%;
+  height: $iframe-height;
+}
+
+figure.video-embed-responsive {
+  position: relative;
+  video {
+    width: 100%;
+  }
+  .overlay-video {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-color: transparent;
+    background-image: url("../images/play_circle_outline.svg");
+    opacity: 0.66;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 6%;
+    cursor: pointer;
+  }
+}
+
+blockquote {
+  font-size: inherit;
+  margin-left: 1rem;
+  border-left: 3px solid $color-gray-200;
+  padding: 0;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+/** end of HTML tags **/
+
+div.exergue,
+div.note {
+  padding: 12px 1rem;
+  margin: 0 0 20px 0;
+  border: 1px solid $color-green-200;
+  background-color: $color-green-100;
+
+  ul,
+  ol {
+    padding-left: 20px;
+  }
+
+  ul:last-child,
+  ol:last-child,
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+table.datatables {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.alert .placeholder {
+  min-height: inherit;
+  vertical-align: inherit;
+  cursor: inherit;
+  background-color: transparent;
+  opacity: inherit;
+  font-style: inherit;
+}
+
+/**** Useful style classes ****/
+.print-only {
+  display: none;
+}
+
+.clearfix {
+  &:before {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.node--unpublished,
+.term--unpublished {
+  background-color: $color-draft !important;
+
+  // Add some spacing around the content, while keeping it at the same place.
+  margin: calc(-15px / 2);
+  padding: calc(15px / 2);
+}
+
+.node--inthefuture,
+.term--inthefuture {
+  background-color: $color-futur !important;
+}

@@ -1,0 +1,19 @@
+uuid: 62368524-f6b4-4c79-b3b4-ea1671c8e046
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_liant
+    - node.type.lieu_geneve
+id: node.lieu_geneve.field_liant
+field_name: field_liant
+entity_type: node
+bundle: lieu_geneve
+label: Liant
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

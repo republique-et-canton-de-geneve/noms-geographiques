@@ -1,0 +1,59 @@
+// Facettes.
+// - Sont des dropdown. Voir les variables overrides.
+.facets-listing {
+  margin-top: 30px !important;
+
+  .facet-wrapper {
+    margin-bottom: 15px;
+
+    .facets-widget-checkbox {
+      width: 100%;
+
+      .facet-item.dropdown-item {
+        &:focus {
+          // Hover en variables.
+          background-color: $color-gray-100;
+        }
+
+        .facets-checkbox {
+          @include form-check-input;
+        }
+
+        label {
+          @include font-size($font-size-small);
+          width: 100%;
+          padding-left: 12px;
+
+          .facet-item__value,
+          .facet-item__count {
+            margin-left: 5px;
+          }
+
+          .facet-item__count {
+            @include facet-item-count;
+          }
+        }
+      }
+
+      .btn.dropdown-toggle {
+        @include font-size($font-size-small);
+        width: 100%;
+        border: 1px solid $color-gray-250;
+
+        &:after {
+          right: 12px;
+          @include vertical-align(absolute);
+        }
+
+        &.show {
+          background-color: $color-gray-100;
+        }
+      }
+
+      // Dropdown ouvert.
+      .dropdown-menu.show {
+        min-width: 100%;
+      }
+    }
+  }
+}

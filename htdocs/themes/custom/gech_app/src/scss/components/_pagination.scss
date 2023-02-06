@@ -1,0 +1,19 @@
+// Pagination variables overriden in _variables.scss file.
+
+.pagination {
+  margin-top: $margin-base*2;
+  border-radius: 0;
+  flex-wrap: wrap;
+  gap: 5px;
+
+  .page-item.pager__item.pager__item--ellipsis {
+    display: none;
+  }
+
+  .page-item a {
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,29 @@
+uuid: 18a3907d-226c-40eb-a395-86d834031de9
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_theme_speciaux_ref
+    - node.type.lieu_geneve
+    - taxonomy.vocabulary.themes_speciaux
+id: node.lieu_geneve.field_theme_speciaux_ref
+field_name: field_theme_speciaux_ref
+entity_type: node
+bundle: lieu_geneve
+label: 'Thème spéciaux'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      themes_speciaux: themes_speciaux
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

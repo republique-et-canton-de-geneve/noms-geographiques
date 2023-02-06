@@ -1,0 +1,19 @@
+uuid: f2f76a72-a482-489d-98d3-4f8ccbf5582d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_definition_arrete_ce
+    - node.type.lieu_geneve
+id: node.lieu_geneve.field_definition_arrete_ce
+field_name: field_definition_arrete_ce
+entity_type: node
+bundle: lieu_geneve
+label: 'Définition de l''Arrêté du Conseil d''État'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

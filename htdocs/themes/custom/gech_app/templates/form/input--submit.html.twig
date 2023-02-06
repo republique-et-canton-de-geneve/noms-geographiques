@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Theme overriden for an 'input' #type form element.
+ *
+ * Available variables:
+ * - attributes: A list of HTML attributes for the input element.
+ * - children: Optional additional rendered elements.
+ *
+ * @see gech_app_preprocess_input()
+ */
+#}
+
+{% set btn_value = children is empty ? attributes.value : children %}
+
+<button{{ attributes.addClass(['btn', 'btn-primary']) }}>{{ btn_value }}</button>

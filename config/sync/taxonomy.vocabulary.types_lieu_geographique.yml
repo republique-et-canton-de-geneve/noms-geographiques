@@ -1,0 +1,8 @@
+uuid: 20adbe6e-52b0-4061-8526-82b80c79467f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Types de lieu géographique'
+vid: types_lieu_geographique
+description: ''
+weight: 0

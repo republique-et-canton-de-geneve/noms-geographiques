@@ -1,0 +1,23 @@
+// Button variables overriden in _variables.scss file.
+
+.btn {
+  text-transform: uppercase;
+
+  &.btn-sm {
+    text-transform: initial;
+    font-size: 14px;
+    padding: .3em .7em;
+  }
+
+  &.btn-icon-only {
+    font-size: 1rem;
+    line-height: 1;
+  }
+
+  &.dropdown-toggle {
+    text-align: left;
+    text-transform: none;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

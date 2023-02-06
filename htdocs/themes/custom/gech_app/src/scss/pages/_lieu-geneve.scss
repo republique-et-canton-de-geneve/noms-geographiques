@@ -1,0 +1,215 @@
+.node--type-lieu-geneve {
+
+  h1 {
+    display: flex;
+    align-items: center;
+
+    & > span.badge {
+      margin-left: 12px;
+    }
+  }
+
+  .fieldset-wrapper {
+    display: inline-flex;
+  }
+
+  // Main content.
+  .layout-main {
+
+    .field--label-above,
+    .field--label-hidden {
+      margin-bottom: 1rem;
+
+      .field-label {
+        @include label-above-style;
+        margin-bottom: 12px;
+      }
+    }
+
+    .magnific-popup--item {
+      .image-slot {
+        display: inline-block;
+        margin: 0 5px 5px 0;
+      }
+    }
+  }
+
+
+  // Twice-repeated section for mobile & desktop.
+  .lieu-sidebar-data {
+    .badges-wrapper {
+      display: block;
+      margin-bottom: 5px;
+
+      .badge {
+        margin-right: 2px;
+      }
+    }
+
+    .field--label-inline {
+      margin-bottom: $mb-field;
+
+      & > div {
+        display: inline-block;
+      }
+
+      .field-label {
+        font-weight: $font-weight-light-bold;
+      }
+    }
+
+    .field--label-above {
+      margin-bottom: $mb-field;
+
+      .field-label {
+        @include font-size($font-size-base);
+        font-weight: $font-weight-light-bold;
+        margin-bottom: 0;
+      }
+    }
+
+    .field--label-above:not(.field_documents_rev),
+    .field--label-inline {
+      .field-label {
+        &:after {
+          content: ':';
+          margin-left: 1px;
+        }
+      }
+    }
+
+    .commune-wrapper {
+      display: flex;
+      margin-bottom: $mb-field;
+
+      img {
+        @include vertical-align(relative);
+        width: 30px;
+        height: auto;
+      }
+
+      & > a {
+        margin-left: 7px;
+        position: relative;
+        width: 100%;
+
+        & > span {
+          @include vertical-align(absolute);
+        }
+      }
+
+      &.wrapper-sm {
+        & > a {
+          @include font-size($font-size-base, $lineheight-ratio-tiny);
+        }
+      }
+
+      &:not(.wrapper-sm) {
+        img {
+          width: 50px;
+        }
+
+        & > a {
+          @include font-size($font-size-large);
+          font-weight: $font-weight-black;
+        }
+      }
+    }
+
+    fieldset {
+      margin-bottom: $mb-field;
+    }
+
+    .field_longueur {
+      // Regarding the border-bottom of document.
+      margin-bottom: 10px;
+    }
+
+    .field_documents_rev {
+      border-top: $border-gray;
+
+      &.field--label-above {
+        margin-bottom: 0;
+      }
+
+      & > .field-label {
+        margin: 11px 0 6px 0;
+      }
+
+      .file-icon {
+        color: $color-green-300;
+        margin: 4px 10px 0 0;
+
+        & > span {
+          font-size: 2.5rem;
+        }
+      }
+
+      .paragraph--type--paragraph-document {
+        margin-top: 5px;
+
+        .field--label-above {
+          margin: 0;
+        }
+
+        .field-label {
+          // Hide "Type de document" label.
+          display: none;
+        }
+      }
+    }
+  }
+
+  .voie-disparue > .lieu-sidebar-data {
+    &.card.with-border-top {
+      border-color: $color-gray-300;
+    }
+
+    .badge.bg-secondary {
+      background-color: $color-gray-200 !important;
+    }
+  }
+
+  // Sidebar.
+  .layout-sidebar-second {
+    hr {
+      border-color: $color-gray-400;
+      margin-bottom: $margin-base;
+    }
+
+    .anecdotes {
+      & > a {
+        font-weight: $font-weight-light-bold;
+      }
+    }
+
+    .interroge {
+      a {
+        display: inline-block;
+
+        &:after {
+          display: none;
+        }
+
+        & > img {
+          // Better position for this specific image.
+          margin: -8px 0 0 -4px;
+        }
+      }
+    }
+
+    .bge-wrapper {
+      ul {
+        margin-bottom: 12px;
+      }
+
+      & > img {
+        margin-bottom: $mb-field;
+      }
+    }
+
+    .aside-extra-links {
+      margin-bottom: 30px;
+    }
+  }
+}

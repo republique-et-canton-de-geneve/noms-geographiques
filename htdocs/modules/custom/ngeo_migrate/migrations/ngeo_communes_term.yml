@@ -1,0 +1,83 @@
+id: ngeo_communes_term
+label: NGEO - Communes - Term
+migration_group: ngeo_lieu_geneve
+
+source:
+  plugin: d7_taxonomy_term
+  key: drupal7
+  bundle: communes
+
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: communes
+
+process:
+  # Hardcode skipping TID 244 & 239 which are garbage Terms on the D7 database that should not exist.
+  skipped:
+    - plugin: skip_on_value
+      method: row
+      source: tid
+      value: 244
+    - plugin: skip_on_value
+      method: row
+      source: tid
+      value: 239
+
+  name: name
+  created: created
+  changed: changed
+  weight: weight
+
+  status:
+    - plugin: get
+      source: status
+    - plugin: default_value
+      default_value: 1
+
+  'description/value': description
+  'description/format':
+    - plugin: skip_on_value
+      method: process
+      source: format
+      value: php_code
+    - plugin: static_map
+      map:
+        filtered_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+      default_value: basic_html
+
+  field_numero_cantonal: field_com_numero_cantonal
+  field_numero_federal: field_com_numero_federal
+  field_abreviation: field_com_abreviation
+
+  ecusson_alt_d7:
+    - plugin: extract
+      source: field_com_ecusson
+      index:
+        - 0
+        - alt
+
+  # Use the original ecusson alt. When empty, use the built-in commune's name.
+  field_ecusson/alt:
+    -
+      plugin: callback
+      source:
+        - '@ecusson_alt_d7'
+        - name
+      callable: array_filter
+    -
+      plugin: callback
+      callable: current
+
+  field_ecusson/target_id:
+    - plugin: migration_lookup
+      migration: ngeo_communes_term_image
+      source: tid
+
+migration_dependencies:
+  required:
+    - ngeo_user
+    - ngeo_communes_term_image
+
+

@@ -1,0 +1,27 @@
+uuid: def35054-fe46-42f0-b489-b4e88fc195af
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_fichier_joint
+    - paragraphs.paragraphs_type.paragraph_document
+  module:
+    - file
+id: paragraph.paragraph_document.field_fichier_joint
+field_name: field_fichier_joint
+entity_type: paragraph
+bundle: paragraph_document
+label: 'Fichier joint'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:file'
+  handler_settings: {  }
+  file_directory: 'document/[date:custom:Y]-[date:custom:m]'
+  file_extensions: 'png jpg jpeg tiff pdf'
+  max_filesize: '50 MB'
+  description_field: false
+field_type: file

@@ -1,0 +1,8 @@
+uuid: ea0a0da4-bd2f-47f4-bcd1-8e978d902947
+langcode: en
+status: true
+dependencies: {  }
+name: 'Thèmes spéciaux'
+vid: themes_speciaux
+description: ''
+weight: 0

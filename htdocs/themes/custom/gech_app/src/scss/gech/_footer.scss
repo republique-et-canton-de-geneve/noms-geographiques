@@ -1,0 +1,87 @@
+.footer-bottom {
+  padding: 2*$margin-base 0;
+  background-color: $color-black; // OK both.
+
+  h2 {
+    margin: 0 0 $margin-base;
+  }
+
+  @media (min-width: 768px) {
+    & #block-menupieddepagefonce{
+      ul {
+        column-count: 2;
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      list-style: none;
+      break-inside: avoid;
+
+      a {
+        display: block;
+        padding: 12px 0;
+        border-bottom: 1px solid;
+        transition: $transition-base;
+
+        &:hover {
+          text-decoration: none;
+        }
+
+        &:before {
+          content: '\e902';
+          margin-right: calc($margin-base / 2);
+          font-family: 'icomoon';
+          @include font-size(10);
+        }
+
+        @media (max-width: 767.98px) {
+          @include font-size($font-size-small);
+        }
+      }
+    }
+  }
+}
+
+.footer-logo {
+  display: block;
+  width: 128px;
+  height: 100px;
+  text-indent: -9999em;
+  background: url(/themes/custom/gech/footer-logo.svg) no-repeat center;
+  background-size: contain;
+  margin: $margin-base auto;
+
+  @media (min-width: 768px) {
+    margin: 0;
+  }
+}
+
+// LIGHT MODE.
+.footer-bottom {
+  ul {
+    li {
+      a {
+        color: $color-white;
+        border-color: $color-white;
+
+        &:hover {
+          color: $color-gray-400;
+        }
+      }
+    }
+  }
+}
+
+// NGEO  overrides.
+footer a {
+  text-decoration: none;
+}
+
+.footer-logo {
+  background: url("../images/footer-logo.svg") no-repeat center;
+}

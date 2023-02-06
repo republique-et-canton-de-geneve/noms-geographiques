@@ -1,0 +1,141 @@
+// Both  homepage & Search page.
+// - We don't use the sort selector from Views (custom one instead).
+#views-exposed-form-search-page-recherche {
+  display: flex;
+  font-size: 1rem;
+  line-height: 21px;
+
+  .form-item-sort-by,
+  .form-item-sort-order,
+  .form-item-voie-disparue {
+    display: none;
+  }
+
+  .form-item-keyword {
+    flex-grow: 1;
+
+    label {
+      margin-bottom: 0.5rem;
+    }
+
+    input.form-text {
+      margin-top: 0;
+    }
+  }
+
+  .btn.form-submit {
+    font-size: 1rem; // like btn-icon-only.
+    line-height: inherit; // like btn-icon-only.
+    margin-left: 5px;
+  }
+}
+
+.facets-listing {
+  .voie-disparue-search > label {
+    @include font-size($font-size-small);
+  }
+}
+
+// Search page.
+.path-search {
+
+  main > .container {
+    position: relative; // for the custom sort select.
+  }
+
+  .search-custom-sort {
+    @include media-breakpoint-up(lg) {
+      width: inherit;
+      position: absolute;
+      top: 5px;
+      right: 0;
+    }
+
+    .col-auto:first-child {
+      padding-right: 0;
+    }
+  }
+
+  #views-exposed-form-search-page-recherche {
+    .form-item-keyword {
+      label {
+        @include sr-only;
+      }
+    }
+
+    .btn.form-submit {
+      padding-left: 13px;
+      padding-right: 13px;
+    }
+  }
+
+  // Résultats.
+  .views-row {
+    margin-bottom: 30px;
+
+    .views-field-field-nom-complet-1 {
+      color: $color-green-300;
+      @include font-size($font-size-large);
+
+      & > a:first-child {
+        font-weight: $font-weight-bold;
+      }
+    }
+
+    .views-field-field-communes-ref .field-content {
+      & > a {
+        @include font-size($font-size-small);
+        color: $color-gray-450;
+        text-decoration: underline;
+      }
+    }
+
+    .views-field-changed {
+      @include font-size($font-size-small);
+      display: inline;
+      color: $color-gray-450;
+      margin-left: 5px;
+    }
+
+    .badge.bg-secondary {
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    &.voie-disparue--wrapper {
+      .views-field-field-nom-complet-1 {
+        color: $color-black;
+        a {
+          color: $color-black;
+        }
+      }
+
+      .badge.bg-secondary {
+        background-color: $color-gray-200 !important;
+      }
+    }
+  }
+
+  // Sidebar of search page.
+  .layout-sidebar-first {
+    .card {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+}
+
+// Modal filters.
+#modal-filters .modal-content {
+  .modal-header {
+    padding-bottom: 0;
+  }
+
+  .modal-body {
+    padding-top: 0;
+  }
+}
+
+
+
+

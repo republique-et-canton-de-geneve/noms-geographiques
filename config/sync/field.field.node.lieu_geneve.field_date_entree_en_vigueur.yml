@@ -1,0 +1,21 @@
+uuid: 35cf7197-c8d5-4a19-9a2d-f60bcd9d2717
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_entree_en_vigueur
+    - node.type.lieu_geneve
+  module:
+    - datetime
+id: node.lieu_geneve.field_date_entree_en_vigueur
+field_name: field_date_entree_en_vigueur
+entity_type: node
+bundle: lieu_geneve
+label: 'Date d''entrée en vigueur'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

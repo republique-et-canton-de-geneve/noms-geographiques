@@ -1,0 +1,29 @@
+uuid: 5941f4ef-04c1-467e-9330-e3f9906bb0b0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_communes_ref
+    - node.type.lieu_geneve
+    - taxonomy.vocabulary.communes
+id: node.lieu_geneve.field_communes_ref
+field_name: field_communes_ref
+entity_type: node
+bundle: lieu_geneve
+label: Commune(s)
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      communes: communes
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

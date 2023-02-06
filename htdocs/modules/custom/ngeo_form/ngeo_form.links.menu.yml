@@ -1,0 +1,6 @@
+ngeo_form.settings:
+  title: Paramétrage de notification des formulaires
+  description: Permet de saisir la liste de distribution des notifications par e-mail.
+  parent: system.admin_config_system
+  route_name: ngeo_form.settings
+  weight: 10

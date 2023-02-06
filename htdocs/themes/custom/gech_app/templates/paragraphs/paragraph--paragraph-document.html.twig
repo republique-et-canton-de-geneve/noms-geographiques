@@ -1,0 +1,20 @@
+{% extends '@gech_app/paragraphs/paragraph.html.twig' %}
+
+{% block content %}
+  <div class="list-group-item d-flex">
+    <div class="file-icon">
+      <span class="fas fa-2x fa-file-pdf"></span>
+    </div>
+    <div class="col">
+      {{ content.field_type_de_document_ref }}
+      {% for file in content.field_fichier_joint.0 %}
+        {% if (file.id is not empty) %}
+          {% set file_title = content.field_title ? content.field_title : file.filename.value %}
+          <a href="{{ file_url(file.uri.value) }}" target="_blank">
+            {{ file_title|length > 30 ? file_title|slice(0, 30) ~ '...' : file_title  }}
+          </a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+{% endblock %}

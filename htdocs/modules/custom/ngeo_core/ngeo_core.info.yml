@@ -1,0 +1,5 @@
+name: NGEO Core
+type: module
+description: Ce module regroupe diverses fonctionnalités transversales et propres au projet NGEO.
+package: ngeo
+core_version_requirement: ^8.8 || ^9

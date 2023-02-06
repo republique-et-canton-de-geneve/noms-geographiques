@@ -1,0 +1,25 @@
+uuid: 458cafae-62a5-426c-a237-11074f390da2
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_longitude
+    - node.type.lieu_geneve
+id: node.lieu_geneve.field_longitude
+field_name: field_longitude
+entity_type: node
+bundle: lieu_geneve
+label: Longitude
+description: 'En format WGS84, généré au milieu de la voie afin d''essayer de trouver un point d''accroche sur StreetView. Si inconnu, mettre 0.'
+required: false
+translatable: false
+default_value:
+  -
+    value: !!float 0
+default_value_callback: ''
+settings:
+  min: null
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: decimal

@@ -1,0 +1,144 @@
+uuid: 257ee680-5935-410a-904b-51a905d47f86
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.lieu_geneve.body
+    - field.field.node.lieu_geneve.field_anecdotes
+    - field.field.node.lieu_geneve.field_carre
+    - field.field.node.lieu_geneve.field_code_voie
+    - field.field.node.lieu_geneve.field_commentaire_saisie
+    - field.field.node.lieu_geneve.field_communes_ref
+    - field.field.node.lieu_geneve.field_date_ac_en_vigueur
+    - field.field.node.lieu_geneve.field_date_ac_originel
+    - field.field.node.lieu_geneve.field_date_entree_en_vigueur
+    - field.field.node.lieu_geneve.field_definition_arrete_ce
+    - field.field.node.lieu_geneve.field_description_courte
+    - field.field.node.lieu_geneve.field_documents_rev
+    - field.field.node.lieu_geneve.field_domaine_activite_ref
+    - field.field.node.lieu_geneve.field_evenement_ref
+    - field.field.node.lieu_geneve.field_illustrations
+    - field.field.node.lieu_geneve.field_illustrations_anecdot
+    - field.field.node.lieu_geneve.field_is_contenu_vide
+    - field.field.node.lieu_geneve.field_latitude
+    - field.field.node.lieu_geneve.field_liant
+    - field.field.node.lieu_geneve.field_longitude
+    - field.field.node.lieu_geneve.field_longueur
+    - field.field.node.lieu_geneve.field_nature_ref
+    - field.field.node.lieu_geneve.field_nom_complet
+    - field.field.node.lieu_geneve.field_nom_de_personne_ref
+    - field.field.node.lieu_geneve.field_sexe_ref
+    - field.field.node.lieu_geneve.field_theme_speciaux_ref
+    - field.field.node.lieu_geneve.field_type_de_voie_ref
+    - field.field.node.lieu_geneve.field_type_geographique_ref
+    - field.field.node.lieu_geneve.field_voie_disparue
+    - image.style.square
+    - node.type.lieu_geneve
+  module:
+    - datetime
+    - image
+    - text
+    - user
+id: node.lieu_geneve.default
+targetEntityType: node
+bundle: lieu_geneve
+mode: default
+content:
+  body:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 1
+    region: content
+  field_anecdotes:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_date_ac_originel:
+    type: datetime_default
+    label: above
+    settings:
+      timezone_override: ''
+      format_type: medium
+    third_party_settings: {  }
+    weight: 8
+    region: content
+  field_definition_arrete_ce:
+    type: basic_string
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 4
+    region: content
+  field_description_courte:
+    type: string
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_illustrations:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: square
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 3
+    region: content
+  field_illustrations_anecdot:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: square
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 6
+    region: content
+  field_nom_complet:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 7
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+hidden:
+  content_moderation_control: true
+  field_carre: true
+  field_code_voie: true
+  field_commentaire_saisie: true
+  field_communes_ref: true
+  field_date_ac_en_vigueur: true
+  field_date_entree_en_vigueur: true
+  field_documents_rev: true
+  field_domaine_activite_ref: true
+  field_evenement_ref: true
+  field_is_contenu_vide: true
+  field_latitude: true
+  field_liant: true
+  field_longitude: true
+  field_longueur: true
+  field_nature_ref: true
+  field_nom_de_personne_ref: true
+  field_sexe_ref: true
+  field_theme_speciaux_ref: true
+  field_type_de_voie_ref: true
+  field_type_geographique_ref: true
+  field_voie_disparue: true
+  langcode: true
+  search_api_excerpt: true

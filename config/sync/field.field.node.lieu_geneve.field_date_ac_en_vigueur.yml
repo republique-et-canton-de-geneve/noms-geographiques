@@ -1,0 +1,21 @@
+uuid: a83f5596-3919-4f31-8cbe-ac43a90e1708
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_date_ac_en_vigueur
+    - node.type.lieu_geneve
+  module:
+    - datetime
+id: node.lieu_geneve.field_date_ac_en_vigueur
+field_name: field_date_ac_en_vigueur
+entity_type: node
+bundle: lieu_geneve
+label: 'Date de l''Arrêté du Conseil d''État en vigueur'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

@@ -1,0 +1,97 @@
+{% extends '@gech_app/content/node.html.twig' %}
+
+{% block content %}
+  {% set is_voie_disparue = node.field_voie_disparue.0.value %}
+  {% set nom_complet = content.field_nom_complet.0|nl2br %}
+
+  <h1>
+    {{ content.field_nom_complet.0 }}
+    {% if is_voie_disparue %}<span class="badge big">{{ "Voie disparue"|t }}</span>{% endif %}
+  </h1>
+
+  <div class="row">
+    <div class="col-12 col-md-8 mb-3">
+      {{ content.field_description_courte }}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-8">
+
+      {% if not is_voie_disparue %}
+        {# code_voie_5digits is set in preprocess_node #}
+        <iframe id="plan-situation-sitg" class="mb-3" src="{{ bamboo_config_get('ngeo_sitg.settings', 'sitg_map_url') ~ code_voie_5digits }}"></iframe>
+      {% endif %}
+
+      {# For mobile #}
+      <div class="d-block d-lg-none {% if is_voie_disparue %} voie-disparue{% endif %}">
+        {% include '@gech_app/partials/lieu-sidebar-data.html.twig' %}
+      </div>
+
+      <div class="layout-main">
+
+      {{ attach_library('gech_app/image-popup') }}
+
+      {{ content.body }}
+      {{ content.field_illustrations }}
+
+      {{ content.field_definition_arrete_ce }}
+
+      {{ content.field_anecdotes }}
+      {{ content.field_illustrations_anecdot }}
+
+      {% if content.field_anecdotes.0 is null %}
+        <div class="field--label-above">
+          <div class="field-label">{{ "Anecdotes" }}</div>
+          <p class="fst-italic">
+            {{ 'Participez à ce site collaboratif en nous <a href="@anecdote-url">soumettant des anecdotes</a> !'|t({'@anecdote-url': path('ngeo_form.anecdote', {'title': nom_complet})}) }}
+          </p>
+        </div>
+      {% endif %}
+
+      </div>
+    </div>
+
+    <aside class="layout-sidebar-second col-lg-4" role="complementary">
+
+      {# For ipad & bigger #}
+      <div class="d-none d-lg-block{% if is_voie_disparue %} voie-disparue{% endif %}">
+        {% include '@gech_app/partials/lieu-sidebar-data.html.twig' %}
+      </div>
+
+      <div class="sidebar-misc">
+        <hr class="d-lg-none" />
+
+        <div class="anecdotes aside-extra-links">
+          <h3>{{ 'Contribuez'|t }}</h3>
+          <a href="{{ path('ngeo_form.anecdote', {'title': nom_complet}) }}">{{ "Soumettre une anecdote"|t }}</a>
+        </div>
+
+        {{ bamboo_render_block('ngeo_sharing_links', {'entity_type': 'node', 'id': node.id()}) }}
+
+        <div class="interroge aside-extra-links">
+          <h3>{{ "Posez votre question"|t }}</h3>
+          <a href="http://interroge.ch" target="_blank" rel="noopener noreferer" class="imgInto">
+            <img
+              src="{{ base_path ~ directory }}/images/logo_interroge.png"
+              alt="{{ "Posez votre question sur interroge"|t }}"
+            />
+          </a>
+        </div>
+
+        <div class="bge-wrapper">
+          <h3>{{ "Trouvez plus d'images"|t }}</h3>
+          <a href="https://bge-geneve.ch/iconographie/recherche?texte={{ label.0|nl2br }}" target="_blank" rel="noopener noreferer" class="d-block mb-1">
+            {{ "Centre iconographique de la BGE"|t }}
+          </a>
+          <a href="http://institutions.ville-geneve.ch/fr/bge/" target="_blank" rel="noopener noreferer" class="imgInto">
+            <img
+              src="{{ base_path ~ directory }}/images/logo_bge_noir.svg"
+              alt="{{ "Site de la bibliothèque de Genève"|t }}"
+            />
+          </a>
+        </div>
+      </div>
+    </aside>
+  </div>
+{% endblock %}

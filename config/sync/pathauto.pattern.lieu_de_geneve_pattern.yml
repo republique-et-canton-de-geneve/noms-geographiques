@@ -1,0 +1,22 @@
+uuid: 6a7093cf-9b2d-41ef-af27-6be091ffcfcc
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+id: lieu_de_geneve_pattern
+label: 'Lieu de Genève pattern'
+type: 'canonical_entities:node'
+pattern: 'voie/geneve/[node:field_type_de_voie_ref]-[node:field_liant]-[node:title]'
+selection_criteria:
+  8fbbdeb3-3821-40c6-809c-d1629222ed9a:
+    id: 'entity_bundle:node'
+    negate: false
+    uuid: 8fbbdeb3-3821-40c6-809c-d1629222ed9a
+    context_mapping:
+      node: node
+    bundles:
+      lieu_geneve: lieu_geneve
+selection_logic: and
+weight: -5
+relationships: {  }

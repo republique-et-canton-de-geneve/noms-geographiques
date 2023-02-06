@@ -1,0 +1,14 @@
+<+>UTF-8
+===================================================================
+diff --git a/.htaccess b/.htaccess
+--- a/.htaccess	(revision ecd978477b57c45358488afb178c5712b6dc56c5)
++++ b/.htaccess	(date 1657814970541)
+@@ -148,6 +148,8 @@
+   # Copy and adapt this rule to directly execute PHP files in contributed or
+   # custom modules or to run another PHP application in the same directory.
+   RewriteCond %{REQUEST_URI} !/core/modules/statistics/statistics\.php$
++  # Allow access to SAML vendor files for avoid access denied on "*/saml"
++  RewriteCond %{REQUEST_URI} !^/saml
+   # Deny access to any other PHP files that do not match the rules above.
+   # Specifically, disallow autoload.php from being served directly.
+   RewriteRule "^(.+/.*|autoload)\.php($|/)" - [F]

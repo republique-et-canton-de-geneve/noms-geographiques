@@ -1,0 +1,5 @@
+browser_detect:
+  version: 1.x
+  js:
+    js/gechDetectBrowser.js: {}
+

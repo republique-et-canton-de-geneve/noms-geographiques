@@ -1,0 +1,38 @@
+id: ngeo_lieu_geneve_node_illustration_anecdote
+label: NGEO - Lieu de Genève - Node File Illustration Anecdote
+migration_group: ngeo_lieu_geneve
+
+source:
+  plugin: ngeo_d7_lieu_geneve_illustration_anecdote
+  key: drupal7
+  constants:
+    drupal_file_dest: 'public://lieu_geneve_illustration_anecdote/'
+
+destination:
+  plugin: entity:file
+
+process:
+  uid:
+    plugin: default_value
+    default_value: 1
+
+  destination_filename:
+    - plugin: callback
+      callable: basename
+      source: 'source_url'
+    - plugin: skip_on_empty
+      method: row
+      message: 'Cannot import empty filename.'
+
+  destination_full_path:
+    - plugin: concat
+      source:
+        - constants/drupal_file_dest
+        - '@destination_filename'
+    - plugin: urlencode
+
+  uri:
+    - plugin: file_copy
+      source:
+        - 'source_url'
+        - '@destination_full_path'

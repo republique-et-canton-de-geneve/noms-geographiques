@@ -1,0 +1,6 @@
+ngeo_sitg.settings:
+  title: Paramétrage des cartes SITG
+  description: Permet de saisir l'URL des iframes.
+  parent: system.admin_config_content
+  route_name: ngeo_sitg.settings
+  weight: 10

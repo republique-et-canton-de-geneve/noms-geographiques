@@ -1,0 +1,22 @@
+uuid: 1d61ab93-d329-4a3f-97a0-f35fcf1f31ca
+langcode: fr
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - gech_app
+_core:
+  default_config_hash: VfPFqqxfkomud5CO8DUijw85QIl9GIxh_nIxLOYESxg
+id: gech_app_help
+theme: gech_app
+region: help
+weight: -4
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Aide
+  label_display: '0'
+  provider: help
+visibility: {  }

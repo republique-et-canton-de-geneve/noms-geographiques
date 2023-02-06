@@ -1,0 +1,139 @@
+// For homepage.
+.path-frontpage {
+  $vertical-space: 15px;
+
+  // Desktop & bigger.
+  @include media-breakpoint-up(md) {
+    $vertical-space: 35px;
+  }
+
+  #home-banner {
+    margin-top: -($subheader-mb) !important;
+    min-height: initial;
+    margin-bottom: $vertical-space;
+
+    & > div {
+      background-image: url('../images/geneve_panorama.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: $vertical-space 15px;
+
+      @include media-breakpoint-only(md) {
+        background-position-x: 25%;
+      }
+    }
+
+    // Desktop & bigger.
+    @include media-breakpoint-up(md) {
+      margin-bottom: $vertical-space;
+
+      & > div {
+        padding: $vertical-space 25px;
+      }
+    }
+
+    #welcome-text {
+      flex: 0 0 auto;
+      max-width: 100%;
+      width: 100%;
+
+      // Only mobile.
+      @include media-breakpoint-down(md) {
+        p:last-of-type {
+          margin-bottom: 5px;
+        }
+      }
+
+      // Tablet.
+      @include media-breakpoint-between(md, lg) {
+        width: 65%;
+      }
+
+      // Desktop & bigger.
+      @include media-breakpoint-up(lg) {
+        width: 45%;
+      }
+    }
+
+    h1 {
+      @include font-size($font-size-big, $lineheight-ratio-small);
+      font-weight: $font-weight-base;
+      margin-top: 0;
+      margin-bottom: 15px;
+
+      // Desktop & bigger.
+      @include media-breakpoint-up(md) {
+        @include font-size(32, $lineheight-ratio-small);
+        margin-top: 10px;
+      }
+    }
+  }
+
+  #views-exposed-form-search-page-recherche {
+    margin-bottom: 2rem;
+
+    @include media-breakpoint-up(xl) {
+      .form-actions {
+        margin-top: auto;
+        margin-bottom: 0;
+      }
+    }
+
+    @include media-breakpoint-down(xl) {
+      .form-item-keyword label {
+        @include sr-only;
+      }
+    }
+  }
+
+  .facets-listing {
+    @include make-row();
+
+    .switch-wrapper {
+      padding: 0 15px;
+    }
+
+    .facet-wrapper {
+      @include make-col-ready();
+      @include make-col(12);
+
+      @include media-breakpoint-up(xl) {
+        @include make-col(6);
+        margin-bottom: 2rem;
+      }
+    }
+
+  }
+
+  .col-commune {
+    @include media-breakpoint-only(lg) {
+      .card-title {
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+
+  #commune-autocomplete {
+    fieldset.group-commune {
+      .fieldset-wrapper {
+        display: flex;
+
+        .form-item-commune {
+          flex-grow: 1;
+
+          .form-text.form-autocomplete {
+            margin-top: 0;
+          }
+        }
+
+        a.btn {
+          margin-left: 5px;
+
+          & > span {
+            font-size: 1.25rem;
+          }
+        }
+      }
+    }
+  }
+}

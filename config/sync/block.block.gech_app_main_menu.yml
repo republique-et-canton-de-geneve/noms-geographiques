@@ -1,0 +1,27 @@
+uuid: 896e6528-ae52-4dc5-9404-73838f48e163
+langcode: fr
+status: true
+dependencies:
+  config:
+    - system.menu.main
+  module:
+    - system
+  theme:
+    - gech_app
+_core:
+  default_config_hash: KWAiziL39uEzmOJEql_wbUP2RtqGceL3WM2CfxhMelE
+id: gech_app_main_menu
+theme: gech_app
+region: primary_menu
+weight: -4
+provider: null
+plugin: 'system_menu_block:main'
+settings:
+  id: 'system_menu_block:main'
+  label: 'Navigation principale'
+  label_display: '0'
+  provider: system
+  level: 1
+  depth: 1
+  expand_all_items: true
+visibility: {  }

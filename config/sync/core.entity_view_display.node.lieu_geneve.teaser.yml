@@ -1,0 +1,93 @@
+uuid: ad426571-885f-4f75-9b4f-5a04401c4c6d
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.lieu_geneve.body
+    - field.field.node.lieu_geneve.field_anecdotes
+    - field.field.node.lieu_geneve.field_carre
+    - field.field.node.lieu_geneve.field_code_voie
+    - field.field.node.lieu_geneve.field_commentaire_saisie
+    - field.field.node.lieu_geneve.field_communes_ref
+    - field.field.node.lieu_geneve.field_date_ac_en_vigueur
+    - field.field.node.lieu_geneve.field_date_ac_originel
+    - field.field.node.lieu_geneve.field_date_entree_en_vigueur
+    - field.field.node.lieu_geneve.field_definition_arrete_ce
+    - field.field.node.lieu_geneve.field_description_courte
+    - field.field.node.lieu_geneve.field_documents_rev
+    - field.field.node.lieu_geneve.field_domaine_activite_ref
+    - field.field.node.lieu_geneve.field_evenement_ref
+    - field.field.node.lieu_geneve.field_illustrations
+    - field.field.node.lieu_geneve.field_illustrations_anecdot
+    - field.field.node.lieu_geneve.field_is_contenu_vide
+    - field.field.node.lieu_geneve.field_latitude
+    - field.field.node.lieu_geneve.field_liant
+    - field.field.node.lieu_geneve.field_longitude
+    - field.field.node.lieu_geneve.field_longueur
+    - field.field.node.lieu_geneve.field_nature_ref
+    - field.field.node.lieu_geneve.field_nom_complet
+    - field.field.node.lieu_geneve.field_nom_de_personne_ref
+    - field.field.node.lieu_geneve.field_sexe_ref
+    - field.field.node.lieu_geneve.field_theme_speciaux_ref
+    - field.field.node.lieu_geneve.field_type_de_voie_ref
+    - field.field.node.lieu_geneve.field_type_geographique_ref
+    - field.field.node.lieu_geneve.field_voie_disparue
+    - node.type.lieu_geneve
+  module:
+    - text
+    - user
+id: node.lieu_geneve.teaser
+targetEntityType: node
+bundle: lieu_geneve
+mode: teaser
+content:
+  body:
+    type: text_summary_or_trimmed
+    label: hidden
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    weight: 101
+    region: content
+  content_moderation_control:
+    settings: {  }
+    third_party_settings: {  }
+    weight: -20
+    region: content
+  links:
+    settings: {  }
+    third_party_settings: {  }
+    weight: 100
+    region: content
+hidden:
+  field_anecdotes: true
+  field_carre: true
+  field_code_voie: true
+  field_commentaire_saisie: true
+  field_communes_ref: true
+  field_date_ac_en_vigueur: true
+  field_date_ac_originel: true
+  field_date_entree_en_vigueur: true
+  field_definition_arrete_ce: true
+  field_description_courte: true
+  field_documents_rev: true
+  field_domaine_activite_ref: true
+  field_evenement_ref: true
+  field_illustrations: true
+  field_illustrations_anecdot: true
+  field_is_contenu_vide: true
+  field_latitude: true
+  field_liant: true
+  field_longitude: true
+  field_longueur: true
+  field_nature_ref: true
+  field_nom_complet: true
+  field_nom_de_personne_ref: true
+  field_sexe_ref: true
+  field_theme_speciaux_ref: true
+  field_type_de_voie_ref: true
+  field_type_geographique_ref: true
+  field_voie_disparue: true
+  langcode: true
+  search_api_excerpt: true

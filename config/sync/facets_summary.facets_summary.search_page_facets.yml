@@ -1,0 +1,81 @@
+uuid: 4d6b9af6-40ca-4088-a880-31785d0f58ef
+langcode: fr
+status: true
+dependencies:
+  config:
+    - search_api.index.lieux_geneve
+    - views.view.search
+  module:
+    - search_api
+id: search_page_facets
+name: 'Search page facets'
+facet_source_id: 'search_api:views_page__search__page_recherche'
+processor_configs:
+  hide_when_not_rendered:
+    processor_id: hide_when_not_rendered
+    weights:
+      build: '45'
+    settings: {  }
+  show_text_when_empty:
+    processor_id: show_text_when_empty
+    weights:
+      build: '10'
+    settings:
+      text:
+        value: ''
+        format: plain_text
+facets:
+  communes:
+    checked: true
+    label: Communes
+    separator: ', '
+    show_count: false
+    weight: 0
+  domaines_activite:
+    checked: true
+    label: 'Domaine d''activité'
+    separator: ', '
+    show_count: false
+    weight: 0
+  evenements:
+    checked: true
+    label: Événement
+    separator: ', '
+    show_count: false
+    weight: 0
+  nature:
+    checked: true
+    label: Nature
+    separator: ', '
+    show_count: false
+    weight: 0
+  personnes:
+    checked: true
+    label: 'Personnalité : métier'
+    separator: ', '
+    show_count: false
+    weight: 0
+  sexes:
+    checked: true
+    label: 'Personnalité : genre'
+    separator: ', '
+    show_count: false
+    weight: 0
+  themes_speciaux:
+    checked: true
+    label: 'Thème spéciaux'
+    separator: ', '
+    show_count: false
+    weight: 0
+  types_lieu_geographique:
+    checked: true
+    label: 'Type de lieu géographique'
+    separator: ', '
+    show_count: false
+    weight: 0
+  types_voie:
+    checked: true
+    label: 'Type de voie'
+    separator: ', '
+    show_count: false
+    weight: 0

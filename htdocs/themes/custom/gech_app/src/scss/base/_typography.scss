@@ -1,0 +1,32 @@
+h1,
+.h1 {
+  @include title-style($font-size-h1, $font-weight-black);
+  margin-bottom: $margin-base;
+
+  @include media-breakpoint-down(md) {
+    @include font-size($font-mobile-size-h1);
+  }
+}
+
+h2,
+.h2 {
+  @include title-style($font-size-h2, $font-weight-black);
+  margin-bottom: $margin-base;
+
+  @include media-breakpoint-down(md) {
+    @include font-size($font-mobile-size-h2);
+  }
+}
+
+h3,
+.h3 {
+  @include title-style($font-size-h3, $font-weight-black);
+  margin-bottom: $margin-base;
+
+  @include media-breakpoint-down(md) {
+    @include font-size($font-mobile-size-h3);
+  }
+}
+
+
+

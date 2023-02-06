@@ -1,0 +1,18 @@
+uuid: 883c27fd-98ef-4cd9-970a-93bbd7c3c30a
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.lieu_geneve
+id: node.lieu_geneve.title
+field_name: title
+entity_type: node
+bundle: lieu_geneve
+label: 'Nom de la voie'
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,20 @@
+uuid: 5818ae4a-4679-4f28-933f-10517ae9ea6e
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - gech_app
+_core:
+  default_config_hash: Q9_2whdOj1YIomfvsIfopROW4FT_X5pY0DjdOiOaQ5U
+id: gech_app_primary_admin_actions
+theme: gech_app
+region: highlighted
+weight: -5
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Actions d''administration principales'
+  label_display: '0'
+  provider: core
+visibility: {  }

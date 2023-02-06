@@ -1,0 +1,5 @@
+name: NGEO Lieu
+type: module
+description: Ce module regroupe diverses fonctionnalités autour des Lieux de Genève.
+package: ngeo
+core_version_requirement: ^8.8 || ^9

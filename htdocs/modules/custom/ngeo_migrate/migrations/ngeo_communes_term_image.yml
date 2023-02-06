@@ -1,0 +1,73 @@
+id: ngeo_communes_term_image
+label: NGEO - Communes - Term File Image
+migration_group: ngeo_lieu_geneve
+
+source:
+  plugin: d7_taxonomy_term
+  key: drupal7
+  bundle: communes
+  constants:
+    drupal_file_dest: 'public://communes_ecussons/'
+
+destination:
+  plugin: entity:file
+
+process:
+  # Hardcode skipping TID 244 & 239 which are garbage Term on the D7 database that should not exists.
+  skipped:
+    - plugin: skip_on_value
+      method: row
+      source: tid
+      value: 244
+    - plugin: skip_on_value
+      method: row
+      source: tid
+      value: 239
+
+  uid:
+    plugin: default_value
+    default_value: 1
+
+  source_url:
+    - plugin: d7_file_to_url
+      base_url: 'https://ge.ch/noms-geographiques/sites/noms-geographiques/files/'
+      source: field_com_ecusson
+      db_connection: 'drupal7'
+
+  destination_filename:
+    - plugin: callback
+      callable: basename
+      source: '@source_url'
+    - plugin: skip_on_empty
+      method: row
+      message: 'Cannot import empty filename.'
+
+  # Extraire la string /!\ inhabituel.
+  pseudofile:
+    - plugin: extract
+      handle_multiples: TRUE
+      source: '@destination_filename'
+      index:
+        - 0
+
+# Extraire la string /!\ inhabituel.
+  pseudosource:
+    - plugin: extract
+      handle_multiples: TRUE
+      source: '@source_url'
+      index:
+        - 0
+
+  destination_full_path:
+    - plugin: concat
+      source:
+        - constants/drupal_file_dest
+        - '@pseudofile'
+    - plugin: urlencode
+
+  uri:
+    - plugin: file_copy
+      source:
+        - '@pseudosource'
+        - '@destination_full_path'
+

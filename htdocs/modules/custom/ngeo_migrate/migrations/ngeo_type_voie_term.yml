@@ -1,0 +1,37 @@
+id: ngeo_type_voie_term
+label: NGEO - Type de voie - Term
+migration_group: ngeo_lieu_geneve
+
+source:
+  plugin: d7_taxonomy_term
+  key: drupal7
+  bundle: type_de_voie
+
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: types_voie
+
+process:
+  name: name
+  created: created
+  changed: changed
+  weight: weight
+
+  status:
+    - plugin: get
+      source: status
+    - plugin: default_value
+      default_value: 1
+
+  'description/value': description
+  'description/format':
+    - plugin: skip_on_value
+      method: process
+      source: format
+      value: php_code
+    - plugin: static_map
+      map:
+        filtered_html: basic_html
+        full_html: full_html
+        plain_text: plain_text
+      default_value: basic_html

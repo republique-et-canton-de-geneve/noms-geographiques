@@ -1,0 +1,19 @@
+uuid: 0e564670-b96a-423c-9470-6bd931f52f05
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description_courte
+    - node.type.lieu_geneve
+id: node.lieu_geneve.field_description_courte
+field_name: field_description_courte
+entity_type: node
+bundle: lieu_geneve
+label: 'Description courte'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

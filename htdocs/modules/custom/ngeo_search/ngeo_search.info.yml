@@ -1,0 +1,5 @@
+name: NGEO Recherche
+type: module
+description: Ce module gère la recherche de l'application.
+package: ngeo
+core_version_requirement: ^8.8 || ^9

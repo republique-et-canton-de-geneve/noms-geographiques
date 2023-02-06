@@ -1,0 +1,25 @@
+@import 'gech/gech_variables';
+@import 'utils/variables';
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import 'gech/gech_mixins';
+@import 'utils/mixins';
+
+@import 'base/font_icon';
+@import 'base/fonts';
+@import 'base/global';
+@import 'base/typography';
+
+@import 'components/button';
+
+@import 'layout/content';
+
+body.cke_editable_themed blockquote {
+  font-size: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}

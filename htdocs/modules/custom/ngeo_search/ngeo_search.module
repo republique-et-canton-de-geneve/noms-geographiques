@@ -1,0 +1,54 @@
+<?php
+
+/**
+ * @file
+ * Contains ngeo_search.module.
+ */
+
+use Drupal\Core\Form\FormStateInterface;
+
+
+/**
+ * Implements hook_form_FORM_ID_alter.
+ */
+function ngeo_search_form_views_exposed_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  // Search page form:
+  $search_form = 'views-exposed-form-search-page-recherche';
+
+  if ($form['#id'] !== $search_form) {
+    return;
+  }
+
+  _ngeo_search_keep_facets_in_query($form);
+}
+
+/**
+ * Keep facet parameters in current query.
+ *
+ * Problématique: on perd les facettes dès le moments où ce formulaire est soumis.
+ * Il faut donc préserver les facettes sélectionnées en réinjectant leurs
+ * paramètres dans la requête courante.
+ *
+ * @param $form
+ */
+function _ngeo_search_keep_facets_in_query(&$form) {
+  $query_params = \Drupal::request()->query->all();
+
+  // Adding GET parameters for facets value.
+  $facets = $query_params['f'] ?? NULL;
+
+  if (is_array($facets)) {
+    // Allow the parameter to be for instance f[0]=<value>.
+    $form['f'] = [
+      '#tree' => TRUE,
+    ];
+    // Add each facet:
+    foreach ($facets as $index => $value) {
+      $form['f'][$index] = [
+        '#type' => 'hidden',
+        '#value' => $value,
+      ];
+    }
+  }
+}
+
