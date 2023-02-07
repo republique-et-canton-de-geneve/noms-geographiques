@@ -1,5 +1,7 @@
 ># NGEO
->Refonte du Site des noms géographiques en Drupal 9
+>Un répertoire collaboratif des noms de rues du canton de Genève
+
+![Page d'accueil](images/Page d'accueil.png)
 
 ## Prérequis
 Docker ou docker desktop.
@@ -9,8 +11,14 @@ Installation basée sur la ligne de commande PowerShell, à l'exception des comm
 
 ### Récupérer le projet GIT.
 Cloner le repo :
+
+Copier l'url dans Github.
+
+![Github clone project](images/clone_project.png)
+
+Cloner le projet chez vous.
 ```
-@Todo
+$ git clone https://github.com/republique-et-canton-de-geneve/noms-geographiques.git
 ```
 ### Préparer l'environnement local
 Modifier le fichier hosts de la machine hôte (C:\Windows\System32\drivers\etc\hosts):
@@ -70,18 +78,11 @@ Pour ne pas utiliser le bloc de titre proposé de base dans les différentes pag
 4. Sauvegarder.
 
 
-# Intégration continue CI-CD
-[Déploiement migration et packagig via Jenkins](scripts/README.md)
-
 # Vérification de code
 
 ## PHPCS
 PHP CodeSniffer sert à vérifier si les standards de code Drupal sont respectés.
 
-1. Lancer le script docker/init.sh (cela permet de fixer les liens dans vendor/bin) :
-    ```
-    . docker/init.sh
-    ```
 1. Ajout de Coder via composer :
     ```
     composer update --prefer-source drupal/coder
