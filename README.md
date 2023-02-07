@@ -1,7 +1,7 @@
 ># NGEO
 >Un répertoire collaboratif des noms de rues du canton de Genève
 
-![Page d'accueil](images/Page d'accueil.png)
+![Page d'accueil](images/Page_d_accueil.png)
 
 ## Prérequis
 Docker ou docker desktop.
