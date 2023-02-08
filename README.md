@@ -104,10 +104,10 @@ PHP CodeSniffer sert à vérifier si les standards de code Drupal sont respecté
    php vendor/bin/phpcbf --standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md htdocs/modules/custom/ngeo_core
 
 ## Contributors
-| Avatar                                           | e-mail adress           |
-|--------------------------------------------------|-------------------------|
-| ![Didier.Beux](images/beux.didier.32x32.png)     | didier.beux@etat.ge.ch  |
-| ![Auriana.Hug](images/hug.auriana.32x32.png)     | auriana.hug@gmail.com   |
-| ![Benjamin.Roy](images/roy.benjamin.32x32.png)   | benjamin.roy@gmail.com  |
-| ![Kévin.Notari](images/notari.kevin.32x32.png)   | kevin.notary@gmail.com  |
-| ![Zeqiri.Erblin](images/zeqiri.erblin.32x32.png) | erblin.zeqiri@gmail.com |
+| Avatar                                           | e-mail adress            |
+|--------------------------------------------------|--------------------------|
+| ![Didier.Beux](images/beux.didier.32x32.png)     | didier.beux@etat.ge.ch   |
+| ![Auriana.Hug](images/hug.auriana.32x32.png)     | auriana.hug@etat.ge.ch   |
+| ![Benjamin.Roy](images/roy.benjamin.32x32.png)   | benjamin.roy@etat.ge.ch  |
+| ![Kévin.Notari](images/notari.kevin.32x32.png)   | kevin.notary@etat.ge.ch  |
+| ![Zeqiri.Erblin](images/zeqiri.erblin.32x32.png) | erblin.zeqiri@etat.ge.ch |
