@@ -103,3 +103,11 @@ PHP CodeSniffer sert à vérifier si les standards de code Drupal sont respecté
    ```
    php vendor/bin/phpcbf --standard=Drupal,DrupalPractice --extensions=php,module,inc,install,test,profile,theme,css,info,txt,md htdocs/modules/custom/ngeo_core
 
+## Contributors
+| Avatar                                     | e-mail adress           |
+|--------------------------------------------|-------------------------|
+| ![Didier.Beux](images/beux.didier.png)     | didier.beux@etat.ge.ch  |
+| ![Auriana.Hug](images/hug.auriana.png)     | auriana.hug@gmail.com   |
+| ![Benjamin.Roy](images/roy.benjamin.png)   | benjamin.roy@gmail.com  |
+| ![Kévin.Notari](images/notari.kevin.png)   | kevin.notary@gmail.com  |
+| ![Zeqiri.Erblin](images/zeqiri.erblin.png) | erblin.zeqiri@gmail.com |
