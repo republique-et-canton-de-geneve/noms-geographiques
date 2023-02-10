@@ -43,6 +43,8 @@ private-files/*
 
 # Ignore mma debug
 run.sh
+
+# For open-sources to ignore.
 /docker/ge-app.b64
 /docker/init.sh
 /vendor/

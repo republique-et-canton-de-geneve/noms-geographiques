@@ -46,6 +46,6 @@ declare -A projets=( \
 
 ## Auteurs
 ***
-| Avatar                                           | Identité    | e-mail adress              |
-|--------------------------------------------------|-------------|----------------------------|
-| ![Didier Beux](***REMOVED***/uploads/-/system/user/avatar/37/avatar.png?width=40) | Didier Beux | DBX didier.beux@etat.ge.ch |
+| Avatar                                             | Identité    | e-mail adress              |
+|----------------------------------------------------|-------------|----------------------------|
+| ![Didier Beux](../../images/beux.didier.32x32.png) | Didier Beux | DBX didier.beux@etat.ge.ch |
