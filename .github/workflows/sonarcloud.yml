@@ -20,4 +20,4 @@ jobs:
           args:
             -Dsonar.projectKey=republique-et-canton-de-geneve_noms-geographiques
             -Dsonar.organization=etat-de-geneve-github
-            -Dsonar.sources=config,docker,htdocs/modules,htdocs/profiles,htdocs/sites,htdocs/themes
+            -Dsonar.exclusions=htdocs/libraries,themes/custom/gech_app/src/fontawesome,themes/custom/gech_app/src/scss
