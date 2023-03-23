@@ -1,5 +1,6 @@
 ># NGEO
 >Un répertoire collaboratif des noms de rues du canton de Genève.
+>.
 
 Analyse SonarCloud :
 
