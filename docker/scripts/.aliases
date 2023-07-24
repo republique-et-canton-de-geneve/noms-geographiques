@@ -24,12 +24,12 @@ source ${docker_path}/.env
 source ${docker_path}/scripts/dbx_bash_tools_library ${PROJECT_NAME}
 
 # Load the .env du projet
-alias start='docker-compose -p ${project_name} up -d'
-alias stop='docker-compose -p ${project_name} down'
+alias start='docker compose -p ${project_name} up -d'
+alias stop='docker compose -p ${project_name} down'
 alias connectPhp='docker exec -it ${project_name}_php: /bin/sh'
 alias connectApache='docker exec -it ${project_name}_apache /bin/sh'
 alias connectMariaDb='docker exec -it ${project_name}_mariadb /bin/sh'
-alias connectNode='docker-compose run node sh'
+alias connectNode='docker compose run node sh'
 alias prune='docker.exe stop $(docker.exe ps -a -q);docker.exe rm $(docker.exe ps -a -q)'
 alias restart='stop;start'
 alias setAuth='cat ${base_path}/config/.htaccess.dist >> ${base_path}/htdocs/public/.htaccess'
