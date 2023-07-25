@@ -1,6 +1,6 @@
 <?php
 
-$databases['default']['default'] = array(
+$databases['default']['default'] = [
   'database' => 'drupal',
   'username' => 'drupal',
   'password' => 'drupal',
@@ -9,9 +9,9 @@ $databases['default']['default'] = array(
   'port' => '3306',
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'driver' => 'mysql',
-);
+];
 
-$databases['default']['toMigrate'] = array(
+$databases['default']['toMigrate'] = [
   'database' => 'drupal_migration',
   'username' => 'drupal',
   'password' => 'drupal',
@@ -20,8 +20,7 @@ $databases['default']['toMigrate'] = array(
   'port' => '3306',
   'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
   'driver' => 'mysql',
-);
-
+];
 
 $config['environment_indicator.indicator']['bg_color'] = '#eb7a34'; // local
 $config['environment_indicator.indicator']['fg_color'] = '#ffffff';
@@ -47,6 +46,7 @@ $settings['trusted_host_patterns'] = [
   '^cmsadmin-noms-geographiques.local.ge.ch$',
   '^127\.0.\0.\1$',
   '^localhost$',
+  '^apache$',
 ];
 //$settings['cache']['default'] = 'cache.backend.memcache';
 //$settings['cache']['bins']['render'] = 'cache.backend.memcache';
@@ -54,7 +54,7 @@ $settings['trusted_host_patterns'] = [
 $settings['extension_discovery_scan_tests'] = FALSE;
 
 $config['reroute_email.settings']['enable'] = TRUE;
-$config['reroute_email.settings']['address'] = "didier.beux@etat.ge.ch";
+$config['reroute_email.settings']['address'] = "user@domain.com";
 
 $config['matomo']['site_id'] = '12';
 $config['matomo']['url'] = "";

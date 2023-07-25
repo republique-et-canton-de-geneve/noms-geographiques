@@ -1,0 +1,57 @@
+default:
+  suites:
+    default:
+      contexts:
+        - FeatureContext:
+            root_path: '%paths.base%'
+        - Drupal\DrupalExtension\Context\DrupalContext
+        - Drupal\DrupalExtension\Context\MinkContext
+        - Drupal\DrupalExtension\Context\MessageContext
+        - FailAid\Context\FailureContext
+  gherkin:
+    filters:
+      tags: ~@wip
+    cache: ~
+  formatters:
+    pretty: ~
+    html:
+      output_path: '%paths.base%/results'
+  extensions:
+    DMore\ChromeExtension\Behat\ServiceContainer\ChromeExtension: ~
+    Behat\MinkExtension:
+      files_path: '%paths.base%/sources/'
+      goutte:
+        guzzle_parameters:
+          verify: false
+      show_cmd: google-chrome %s
+      javascript_session: chrome
+      chrome:
+        api_url: "http://localhost:9222"
+    Drupal\DrupalExtension:
+      blackbox: ~
+      api_driver: drupal
+      drupal:
+        drupal_root: htdocs/
+      region_map:
+        header: "#header"
+        content: "#main-content"
+        footer: ".footer"
+      text:
+        username_field: "Nom d'utilisateur"
+        password_field: "Mot de passe"
+        log_in: "Se connecter"
+        log_out: "Se déconnecter"
+    emuse\BehatHTMLFormatter\BehatHTMLFormatterExtension:
+      name: html
+      renderer: Twig,Behat2
+      file_name: index
+      print_args: true
+      print_outp: true
+      loop_break: true
+    FailAid\Extension:
+      screenshot:
+        directory: '%paths.base%/failed/'
+        mode: default
+        autoClean: false
+imports:
+  - behat.local.yml
