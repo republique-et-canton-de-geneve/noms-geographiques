@@ -34,12 +34,15 @@ tests/failed/
 tests/results/
 tests/behat.local.yml
 
+# Ignore generated files
+/vendor/bin/
+
 private-files/*
 !private-files/.htaccess
 /htdocs/saml
 /htdocs/noms-geographiques
+/vendor/simplesamlphp/simplesamlphp/www/www
 /config/settings.local.php
-/saml
 
 # Ignore mma debug
 run.sh
@@ -54,4 +57,3 @@ run.sh
 
 # Sonarscanner
 .scannerwork
-
