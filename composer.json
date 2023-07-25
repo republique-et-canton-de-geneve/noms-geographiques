@@ -36,7 +36,6 @@
         "drupal/admin_toolbar": "^3.1",
         "drupal/bamboo_twig": "^5.0",
         "drupal/ckeditor_div_manager": "^2.0",
-        "drupal/coder": "^8.3",
         "drupal/config_ignore": "^2.3",
         "drupal/core-composer-scaffold": "^9.4",
         "drupal/core-project-message": "^9.4",
@@ -166,14 +165,17 @@
         ]
     },
     "require-dev": {
-        "behat/behat": "^3.3",
+        "behat/behat": "^3.12",
         "dmore/behat-chrome-extension": "^1.4",
+        "drupal/coder": "^8.3",
         "drupal/devel": "^5.0.2",
         "drupal/drupal-extension": "^4.2",
         "drupal/migrate_plus": "^6.0",
         "drupal/migrate_tools": "^6.0",
         "drupal/twig_vardumper": "^3.0",
+        "emuse/behat-html-formatter": "^1.0",
         "fenetikm/autoload-drupal": "dev-master",
+        "genesis/behat-fail-aid": "^3.7",
         "squizlabs/php_codesniffer": "3.*",
         "vimeo/psalm": "^4.30"
     }

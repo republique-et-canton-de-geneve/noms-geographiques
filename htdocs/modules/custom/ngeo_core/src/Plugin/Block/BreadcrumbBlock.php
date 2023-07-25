@@ -133,22 +133,25 @@ class BreadcrumbBlock extends BlockBase implements ContainerFactoryPluginInterfa
         $urlPath = str_replace($basePath, '', $urlParsed['path']);
         $urlObject = $this->pathValidator->getUrlIfValid($urlPath);
         // Get the route name of the previous page:
-        $routeName = $urlObject->getRouteName();
 
-        if ($routeName === 'entity.taxonomy_term.canonical') {
-          // Comes from a commune:
-          $text = $this->t("Retour à la commune");
-          $linkMarkup = Markup::create('<a href="' . $this->referer . '">' . $text . '</a>');
+        if (!empty($urlObject)) {
+          $routeName = $urlObject->getRouteName();
+
+          if ($routeName === 'entity.taxonomy_term.canonical') {
+            // Comes from a commune:
+            $text = $this->t("Retour à la commune");
+            $linkMarkup = Markup::create('<a href="' . $this->referer . '">' . $text . '</a>');
+          }
+          else if ($routeName === 'search.view') {
+            // Comes from the search:
+            $text = $this->t("Retour aux résultats de recherche");
+            $linkMarkup = Markup::create('<a href="' . $this->referer . '">' . $text . '</a>');
+          }
+          else  {
+            $linkMarkup = Link::fromTextAndUrl($this->t("Retour à l'accueil"), Url::fromRoute('<front>'))->toString();
+          }
         }
-        else if ($routeName === 'search.view') {
-          // Comes from the search:
-          $text = $this->t("Retour aux résultats de recherche");
-          $linkMarkup = Markup::create('<a href="' . $this->referer . '">' . $text . '</a>');
-        }
-        else  {
-          $linkMarkup = Link::fromTextAndUrl($this->t("Retour à l'accueil"), Url::fromRoute('<front>'))->toString();
-        }
-        
+
         $build['#cache']['contexts'][] = 'headers:referer';
       }
     }

@@ -86,7 +86,7 @@ function connect(){
         docker exec -it ${project_name}_apache /bin/sh
         ;;
      node)
-        docker-compose run node sh
+        docker exec -it ${project_name}_node /bin/sh
         ;;
      *)
         echo "+----------------------------------------------------+"
