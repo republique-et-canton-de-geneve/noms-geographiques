@@ -3,23 +3,24 @@ langcode: fr
 status: true
 dependencies:
   config:
-    - field.storage.node.body
     - field.storage.node.field_anecdotes
     - field.storage.node.field_carre
     - field.storage.node.field_code_voie
     - field.storage.node.field_communes_ref
-    - field.storage.node.field_definition_arrete_ce
+    - field.storage.node.field_date_ac_en_vigueur
     - field.storage.node.field_description_courte
+    - field.storage.node.body
     - field.storage.node.field_domaine_activite_ref
-    - field.storage.node.field_evenement_ref
+    - field.storage.node.field_definition_arrete_ce
     - field.storage.node.field_nature_ref
     - field.storage.node.field_nom_complet
     - field.storage.node.field_nom_de_personne_ref
     - field.storage.node.field_sexe_ref
     - field.storage.node.field_theme_speciaux_ref
-    - field.storage.node.field_type_de_voie_ref
     - field.storage.node.field_type_geographique_ref
+    - field.storage.node.field_type_de_voie_ref
     - field.storage.node.field_voie_disparue
+    - field.storage.node.field_evenement_ref
     - search_api.server.default_server
   module:
     - node
@@ -79,6 +80,14 @@ field_settings:
     dependencies:
       config:
         - field.storage.node.field_communes_ref
+  field_date_ac_en_vigueur:
+    label: 'Date de l''Arrêté du Conseil d''État en vigueur'
+    datasource_id: 'entity:node'
+    property_path: field_date_ac_en_vigueur
+    type: date
+    dependencies:
+      config:
+        - field.storage.node.field_date_ac_en_vigueur
   field_definition_arrete_ce:
     label: 'Définition de l''Arrêté du Conseil d''État'
     datasource_id: 'entity:node'

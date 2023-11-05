@@ -125,7 +125,9 @@ function gech_app_preprocess_input(&$variables) {
   // If button value is "Rechercher": we want to have a loupe icon instead.
   // It will use the template input--submit that show "children" between the button brackets.
   // @see gech_app_theme_suggestions_input_alter() for twig suggestion.
-  $variables['children'] = Markup::create('<span class="fas fa-search"></span>');
+  if ($element['#attributes']['id'] == 'edit-submit-search') {
+    $variables['children'] = Markup::create('<span class="fas fa-search"></span>');
+  }
 }
 
 /**

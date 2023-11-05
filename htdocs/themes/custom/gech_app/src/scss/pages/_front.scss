@@ -84,6 +84,11 @@
         @include sr-only;
       }
     }
+
+    .form-item-field-date-ac-en-vigueur,
+    .form-item-field-date-ac-en-vigueur-1 {
+      display: none;
+    }
   }
 
   .facets-listing {

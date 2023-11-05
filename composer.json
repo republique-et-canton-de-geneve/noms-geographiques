@@ -95,6 +95,10 @@
         "patches": {
             "drupal/config_ignore": {
                 "[2857247] - Support for export filtering via Drush'": "https://www.drupal.org/files/issues/2021-08-18/config_ignore_2857247-75.patch"
+            },
+            "drupal/search_api": {
+                "Date views filters parse the given date": "https://www.drupal.org/files/issues/2021-02-21/3137821-9--views_filter_date_handling.patch",
+                "Index content after its creation on behat steps does not work" : "https://www.drupal.org/files/issues/2023-05-07/3263875-10--fix_behat_integration.patch"
             }
         },
         "drupal-scaffold": {

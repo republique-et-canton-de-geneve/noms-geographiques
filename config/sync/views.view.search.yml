@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.storage.node.body
     - field.storage.node.field_communes_ref
+    - field.storage.node.field_date_ac_en_vigueur
     - field.storage.node.field_domaine_activite_ref
     - field.storage.node.field_evenement_ref
     - field.storage.node.field_nature_ref
@@ -16,6 +17,7 @@ dependencies:
     - field.storage.node.field_voie_disparue
     - search_api.index.lieux_geneve
   module:
+    - datetime
     - search_api
     - text
 id: search
@@ -1002,6 +1004,78 @@ display:
                 display_method: label
               types_voie:
                 display_method: label
+        field_date_ac_en_vigueur:
+          id: field_date_ac_en_vigueur
+          table: search_api_datasource_lieux_geneve_entity_node
+          field: field_date_ac_en_vigueur
+          relationship: none
+          group_type: group
+          admin_label: ''
+          entity_type: node
+          plugin_id: search_api_field
+          label: ''
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: false
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: value
+          type: datetime_default
+          settings:
+            timezone_override: ''
+            format_type: medium_explicit_month
+          group_column: value
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+          field_rendering: true
+          fallback_handler: search_api
+          fallback_options:
+            link_to_item: false
+            use_highlighting: false
+            multi_type: separator
+            multi_separator: ', '
         changed:
           id: changed
           table: search_api_datasource_lieux_geneve_entity_node
@@ -1012,7 +1086,7 @@ display:
           entity_type: node
           plugin_id: search_api_field
           label: ''
-          exclude: false
+          exclude: true
           alter:
             alter_text: false
             text: ''
@@ -1335,6 +1409,104 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_date_ac_en_vigueur:
+          id: field_date_ac_en_vigueur
+          table: search_api_index_lieux_geneve
+          field: field_date_ac_en_vigueur
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_date
+          operator: '>='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_ac_en_vigueur_op
+            label: Du
+            description: ''
+            use_operator: false
+            operator: field_date_ac_en_vigueur_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_date_ac_en_vigueur
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              admin_site: '0'
+              contributeur: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: jj.mm.aaaa
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+        field_date_ac_en_vigueur_1:
+          id: field_date_ac_en_vigueur_1
+          table: search_api_index_lieux_geneve
+          field: field_date_ac_en_vigueur
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: search_api_date
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_date_ac_en_vigueur_1_op
+            label: Au
+            description: ''
+            use_operator: false
+            operator: field_date_ac_en_vigueur_1_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_date_ac_en_vigueur_1
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              admin_site: '0'
+              contributeur: '0'
+            min_placeholder: ''
+            max_placeholder: ''
+            placeholder: jj.mm.aaaa
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
       style:
         type: default
       row:
@@ -1366,6 +1538,7 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_communes_ref'
+        - 'config:field.storage.node.field_date_ac_en_vigueur'
         - 'config:field.storage.node.field_domaine_activite_ref'
         - 'config:field.storage.node.field_evenement_ref'
         - 'config:field.storage.node.field_nature_ref'
@@ -1464,6 +1637,7 @@ display:
       tags:
         - 'config:field.storage.node.body'
         - 'config:field.storage.node.field_communes_ref'
+        - 'config:field.storage.node.field_date_ac_en_vigueur'
         - 'config:field.storage.node.field_domaine_activite_ref'
         - 'config:field.storage.node.field_evenement_ref'
         - 'config:field.storage.node.field_nature_ref'

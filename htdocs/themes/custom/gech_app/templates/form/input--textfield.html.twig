@@ -10,4 +10,24 @@
  * @see template_preprocess_input()
  */
 #}
-<input{{ attributes.addClass('form-control') }} />{{ children }}
+{# Classe CSS de base pour les éléments de formulaire #}
+{% set classes = [
+'form-element',
+'form-element--type-date',
+'form-element--api-date',
+'form-date',
+'form-control',
+]
+%}
+{#
+/**
+ * Si l'ID de stockage de l'attribut contient 'edit-field-date-ac-en-vigueur',
+ * alors les classes CSS définies ci-dessus seront ajouté,
+ * suppression la classe CSS 'form-text' et ajout l'attribut 'type' avec la valeur 'date' à l'élément input.
+ */
+#}
+{%  if 'edit-field-date-ac-en-vigueur' in attributes.storage.id|render %}
+  <input{{ attributes.addClass(classes).removeClass('form-text').setAttribute('type', 'date') }}/>{{ children }}
+{% else %}
+  <input{{ attributes.addClass('form-control') }} />{{ children }}
+{% endif %}

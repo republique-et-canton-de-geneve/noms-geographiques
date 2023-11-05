@@ -4,7 +4,7 @@ Le theme a été implémenté de manière à ce que Gulp fonctionne depuis le co
 
 Liens utiles:
 - [Bootstrap 5.2](https://getbootstrap.com/docs/5.2)
-- [docker4drupal sur un poste PTE](***REMOVED***/viewpage.action?pageId=1463550270)
+- docker4drupal sur un poste PTE
 - [docker4drupal](https://github.com/wodby/docker4drupal)
 
 ### Développement

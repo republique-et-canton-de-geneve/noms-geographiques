@@ -19674,6 +19674,10 @@ form textarea.form-control:focus {
     width: 1px;
   }
 }
+.path-frontpage #views-exposed-form-search-page-recherche .form-item-field-date-ac-en-vigueur,
+.path-frontpage #views-exposed-form-search-page-recherche .form-item-field-date-ac-en-vigueur-1 {
+  display: none;
+}
 .path-frontpage .facets-listing {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -19994,6 +19998,13 @@ form textarea.form-control:focus {
 .path-search .search-custom-sort .col-auto:first-child {
   padding-right: 0;
 }
+.path-search #views-exposed-form-search-page-recherche {
+  display: inline;
+}
+.path-search #views-exposed-form-search-page-recherche .form-item-field-date-ac-en-vigueur,
+.path-search #views-exposed-form-search-page-recherche .form-item-field-date-ac-en-vigueur-1 {
+  margin-top: 15px;
+}
 .path-search #views-exposed-form-search-page-recherche .form-item-keyword label {
   border: 0;
   clip: rect(0, 0, 0, 0);
@@ -20004,12 +20015,25 @@ form textarea.form-control:focus {
   position: absolute;
   width: 1px;
 }
+.path-search #views-exposed-form-search-page-recherche label[for=edit-field-date-ac-en-vigueur--2]::before {
+  content: "Date de l'arrêté cantonal :";
+  display: block;
+  margin-bottom: 15px;
+}
 .path-search #views-exposed-form-search-page-recherche .btn.form-submit {
   padding-left: 13px;
   padding-right: 13px;
+  margin-left: 0;
+  margin-top: 15px;
+  width: 100%;
 }
 .path-search .views-row {
   margin-bottom: 30px;
+}
+.path-search .views-row .views-field-field-date-ac-en-vigueur .field-content {
+  color: grey;
+  font-size: 14px;
+  margin-left: 5px;
 }
 .path-search .views-row .views-field-field-nom-complet-1 {
   color: #227D5F;

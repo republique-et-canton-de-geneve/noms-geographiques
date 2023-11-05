@@ -57,21 +57,45 @@
   }
 
   #views-exposed-form-search-page-recherche {
+    display: inline;
+
+    .form-item-field-date-ac-en-vigueur,
+    .form-item-field-date-ac-en-vigueur-1 {
+      margin-top: 15px;
+    }
+
     .form-item-keyword {
       label {
         @include sr-only;
       }
     }
 
+    label[for="edit-field-date-ac-en-vigueur--2"]::before{
+      content: "Date de l'arrêté cantonal :";
+      display: block;
+      margin-bottom: 15px;
+    }
+
     .btn.form-submit {
       padding-left: 13px;
       padding-right: 13px;
+      margin-left: 0;
+      margin-top: 15px;
+      width: 100%;
     }
   }
 
   // Résultats.
   .views-row {
     margin-bottom: 30px;
+
+    .views-field-field-date-ac-en-vigueur {
+      .field-content {
+        color: grey;
+        font-size: 14px;
+        margin-left: 5px;
+      }
+    }
 
     .views-field-field-nom-complet-1 {
       color: $color-green-300;

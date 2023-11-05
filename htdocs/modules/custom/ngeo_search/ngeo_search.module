@@ -20,6 +20,9 @@ function ngeo_search_form_views_exposed_form_alter(&$form, FormStateInterface $f
   }
 
   _ngeo_search_keep_facets_in_query($form);
+
+  // Add a custom submit handler to save the array of types back to the config file.
+  $form['#validate'][] = '_ngeo_search_date_validation';
 }
 
 /**
@@ -52,3 +55,49 @@ function _ngeo_search_keep_facets_in_query(&$form) {
   }
 }
 
+/**
+ * Fonction de validation de formulaire pour les dates de recherche.
+ *
+ * @param array $form
+ *   Le tableau de construction du formulaire.
+ * @param FormStateInterface $form_state
+ *   L'objet contenant l'état courant du formulaire.
+ */
+function _ngeo_search_date_validation(array &$form, FormStateInterface $form_state) {
+  //Validation de formulaire
+  //Test des cas limites ou ko limites
+
+// Récupération des valeurs des champs dates et conversion en timestamp.
+  $dateDu = strtotime($form_state->getValue('field_date_ac_en_vigueur'));
+  $dateAu = strtotime($form_state->getValue('field_date_ac_en_vigueur_1'));
+
+
+  // Si les champs dates sont vides, il n'y a rien à valider.
+  if ($dateDu == "" && $dateAu == "") {
+    return;
+  }
+
+  // Validation que la date "Du" est bien inférieure à la date "Au".
+  if ($dateDu != "" && $dateAu != "" && $dateDu > $dateAu) {
+    $form_state->setErrorByName("Du>Au",
+      t("Le champ 'Du' doit être plus petit que le champ 'Au'."));
+  }
+
+  // Validation que la date "Du" n'est pas supérieure à la date d'aujourd'hui.
+  if ($dateDu != '' && $dateDu > time()) {
+    $form_state->setErrorByName("Du>Date()",
+      t("Le champ 'Du' ne doit pas être plus grand que la date d'aujourd'hui."));
+  }
+
+  // Validation que la date "Du" n'est pas antérieure au 10 avril 1906.
+  if ($dateDu != '' && $dateDu < strtotime('1906-04-10 00:00:00')) {
+    $form_state->setErrorByName("Du<1906-04-10",
+      t("Le champ 'Du' ne doit pas être plus petit que la date 10 avril 1906."));
+  }
+
+  // Validation que la date "Au" n'est pas antérieure au 10 avril 1906.
+  if ($dateAu != '' && $dateAu < strtotime('1906-04-10 00:00:00')) {
+    $form_state->setErrorByName("Du<1906-04-10",
+      t("Le champ 'Au' ne doit pas être plus petit que la date 10 avril 1906."));
+  }
+}
