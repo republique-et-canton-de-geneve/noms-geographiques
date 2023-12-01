@@ -20003,22 +20003,18 @@ form textarea.form-control:focus {
 }
 .path-search #views-exposed-form-search-page-recherche .form-item-field-date-ac-en-vigueur,
 .path-search #views-exposed-form-search-page-recherche .form-item-field-date-ac-en-vigueur-1 {
+  font-size: 14px;
+  line-height: 19.1780821918px;
   margin-top: 15px;
 }
 .path-search #views-exposed-form-search-page-recherche .form-item-keyword label {
-  border: 0;
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
+  font-size: 14px;
+  line-height: 19.1780821918px;
 }
 .path-search #views-exposed-form-search-page-recherche label[for=edit-field-date-ac-en-vigueur--2]::before {
   content: "Date de l'arrêté cantonal :";
   display: block;
-  margin-bottom: 15px;
+  margin-bottom: 5px;
 }
 .path-search #views-exposed-form-search-page-recherche .btn.form-submit {
   padding-left: 13px;
@@ -20033,6 +20029,7 @@ form textarea.form-control:focus {
 .path-search .views-row .views-field-field-date-ac-en-vigueur .field-content {
   color: grey;
   font-size: 14px;
+  line-height: 19.1780821918px;
   margin-left: 5px;
 }
 .path-search .views-row .views-field-field-nom-complet-1 {

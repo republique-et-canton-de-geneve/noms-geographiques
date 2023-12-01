@@ -61,19 +61,20 @@
 
     .form-item-field-date-ac-en-vigueur,
     .form-item-field-date-ac-en-vigueur-1 {
+      @include font-size($font-size-small);
       margin-top: 15px;
     }
 
     .form-item-keyword {
       label {
-        @include sr-only;
+        @include font-size($font-size-small);
       }
     }
 
     label[for="edit-field-date-ac-en-vigueur--2"]::before{
       content: "Date de l'arrêté cantonal :";
       display: block;
-      margin-bottom: 15px;
+      margin-bottom: 5px;
     }
 
     .btn.form-submit {
@@ -92,7 +93,7 @@
     .views-field-field-date-ac-en-vigueur {
       .field-content {
         color: grey;
-        font-size: 14px;
+        @include font-size($font-size-small);
         margin-left: 5px;
       }
     }
