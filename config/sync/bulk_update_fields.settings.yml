@@ -1,0 +1,44 @@
+_core:
+  default_config_hash: N_iu_PLeuV8SgRtjf-XpsE7HBIr-CBlX6vvVvMbTLPw
+bulk_update_fields: null
+langcode: fr
+exclude:
+  field_domaine_activite_ref: field_domaine_activite_ref
+  langcode: 0
+  promote: 0
+  sticky: 0
+  revision_default: 0
+  revision_translation_affected: 0
+  moderation_state: 0
+  metatag: 0
+  path: 0
+  body: 0
+  field_image: 0
+  field_tags: 0
+  field_anecdotes: 0
+  field_carre: 0
+  field_code_voie: 0
+  field_commentaire_saisie: 0
+  field_communes_ref: 0
+  field_date_ac_en_vigueur: 0
+  field_date_ac_originel: 0
+  field_date_entree_en_vigueur: 0
+  field_definition_arrete_ce: 0
+  field_description_courte: 0
+  field_documents_rev: 0
+  field_evenement_ref: 0
+  field_illustrations: 0
+  field_illustrations_anecdot: 0
+  field_is_contenu_vide: 0
+  field_latitude: 0
+  field_liant: 0
+  field_longitude: 0
+  field_longueur: 0
+  field_nature_ref: 0
+  field_nom_complet: 0
+  field_nom_de_personne_ref: 0
+  field_sexe_ref: 0
+  field_theme_speciaux_ref: 0
+  field_type_de_voie_ref: 0
+  field_type_geographique_ref: 0
+  field_voie_disparue: 0

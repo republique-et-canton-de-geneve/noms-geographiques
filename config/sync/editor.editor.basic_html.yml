@@ -1,70 +1,81 @@
-uuid: 821dd16b-8dd7-47a8-88d1-3b5064047dd7
+uuid: 589f6e12-50c9-49d1-b038-ef67e1aeca0b
 langcode: fr
 status: true
 dependencies:
   config:
     - filter.format.basic_html
   module:
-    - ckeditor
-_core:
-  default_config_hash: AqlPmO16LvJI4D0Ih6u4GFQIzqr5OnLgAUSjcUGWk2g
+    - ckeditor5
 format: basic_html
-editor: ckeditor
+editor: ckeditor5
 settings:
   toolbar:
-    rows:
-      -
-        -
-          name: Formatting
-          items:
-            - Bold
-            - Italic
-            - Subscript
-            - Superscript
-            - Blockquote
-        -
-          name: Formatting_2
-          items:
-            - Undo
-            - Redo
-            - RemoveFormat
-        -
-          name: Media
-          items:
-            - DrupalImage
-        -
-          name: Linking
-          items:
-            - DrupalLink
-            - DrupalUnlink
-        -
-          name: Tools
-          items:
-            - Cut
-            - Copy
-            - Paste
-        -
-          name: Source
-          items:
-            - Source
-      -
-        -
-          name: Formatting
-          items:
-            - Format
-        -
-          name: Styles
-          items:
-            - CreateDiv
-            - Styles
-        -
-          name: Retraits
-          items:
-            - BulletedList
-            - NumberedList
+    items:
+      - bold
+      - italic
+      - subscript
+      - superscript
+      - blockQuote
+      - '|'
+      - undo
+      - redo
+      - removeFormat
+      - '|'
+      - drupalInsertImage
+      - '|'
+      - link
+      - '|'
+      - sourceEditing
+      - '-'
+      - heading
+      - '|'
+      - style
+      - '|'
+      - bulletedList
+      - numberedList
+      - '|'
   plugins:
-    stylescombo:
-      styles: 'div.exergue|Texte en exergue'
+    ckeditor5_heading:
+      enabled_headings:
+        - heading2
+        - heading3
+        - heading4
+        - heading5
+        - heading6
+    ckeditor5_style:
+      styles:
+        -
+          label: 'Texte en exergue'
+          element: '<p class="exergue">'
+    ckeditor5_sourceEditing:
+      allowed_tags:
+        - '<cite>'
+        - '<dl>'
+        - '<dt>'
+        - '<dd>'
+        - '<span>'
+        - '<a target>'
+        - '<blockquote cite>'
+        - '<ul type>'
+        - '<ol type>'
+        - '<h2 id>'
+        - '<h3 id>'
+        - '<h4 id>'
+        - '<h5 id>'
+        - '<h6 id>'
+        - '<div class>'
+    ckeditor5_list:
+      reversed: false
+      startIndex: true
+    ckeditor5_imageResize:
+      allow_resize: true
+    editor_advanced_link_link:
+      enabled_attributes:
+        - class
+        - id
+        - rel
+        - target
+        - title
 image_upload:
   status: true
   scheme: public
@@ -72,4 +83,4 @@ image_upload:
   max_size: ''
   max_dimensions:
     width: 1024
-    height: null
+    height: 0

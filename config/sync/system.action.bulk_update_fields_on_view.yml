@@ -1,0 +1,11 @@
+uuid: a0ab55d1-ea96-4e34-8e43-f8400601ab43
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_view
+label: 'Bulk Update Vue Fields'
+type: view
+plugin: bulk_update_fields_action_base
+configuration: {  }

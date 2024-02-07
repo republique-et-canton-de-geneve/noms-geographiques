@@ -20,12 +20,14 @@ dependencies:
     - taxonomy.vocabulary.types_voie
     - workflows.workflow.editorial
   module:
+    - bulk_update_fields
     - content_moderation
     - filter
     - node
     - system
     - taxonomy
     - toolbar
+    - views_bulk_edit
 id: admin_site
 label: Admin-site
 weight: 4
@@ -35,6 +37,7 @@ permissions:
   - 'access content overview'
   - 'access taxonomy overview'
   - 'access toolbar'
+  - 'administer bulk_update_fields'
   - 'administer nodes'
   - 'administer taxonomy'
   - 'bypass node access'
@@ -82,6 +85,7 @@ permissions:
   - 'edit terms in types_document_joint'
   - 'edit terms in types_lieu_geographique'
   - 'edit terms in types_voie'
+  - 'exlude bulk_update_fields'
   - 'revert all revisions'
   - 'revert lieu_geneve revisions'
   - 'revert page revisions'
@@ -92,6 +96,7 @@ permissions:
   - 'use editorial transition validate'
   - 'use text format basic_html'
   - 'use text format full_html'
+  - 'use views bulk edit'
   - 'view all revisions'
   - 'view any unpublished content'
   - 'view latest version'

@@ -1,10 +1,10 @@
-# French translation of Devel (5.1.1)
-# Copyright (c) 2022 by the French translation team
+# French translation of Devel (5.1.2)
+# Copyright (c) 2023 by the French translation team
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Devel (5.1.1)\n"
-"POT-Creation-Date: 2022-12-21 18:46+0000\n"
+"Project-Id-Version: Devel (5.1.2)\n"
+"POT-Creation-Date: 2023-06-07 18:43+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -394,3 +394,5 @@ msgid "Kint"
 msgstr "Kint"
 msgid "Devel Toolbar Settings"
 msgstr "Paramètres de Devel Toolbar"
+msgid "Links related to Devel module."
+msgstr "Liens associés au module Devel."

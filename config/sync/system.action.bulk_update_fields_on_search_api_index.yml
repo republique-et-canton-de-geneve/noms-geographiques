@@ -1,0 +1,11 @@
+uuid: be6977f4-a6b8-4dc2-aa28-28f2b194629b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_search_api_index
+label: 'Bulk Update Index de recherche Fields'
+type: search_api_index
+plugin: bulk_update_fields_action_base
+configuration: {  }

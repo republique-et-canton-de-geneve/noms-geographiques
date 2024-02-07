@@ -1,0 +1,11 @@
+uuid: f883cebc-7f35-4c24-875d-d2512c3f578b
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_workflow
+label: 'Bulk Update Processus Fields'
+type: workflow
+plugin: bulk_update_fields_action_base
+configuration: {  }
