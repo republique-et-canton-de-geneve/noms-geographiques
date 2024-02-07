@@ -1,0 +1,11 @@
+uuid: d7fb3536-6009-4b12-81ec-499fde7e52ab
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_search_api_server
+label: 'Bulk Update Serveur de recherche Fields'
+type: search_api_server
+plugin: bulk_update_fields_action_base
+configuration: {  }

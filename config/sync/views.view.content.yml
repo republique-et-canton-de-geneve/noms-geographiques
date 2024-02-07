@@ -4,13 +4,27 @@ status: true
 dependencies:
   config:
     - field.storage.node.field_communes_ref
+    - field.storage.node.field_domaine_activite_ref
     - field.storage.node.field_is_contenu_vide
     - field.storage.node.field_nom_complet
     - taxonomy.vocabulary.communes
+    - taxonomy.vocabulary.domaines_activite
+  content:
+    - 'taxonomy_term:domaines_activite:19dfbd04-2276-4755-bcaa-9e8040a4c2ca'
+    - 'taxonomy_term:domaines_activite:2b496247-c0a2-4d7d-904d-fd310f3d2e0c'
+    - 'taxonomy_term:domaines_activite:353f05ce-c1e8-48e4-9e6c-1bc50aa36179'
+    - 'taxonomy_term:domaines_activite:6ebc2267-5000-4ad0-a719-59f0901c6d0e'
+    - 'taxonomy_term:domaines_activite:7518af37-8ded-40c3-94ee-8985f32b9314'
+    - 'taxonomy_term:domaines_activite:88395525-8bb9-4d88-b793-3269b7ef5d08'
+    - 'taxonomy_term:domaines_activite:9ec769be-0afe-4034-bb52-10edeac96a3f'
+    - 'taxonomy_term:domaines_activite:a5821d15-ada2-41db-ac47-b45ba94464c3'
+    - 'taxonomy_term:domaines_activite:cfb2689a-fa22-4c2b-826f-c77b8d80d5cd'
+    - 'taxonomy_term:types_voie:956d00ff-8148-4ad8-8d4b-2a598b0ba48e'
   module:
     - node
     - taxonomy
     - user
+    - views_bulk_operations
 _core:
   default_config_hash: vBKWYGGDoAX-tFd1JErB8tZLSxx3lJ0foouVsgpcbB4
 id: content
@@ -29,6 +43,70 @@ display:
     display_options:
       title: Contenu
       fields:
+        views_bulk_operations_bulk_form:
+          id: views_bulk_operations_bulk_form
+          table: views
+          field: views_bulk_operations_bulk_form
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: views_bulk_operations_bulk_form
+          label: 'Views bulk operations'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: true
+          hide_alter_empty: true
+          batch: true
+          batch_size: 10
+          form_step: true
+          ajax_loader: false
+          buttons: true
+          action_title: Action
+          clear_on_exposed: true
+          force_selection_info: true
+          selected_actions:
+            6:
+              action_id: views_bulk_edit
+              preconfiguration:
+                add_confirmation: true
+                label_override: 'Modifier la valeur du champ'
+                get_bundles_from_results: true
         title:
           id: title
           table: node_field_data
@@ -275,6 +353,69 @@ display:
           type: entity_reference_label
           settings:
             link: false
+          group_column: target_id
+          group_columns: {  }
+          group_rows: true
+          delta_limit: 0
+          delta_offset: 0
+          delta_reversed: false
+          delta_first_last: false
+          multi_type: separator
+          separator: ', '
+          field_api_classes: false
+        field_domaine_activite_ref:
+          id: field_domaine_activite_ref
+          table: node__field_domaine_activite_ref
+          field: field_domaine_activite_ref
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: field
+          label: 'Domaine d''activité'
+          exclude: false
+          alter:
+            alter_text: false
+            text: ''
+            make_link: false
+            path: ''
+            absolute: false
+            external: false
+            replace_spaces: false
+            path_case: none
+            trim_whitespace: false
+            alt: ''
+            rel: ''
+            link_class: ''
+            prefix: ''
+            suffix: ''
+            target: ''
+            nl2br: false
+            max_length: 0
+            word_boundary: true
+            ellipsis: true
+            more_link: false
+            more_link_text: ''
+            more_link_path: ''
+            strip_tags: false
+            trim: false
+            preserve_tags: ''
+            html: false
+          element_type: ''
+          element_class: ''
+          element_label_type: ''
+          element_label_class: ''
+          element_label_colon: true
+          element_wrapper_type: ''
+          element_wrapper_class: ''
+          element_default_classes: true
+          empty: ''
+          hide_empty: false
+          empty_zero: false
+          hide_alter_empty: true
+          click_sort_column: target_id
+          type: entity_reference_label
+          settings:
+            link: true
           group_column: target_id
           group_columns: {  }
           group_rows: true
@@ -906,6 +1047,65 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
+        field_domaine_activite_ref_target_id:
+          id: field_domaine_activite_ref_target_id
+          table: node__field_domaine_activite_ref
+          field: field_domaine_activite_ref_target_id
+          relationship: none
+          group_type: group
+          admin_label: ''
+          plugin_id: taxonomy_index_tid
+          operator: or
+          value:
+            55: 55
+            56: 56
+            57: 57
+            58: 58
+            59: 59
+            60: 60
+            62: 62
+            142: 142
+            63: 63
+            61: 61
+          group: 1
+          exposed: false
+          expose:
+            operator_id: field_domaine_activite_ref_target_id_op
+            label: 'Domaine d''activité (field_domaine_activite_ref)'
+            description: ''
+            use_operator: false
+            operator: field_domaine_activite_ref_target_id_op
+            operator_limit_selection: false
+            operator_list: {  }
+            identifier: field_domaine_activite_ref_target_id
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+              admin_site: '0'
+              contributeur: '0'
+            reduce: false
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          reduce_duplicates: true
+          vid: domaines_activite
+          type: select
+          hierarchy: false
+          limit: true
+          error_message: true
       filter_groups:
         operator: AND
         groups:
@@ -919,7 +1119,6 @@ display:
           columns:
             title: title
             field_nom_complet: field_nom_complet
-            title_1: title_1
             field_communes_ref: field_communes_ref
             type: type
             field_is_contenu_vide: field_is_contenu_vide
@@ -927,6 +1126,8 @@ display:
             changed: changed
             name: name
             operations: operations
+            field_domaine_activite_ref: field_domaine_activite_ref
+            views_bulk_operations_bulk_form: views_bulk_operations_bulk_form
           default: changed
           info:
             title:
@@ -938,13 +1139,6 @@ display:
               responsive: ''
             field_nom_complet:
               sortable: false
-              default_sort_order: asc
-              align: ''
-              separator: ''
-              empty_column: false
-              responsive: ''
-            title_1:
-              sortable: true
               default_sort_order: asc
               align: ''
               separator: ''
@@ -995,6 +1189,16 @@ display:
               separator: ''
               empty_column: false
               responsive: ''
+            field_domaine_activite_ref:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
+            views_bulk_operations_bulk_form:
+              align: ''
+              separator: ''
+              empty_column: false
+              responsive: ''
           override: true
           sticky: true
           summary: ''
@@ -1020,7 +1224,7 @@ display:
       show_admin_links: false
       display_extenders: {  }
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -1031,6 +1235,7 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_communes_ref'
+        - 'config:field.storage.node.field_domaine_activite_ref'
         - 'config:field.storage.node.field_is_contenu_vide'
         - 'config:field.storage.node.field_nom_complet'
   page_1:
@@ -1055,7 +1260,7 @@ display:
         weight: -10
         menu_name: admin
     cache_metadata:
-      max-age: -1
+      max-age: 0
       contexts:
         - 'languages:language_content'
         - 'languages:language_interface'
@@ -1066,5 +1271,6 @@ display:
         - user.permissions
       tags:
         - 'config:field.storage.node.field_communes_ref'
+        - 'config:field.storage.node.field_domaine_activite_ref'
         - 'config:field.storage.node.field_is_contenu_vide'
         - 'config:field.storage.node.field_nom_complet'

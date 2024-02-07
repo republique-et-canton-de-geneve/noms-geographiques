@@ -1,0 +1,11 @@
+uuid: f94aef0f-1aba-468f-8f0a-8d6bad6b387d
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_facets_facet
+label: 'Bulk Update Facette Fields'
+type: facets_facet
+plugin: bulk_update_fields_action_base
+configuration: {  }

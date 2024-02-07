@@ -1,0 +1,11 @@
+uuid: 34bcb4e8-354a-4bac-b471-a86f13e0c0ef
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_shortcut_set
+label: 'Bulk Update Ensemble de raccourcis Fields'
+type: shortcut_set
+plugin: bulk_update_fields_action_base
+configuration: {  }
