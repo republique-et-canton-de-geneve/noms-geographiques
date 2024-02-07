@@ -1,0 +1,11 @@
+uuid: dece69a2-7a55-4315-9146-7ee935fba7a7
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_path_alias
+label: 'Bulk Update Alias d''URL Fields'
+type: path_alias
+plugin: bulk_update_fields_action_base
+configuration: {  }

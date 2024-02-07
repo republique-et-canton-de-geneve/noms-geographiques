@@ -1,0 +1,11 @@
+uuid: 6505864f-10f1-451d-bb0e-5760ba36848e
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_entity_view_display
+label: 'Bulk Update Entité d''affichage Fields'
+type: entity_view_display
+plugin: bulk_update_fields_action_base
+configuration: {  }

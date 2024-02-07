@@ -1,0 +1,11 @@
+uuid: 73c97e30-bead-4027-bdc8-11554823c472
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_menu_link_content
+label: 'Bulk Update Lien de menu personnalisé Fields'
+type: menu_link_content
+plugin: bulk_update_fields_action_base
+configuration: {  }

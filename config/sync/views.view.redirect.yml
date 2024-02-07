@@ -9,20 +9,20 @@ dependencies:
 _core:
   default_config_hash: 7-f_3ASk-Ly7MqcUiwREHB0r0l-jkq7bKwjRLTMhDEs
 id: redirect
-label: Redirect
+label: Rediriger
 module: views
-description: 'List of redirects'
+description: 'Liste des redirections'
 tag: ''
 base_table: redirect
 base_field: rid
 display:
   default:
     id: default
-    display_title: Master
+    display_title: Maître
     display_plugin: default
     position: 0
     display_options:
-      title: Redirect
+      title: Rediriger
       fields:
         redirect_bulk_form:
           id: redirect_bulk_form
@@ -74,7 +74,7 @@ display:
           hide_empty: false
           empty_zero: false
           hide_alter_empty: true
-          action_title: 'With selection'
+          action_title: 'Pour la sélection'
           include_exclude: exclude
           selected_actions: {  }
         redirect_source__path:
@@ -247,7 +247,7 @@ display:
         type: basic
         options:
           submit_button: Filtrer
-          reset_button: false
+          reset_button: true
           reset_button_label: Réinitialiser
           exposed_sorts_label: 'Trier par'
           expose_sort_order: true
@@ -270,7 +270,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'There is no redirect yet.'
+          content: 'Il n''y a pas encore de redirection.'
           tokenize: false
       sorts: {  }
       arguments: {  }
@@ -378,7 +378,7 @@ display:
           exposed: true
           expose:
             operator_id: status_code_op
-            label: 'Status code'
+            label: 'Code du statut'
             description: ''
             use_operator: false
             operator: status_code_op
@@ -394,7 +394,7 @@ display:
               administrator: '0'
           is_grouped: true
           group_info:
-            label: 'Status code'
+            label: 'Code du statut'
             description: ''
             identifier: status_code
             optional: true
@@ -405,49 +405,49 @@ display:
             default_group_multiple: {  }
             group_items:
               1:
-                title: '300 Multiple Choices'
+                title: '300 Choix Multiples'
                 operator: '='
                 value:
                   min: ''
                   max: ''
                   value: '300'
               2:
-                title: '301 Moved Permanently'
+                title: '301 Redirection Permanente'
                 operator: '='
                 value:
                   min: ''
                   max: ''
                   value: '301'
               3:
-                title: '302 Found'
+                title: '302 Trouvé'
                 operator: '='
                 value:
                   min: ''
                   max: ''
                   value: '302'
               4:
-                title: '303 See Other'
+                title: '303 Voir Ailleurs'
                 operator: '='
                 value:
                   min: ''
                   max: ''
                   value: '303'
               5:
-                title: '304 Not Modified'
+                title: '304 Non Modifié'
                 operator: '='
                 value:
                   min: ''
                   max: ''
                   value: '304'
               6:
-                title: '305 Use Proxy'
+                title: '305 Utilise un Proxy'
                 operator: '='
                 value:
                   min: ''
                   max: ''
                   value: '305'
               7:
-                title: '307 Temporary Redirect'
+                title: '307 Redirection Temporaire'
                 operator: '='
                 value:
                   min: ''
