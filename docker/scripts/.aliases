@@ -47,4 +47,5 @@ alias clearX='find ../ -type f -perm 0755 \
 alias setXdebug='xdebug true;restart'
 alias unsetXdebug='xdebug false;restart'
 alias composerInstall='cleanDrupal ${base_path}; composer install'
+alias setVersion='drush sset environment_indicator.current_release $(git branch | grep \* | cut -d" " -f2)'
 
