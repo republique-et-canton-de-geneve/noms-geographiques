@@ -94,6 +94,34 @@ services:
   memcached:
     container_name: "${PROJECT_NAME}_memcached"
     image: "wodby/memcached:${MEMCACHED_TAG}"
+  
+  node:
+    image: wodby/node:$NODE_TAG
+    container_name: "${PROJECT_NAME}_node"
+    working_dir: /var/www/html/htdocs/themes/custom/gech_app/src
+    labels:
+    - "traefik.http.services.${PROJECT_NAME}_node.loadbalancer.server.port=3000"
+    - "traefik.http.routers.${PROJECT_NAME}_node.rule=Host(`node.${PROJECT_BASE_URL}`)"
+    expose:
+    - "3000"
+    volumes:
+    - ../:/var/www/html
+    command: sh -c 'yarn install && yarn run start'
+
+#  node:
+#    build: dockerfile/node
+#    user: root
+#    container_name: "${PROJECT_NAME}_node"
+#    working_dir: /var/www/html/htdocs/themes/custom/gech_app/src
+#    labels:
+#      - 'traefik.backend=${PROJECT_NAME}_node'
+#      - 'traefik.port=3000'
+#      - 'traefik.frontend.rule=Host:front.${PROJECT_BASE_URL}'
+#    expose:
+#      - "3000"
+#    tty: true
+#    volumes:
+#      - ../:/var/www/html
 
   traefik:
     image: "traefik:v2.0"
@@ -116,17 +144,4 @@ services:
     volumes:
       - ./comptes_locaux_saml.php:/var/www/simplesamlphp/config/authsources.php
 
-  node:
-    build: dockerfile/node
-    user: root
-    container_name: "${PROJECT_NAME}_node"
-    working_dir: /var/www/html/htdocs/themes/custom/gech_app/src
-    labels:
-      - 'traefik.backend=${PROJECT_NAME}_node'
-      - 'traefik.port=3000'
-      - 'traefik.frontend.rule=Host:front.${PROJECT_BASE_URL}'
-    expose:
-      - "3000"
-    tty: true
-    volumes:
-      - ../:/var/www/html
+
