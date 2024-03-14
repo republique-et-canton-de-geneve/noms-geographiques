@@ -4,18 +4,21 @@
   "description": "GE.ch app",
   "main": "index.js",
   "scripts": {
+    "start": "yarn gulp",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "/DEVELOPPEUR-PHP/1985-Zeteo"
+    "url": "github.com/republique-et-canton-de-geneve/noms-geographiques.git"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.1",
     "bootstrap": "^5.2.0",
-    "magnific-popup": "^1.1.0"
+    "gulp-cli": "^2.3.0",
+    "magnific-popup": "^1.1.0",
+    "yarn": "^1.22.21"
   },
   "devDependencies": {
     "autoprefixer": "^7.2.6",
