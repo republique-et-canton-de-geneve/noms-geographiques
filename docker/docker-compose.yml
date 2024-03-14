@@ -108,21 +108,6 @@ services:
     - ../:/var/www/html
     command: sh -c 'yarn install && yarn run start'
 
-#  node:
-#    build: dockerfile/node
-#    user: root
-#    container_name: "${PROJECT_NAME}_node"
-#    working_dir: /var/www/html/htdocs/themes/custom/gech_app/src
-#    labels:
-#      - 'traefik.backend=${PROJECT_NAME}_node'
-#      - 'traefik.port=3000'
-#      - 'traefik.frontend.rule=Host:front.${PROJECT_BASE_URL}'
-#    expose:
-#      - "3000"
-#    tty: true
-#    volumes:
-#      - ../:/var/www/html
-
   traefik:
     image: "traefik:v2.0"
     container_name: "${PROJECT_NAME}_traefik"
