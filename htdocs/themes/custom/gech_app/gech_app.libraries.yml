@@ -34,9 +34,9 @@ image-popup:
     js/jquery.magnific-popup.min.js: {minified: true}
     js/ngeoImagePopup.js: {}
   dependencies:
-    - core/jquery
-    - core/jquery.once
     - core/drupal
+    - core/jquery
+    - core/once
 
 ngeo-svg-highlight:
     js:

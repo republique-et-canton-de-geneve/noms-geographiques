@@ -19193,7 +19193,9 @@ blockquote {
 
 /** end of HTML tags **/
 div.exergue,
-div.note {
+p.exergue,
+div.note,
+p.note {
   padding: 12px 1rem;
   margin: 0 0 20px 0;
   border: 1px solid #8BCE7E;
@@ -19201,16 +19203,26 @@ div.note {
 }
 div.exergue ul,
 div.exergue ol,
+p.exergue ul,
+p.exergue ol,
 div.note ul,
-div.note ol {
+div.note ol,
+p.note ul,
+p.note ol {
   padding-left: 20px;
 }
 div.exergue ul:last-child,
 div.exergue ol:last-child,
 div.exergue p:last-child,
+p.exergue ul:last-child,
+p.exergue ol:last-child,
+p.exergue p:last-child,
 div.note ul:last-child,
 div.note ol:last-child,
-div.note p:last-child {
+div.note p:last-child,
+p.note ul:last-child,
+p.note ol:last-child,
+p.note p:last-child {
   margin-bottom: 0;
 }
 

@@ -102,7 +102,9 @@ blockquote {
 /** end of HTML tags **/
 
 div.exergue,
-div.note {
+p.exergue,
+div.note,
+p.note {
   padding: 12px 1rem;
   margin: 0 0 20px 0;
   border: 1px solid $color-green-200;
