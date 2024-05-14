@@ -2,7 +2,7 @@ name: NGEO Migrate
 type: module
 description: Module de migration à drupal 9 pour NGEO
 package: ngeo
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9 || ^10
 dependencies:
   - drupal:migrate
   - drupal:migrate_tools

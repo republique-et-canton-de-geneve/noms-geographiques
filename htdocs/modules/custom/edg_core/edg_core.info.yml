@@ -2,4 +2,4 @@ name: EDG Core
 type: module
 description: Ce module regroupe diverses fonctionnalités issues de ge.ch.
 package: edg
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9 || ^10
