@@ -2,4 +2,4 @@ name: NGEO Sitg
 type: module
 description: Ce module gère tout ce qui est lié aux cartes SITG du projet NGEO.
 package: ngeo
-core_version_requirement: ^8.8 || ^9
+core_version_requirement: ^9 || ^10
