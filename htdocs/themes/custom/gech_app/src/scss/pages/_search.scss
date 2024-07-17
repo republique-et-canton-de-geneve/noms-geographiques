@@ -31,7 +31,7 @@
 }
 
 .facets-listing {
-  .voie-disparue-search > label {
+  .voie-disparue-search>label {
     @include font-size($font-size-small);
   }
 }
@@ -39,7 +39,7 @@
 // Search page.
 .path-search {
 
-  main > .container {
+  main>.container {
     position: relative; // for the custom sort select.
   }
 
@@ -61,8 +61,10 @@
 
     .form-item-field-date-ac-en-vigueur,
     .form-item-field-date-ac-en-vigueur-1 {
+      display: inline-block;
       @include font-size($font-size-small);
       margin-top: 15px;
+      width: 49.25%;
     }
 
     .form-item-keyword {
@@ -71,7 +73,7 @@
       }
     }
 
-    label[for="edit-field-date-ac-en-vigueur--2"]::before{
+    label[for="edit-field-date-ac-en-vigueur--2"]::before {
       content: "Date de l'arrêté cantonal :";
       display: block;
       margin-bottom: 5px;
@@ -91,9 +93,11 @@
     margin-bottom: 30px;
 
     .views-field-field-date-ac-en-vigueur {
-      .field-content {
-        color: grey;
+      display: inline;
+
+      time {
         @include font-size($font-size-small);
+        color: grey;
         margin-left: 5px;
       }
     }
@@ -102,13 +106,13 @@
       color: $color-green-300;
       @include font-size($font-size-large);
 
-      & > a:first-child {
+      &>a:first-child {
         font-weight: $font-weight-bold;
       }
     }
 
     .views-field-field-communes-ref .field-content {
-      & > a {
+      &>a {
         @include font-size($font-size-small);
         color: $color-gray-450;
         text-decoration: underline;
@@ -130,6 +134,7 @@
     &.voie-disparue--wrapper {
       .views-field-field-nom-complet-1 {
         color: $color-black;
+
         a {
           color: $color-black;
         }
@@ -160,7 +165,3 @@
     padding-top: 0;
   }
 }
-
-
-
-
