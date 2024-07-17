@@ -21163,9 +21163,11 @@ form textarea.form-control:focus {
 }
 .path-search #views-exposed-form-search-page-recherche .form-item-field-date-ac-en-vigueur,
 .path-search #views-exposed-form-search-page-recherche .form-item-field-date-ac-en-vigueur-1 {
+  display: inline-block;
   font-size: 14px;
   line-height: 19.1780821918px;
   margin-top: 15px;
+  width: 49.25%;
 }
 .path-search #views-exposed-form-search-page-recherche .form-item-keyword label {
   font-size: 14px;
@@ -21186,10 +21188,13 @@ form textarea.form-control:focus {
 .path-search .views-row {
   margin-bottom: 30px;
 }
-.path-search .views-row .views-field-field-date-ac-en-vigueur .field-content {
-  color: grey;
+.path-search .views-row .views-field-field-date-ac-en-vigueur {
+  display: inline;
+}
+.path-search .views-row .views-field-field-date-ac-en-vigueur time {
   font-size: 14px;
   line-height: 19.1780821918px;
+  color: grey;
   margin-left: 5px;
 }
 .path-search .views-row .views-field-field-nom-complet-1 {
