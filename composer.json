@@ -37,7 +37,6 @@
         "drupal/adminimal_admin_toolbar": "^1.11",
         "drupal/bamboo_twig": "^6.0",
         "drupal/bulk_update_fields": "^2.0@alpha",
-        "drupal/ckeditor": "^1.0",
         "drupal/ckeditor_div_manager": "^3.0@alpha",
         "drupal/color": "^1.0",
         "drupal/config_filter": "^2.6",
