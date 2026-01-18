@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4112f9ae6d08bfbcb7cce06f3555a364",
+    "content-hash": "9173c02784f3402fa91c7f589d77955a",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1255,40 +1255,6 @@
             "time": "2023-07-27T18:11:59+00:00"
         },
         {
-            "name": "drupal-ckeditor-libraries-group/div",
-            "version": "4.22.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/drupal-ckeditor-libraries-group/div.git",
-                "reference": "bbb2b65a82fb3e5efd5162415d8fecc635ef206f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/drupal-ckeditor-libraries-group/div/zipball/bbb2b65a82fb3e5efd5162415d8fecc635ef206f",
-                "reference": "bbb2b65a82fb3e5efd5162415d8fecc635ef206f",
-                "shasum": ""
-            },
-            "type": "drupal-library",
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0-or-later",
-                "LGPL-2.1-or-later",
-                "MPL-1.1"
-            ],
-            "description": "CKEditor 4 div plugin",
-            "homepage": "https://ckeditor.com/cke4/addon/div",
-            "keywords": [
-                "CKEditor",
-                "div",
-                "plugin"
-            ],
-            "support": {
-                "issues": "https://github.com/ckeditor/ckeditor4/issues",
-                "source": "https://github.com/ckeditor/ckeditor4/tree/master/plugins/div"
-            },
-            "time": "2023-02-08T14:53:49+00:00"
-        },
-        {
             "name": "drupal/admin_toolbar",
             "version": "3.4.2",
             "source": {
@@ -1467,57 +1433,6 @@
             "homepage": "https://www.drupal.org/project/bulk_update_fields",
             "support": {
                 "source": "https://git.drupalcode.org/project/bulk_update_fields"
-            }
-        },
-        {
-            "name": "drupal/ckeditor_div_manager",
-            "version": "3.0.0-alpha1",
-            "source": {
-                "type": "git",
-                "url": "https://git.drupalcode.org/project/ckeditor_div_manager.git",
-                "reference": "3.0.0-alpha1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/ckeditor_div_manager-3.0.0-alpha1.zip",
-                "reference": "3.0.0-alpha1",
-                "shasum": "d6a60f1a9c28bc421a6bf042ade47b043f9202e5"
-            },
-            "require": {
-                "drupal-ckeditor-libraries-group/div": "^4.10",
-                "drupal/core": "^9 || ^10"
-            },
-            "type": "drupal-module",
-            "extra": {
-                "drupal": {
-                    "version": "3.0.0-alpha1",
-                    "datestamp": "1690914099",
-                    "security-coverage": {
-                        "status": "not-covered",
-                        "message": "Alpha releases are not covered by Drupal security advisories."
-                    }
-                }
-            },
-            "notification-url": "https://packages.drupal.org/8/downloads",
-            "license": [
-                "GPL-2.0+"
-            ],
-            "authors": [
-                {
-                    "name": "Corey Eiseman",
-                    "homepage": "https://www.drupal.org/u/toegristle",
-                    "role": "Maintainer"
-                },
-                {
-                    "name": "toegristle",
-                    "homepage": "https://www.drupal.org/user/1802910"
-                }
-            ],
-            "description": "Adds the Div Container Manager plugin to CKEditor.",
-            "homepage": "https://www.drupal.org/project/ckeditor_div_manager",
-            "support": {
-                "source": "https://cgit.drupalcode.org/ckeditor_div_manager",
-                "issues": "https://www.drupal.org/project/issues/ckeditor_div_manager"
             }
         },
         {
@@ -16224,7 +16139,6 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "drupal/bulk_update_fields": 15,
-        "drupal/ckeditor_div_manager": 15,
         "drupal/gin": 5,
         "drupal/gin_toolbar": 5,
         "drupal/rabbit_hole": 10,
