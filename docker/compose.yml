@@ -34,9 +34,11 @@ services:
       DB_PASSWORD: $DB_PASSWORD
       DB_NAME: $DB_NAME
       DB_DRIVER: $DB_DRIVER
-      DRUSH_OPTIONS_URI: "http://${PROJECT_BASE_URL}:${PROJECT_PORT}"
+#      DRUSH_OPTIONS_URI: "http://${PROJECT_BASE_URL}:${PROJECT_PORT}"
       PHP_FPM_USER: wodby
       PHP_FPM_GROUP: wodby
+      PHP_DATE_TIMEZONE: $PHP_DATE_TIMEZONE
+      SIMPLESAMLPHP_CONFIG_DIR: $SIMPLESAMLPHP_CONFIG_DIR
 #      COLUMNS: 80 # Set 80 columns for docker exec -it.
 #      # Read instructions at https://wodby.com/docs/stacks/php/local/#xdebug
 #      PHP_XDEBUG_MODE: debug
@@ -46,7 +48,7 @@ services:
 #      PHP_XDEBUG_IDEKEY: "my-ide"
 #      PHP_XDEBUG_LOG: /tmp/php-xdebug.log
 #      # PHPUnit Drupal testing configurations
-#      SIMPLETEST_BASE_URL: "http://nginx"
+#      SIMPLETEST_BASE_URL: "http://apache"
 #      SIMPLETEST_DB: "${DB_DRIVER}://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}#tests_"
 #      MINK_DRIVER_ARGS_WEBDRIVER: '["chrome", {"browserName":"chrome","goog:chromeOptions":{"args":["--disable-gpu","--headless"]}}, "http://chrome:9515"]'
 #    extra_hosts:
@@ -63,7 +65,7 @@ services:
     image: wodby/drupal-php:$PHP_TAG
     container_name: "${PROJECT_NAME}_crond"
     environment:
-      CRONTAB: "0 * * * * drush -r /var/www/html/web cron"
+      CRONTAB: "0 * * * * drush -r /var/www/html/${DOCUMENT_ROOT_NAME} cron"
     command: sudo -E crond -f -d 0
     volumes:
     - ../:/var/www/html:cached
@@ -117,7 +119,7 @@ services:
       APACHE_LOG_LEVEL: debug
       APACHE_BACKEND_HOST: php
       APACHE_VHOST_PRESET: php
-      APACHE_DOCUMENT_ROOT: /var/www/html/htdocs
+      APACHE_DOCUMENT_ROOT: /var/www/html/${DOCUMENT_ROOT_NAME}
     volumes:
     - ../:/var/www/html:cached
 ## Alternative for macOS users: Mutagen https://wodby.com/docs/stacks/drupal/local#docker-for-mac
@@ -206,7 +208,7 @@ services:
   node:
     image: wodby/node:$NODE_TAG
     container_name: "${PROJECT_NAME}_node"
-    working_dir: /var/www/html/htdocs/themes/custom/gech_app/src/build
+    working_dir: /var/www/html/${DOCUMENT_ROOT_NAME}/themes/custom/gech_app/src/build
     labels:
     - "traefik.http.services.${PROJECT_NAME}_node.loadbalancer.server.port=3000"
     - "traefik.http.routers.${PROJECT_NAME}_node.rule=Host(`node.${PROJECT_BASE_URL}`)"
