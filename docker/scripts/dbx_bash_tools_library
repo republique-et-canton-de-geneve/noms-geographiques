@@ -89,11 +89,14 @@ function connect(){
         docker exec -it ${project_name}_node /bin/sh
         ;;
      *)
-        echo "+----------------------------------------------------+"
-        echo "| AIDE!                                              |"
-        echo "+----------------------------------------------------+"
-        echo "| Vous devez taper : connect [php | mysql | apache]  |"
-        echo "+----------------------------------------------------+"
+	docker exec -it ${project_name}_${value} /bin/bash
+	if [[ "$?" != "0" ]]; then 
+           echo "+---------------------------------------------------------+"
+           echo "| AIDE!                                                   |"
+           echo "+---------------------------------------------------------+"
+           echo "| Vous devez taper : connect [php | mysql | apache | ${value}] |"
+           echo "+---------------------------------------------------------+"
+	fi
    esac
 }
 

@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   traefik:
     image: traefik:v2.0
@@ -15,9 +13,9 @@ services:
 
 networks:
   project1:
-    external: 
-      name: project1-dir_default
+    external: true
+    name: project1-dir_default
   project2:
-    external:
-      name: project2-dir_default
+    external: true
+    name: project2-dir_default
 
