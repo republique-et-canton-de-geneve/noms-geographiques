@@ -33,7 +33,7 @@
         "ckeditor/div": "4.10.1",
         "composer/installers": "^2.2",
         "cweagans/composer-patches": "^1.7",
-        "drupal/admin_toolbar": "^3.4",
+        "drupal/admin_toolbar": "^3.6",
         "drupal/bamboo_twig": "^6.0",
         "drupal/bulk_update_fields": "^2.0@alpha",
         "drupal/color": "^1.0",
