@@ -52,7 +52,7 @@
         "drupal/field_group": "^3.6",
         "drupal/focal_point": "^2.1",
         "drupal/gin": "^3.0@RC",
-        "drupal/gin_toolbar": "^1.0@RC",
+        "drupal/gin_toolbar": "^1.1",
         "drupal/jquery_ui_accordion": "^2.0",
         "drupal/memcache": "^2.3",
         "drupal/menu_export": "^1.4",
