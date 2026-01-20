@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8b273e535638508921e1e09bc062368",
+    "content-hash": "74efcf3ef66b8c4f5ed10af63402b1b4",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -2923,26 +2923,26 @@
         },
         {
             "name": "drupal/menu_export",
-            "version": "1.4.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/menu_export.git",
-                "reference": "8.x-1.4"
+                "reference": "8.x-1.7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/menu_export-8.x-1.4.zip",
-                "reference": "8.x-1.4",
-                "shasum": "9bcefcf4077cfd751b9b28ae6b1a3f2f7febec3e"
+                "url": "https://ftp.drupal.org/files/projects/menu_export-8.x-1.7.zip",
+                "reference": "8.x-1.7",
+                "shasum": "e6a8b0db6406ac57ff38021ce1552b64900b005e"
             },
             "require": {
-                "drupal/core": "^8 || ^9 || ^10"
+                "drupal/core": "^8 || ^9 || ^10 || ^11"
             },
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.4",
-                    "datestamp": "1683815876",
+                    "version": "8.x-1.7",
+                    "datestamp": "1761512116",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
@@ -2955,18 +2955,21 @@
             ],
             "authors": [
                 {
-                    "name": "joseph.olstad",
-                    "homepage": "https://www.drupal.org/user/1321830"
+                    "name": "Sandeep Reddy",
+                    "homepage": "https://www.drupal.org/user/1321830",
+                    "email": "sandeepguntaka@drupal.org"
                 },
                 {
-                    "name": "sandeepguntaka",
-                    "homepage": "https://www.drupal.org/user/3397192"
+                    "name": "Joseph Olstad",
+                    "homepage": "https://www.drupal.org/user/3397192",
+                    "email": "joseph.olstad@drupal.org"
                 }
             ],
             "description": "This module exports and imports menus and menu links.",
             "homepage": "https://www.drupal.org/project/menu_export",
             "support": {
-                "source": "https://git.drupalcode.org/project/menu_export"
+                "source": "https://git.drupalcode.org/project/menu_export",
+                "issues": "https://www.drupal.org/project/issues/menu_export"
             }
         },
         {
