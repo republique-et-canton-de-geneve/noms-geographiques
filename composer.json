@@ -37,7 +37,7 @@
         "drupal/bamboo_twig": "^6.0",
         "drupal/bulk_update_fields": "^2.0@alpha",
         "drupal/color": "^1.0",
-        "drupal/config_ignore": "^3.1",
+        "drupal/config_ignore": "^3.3",
         "drupal/core-composer-scaffold": "9.5.11",
         "drupal/core-project-message": "9.5.11",
         "drupal/core-recommended": "9.5.11",
