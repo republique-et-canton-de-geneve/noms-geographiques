@@ -63,7 +63,7 @@
         "drupal/rdf": "^2.0",
         "drupal/redirect": "^1.7",
         "drupal/reroute_email": "^2.2",
-        "drupal/schema_metatag": "^2.5",
+        "drupal/schema_metatag": "^2.6",
         "drupal/search_api": "1.27",
         "drupal/seckit": "^2.0",
         "drupal/simple_sitemap": "^4.1",
