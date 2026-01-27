@@ -35,7 +35,12 @@ alias restart='stop;start'
 alias setAuth='cat ${base_path}/config/.htaccess.dist >> ${base_path}/htdocs/public/.htaccess'
 alias removeAuth='git checkout ${base_path}/htdocs/public/.htaccess'
 alias dumpDb='drush cr; drush sql:dump >${docker_path}/$(date +%Y-%m-%d)_local_10677-ngeo.dump'
-alias initDb='drush cr; drush sql:cli <${docker_path}/10677-ngeo.dump'
+alias initDb='\
+ drush sql:drop -y;\
+ drush sql:cli --extra="--ssl=0" < ${docker_path}/10677-ngeo.dump;\
+ drush updb -y;\
+ drush cim -y;\
+ drush cr;'
 alias clearX='find ../ -type f -perm 0755 \
 -not -path "../.git/*" \
 -and -not -path "../docker/*" \
