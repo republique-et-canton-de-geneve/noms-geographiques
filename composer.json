@@ -59,7 +59,7 @@
         "drupal/metatag": "^1.22",
         "drupal/paragraphs": "^1.20",
         "drupal/pathauto": "^1.14",
-        "drupal/rabbit_hole": "^1.1",
+        "drupal/rabbit_hole": " ^1.2",
         "drupal/rdf": "^2.0",
         "drupal/redirect": "^1.12",
         "drupal/reroute_email": "^2.2",

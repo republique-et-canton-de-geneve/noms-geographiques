@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "491979796e3d4335c36880fa70edf43e",
+    "content-hash": "1af152193fb9d1a8fe48312d36ebfc01",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3012,17 +3012,17 @@
         },
         {
             "name": "drupal/rabbit_hole",
-            "version": "1.1.0",
+            "version": "1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://git.drupalcode.org/project/rabbit_hole.git",
-                "reference": "8.x-1.1"
+                "reference": "8.x-1.2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://ftp.drupal.org/files/projects/rabbit_hole-8.x-1.1.zip",
-                "reference": "8.x-1.1",
-                "shasum": "7ee2b73b4c9d762fc7e8725e97a5dd84e2fbb252"
+                "url": "https://ftp.drupal.org/files/projects/rabbit_hole-8.x-1.2.zip",
+                "reference": "8.x-1.2",
+                "shasum": "9fee0b55182c09fa2e3a14da965dbde323e4eb9a"
             },
             "require": {
                 "drupal/core": "^9.5 || ^10 || ^11"
@@ -3037,8 +3037,8 @@
             "type": "drupal-module",
             "extra": {
                 "drupal": {
-                    "version": "8.x-1.1",
-                    "datestamp": "1768284683",
+                    "version": "8.x-1.2",
+                    "datestamp": "1773704444",
                     "security-coverage": {
                         "status": "covered",
                         "message": "Covered by Drupal's security advisory policy"
