@@ -46,7 +46,7 @@ class EdgSamlBehaviorSubscriber implements EventSubscriberInterface {
    * Enforce connection for any access through "cmsadmin" url.
    * Previous destination is keeped.
    *
-   * @param \Symfony\Component\HttpKernel\Event\GetResponseEvent $event
+   * @param \Symfony\Component\HttpKernel\Event\RequestEvent $event
    *   Response event.
    */
   public function onKernelRequest(RequestEvent $event) {
@@ -85,7 +85,7 @@ class EdgSamlBehaviorSubscriber implements EventSubscriberInterface {
   /**
    * {@inheritdoc}
    */
-  public static function getSubscribedEvents() {
+  public static function getSubscribedEvents(): array {
     return [
       // Method 'onRequest' on [KernelEvents::REQUEST].
       // The priority must be just after the onKernelRequestAuthenticate as it

@@ -2,6 +2,8 @@
 
 namespace Drupal\edg_core\Service;
 
+use Drupal\Component\Utility\DeprecationHelper;
+use Drupal\Core\Utility\Error;
 use GuzzleHttp\Client;
 use GuzzleHttp\Exception\RequestException;
 use GuzzleHttp\RequestOptions;
@@ -48,7 +50,7 @@ class JsonService {
       $response = $request->getBody()->getContents();
     }
     catch (RequestException $e) {
-      watchdog_exception('edg_core', $e);
+      DeprecationHelper::backwardsCompatibleCall(\Drupal::VERSION, '10.1.0', fn() => Error::logException(\Drupal::logger('edg_core'), $e), fn() => watchdog_exception('edg_core', $e));
     }
 
     return $response;
