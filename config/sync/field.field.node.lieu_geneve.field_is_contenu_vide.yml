@@ -10,7 +10,7 @@ field_name: field_is_contenu_vide
 entity_type: node
 bundle: lieu_geneve
 label: 'Contenu vide ?'
-description: 'La case doit être cochée pour signaler que les descriptions sont vides ou bien que les champs n''ont pas été revu.'
+description: "La case doit être cochée pour signaler que les descriptions sont vides ou bien que les champs n'ont pas été revu."
 required: false
 translatable: false
 default_value:

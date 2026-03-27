@@ -11,7 +11,7 @@ id: node.lieu_geneve.field_date_entree_en_vigueur
 field_name: field_date_entree_en_vigueur
 entity_type: node
 bundle: lieu_geneve
-label: 'Date d''entrée en vigueur'
+label: "Date d'entrée en vigueur"
 description: ''
 required: false
 translatable: false

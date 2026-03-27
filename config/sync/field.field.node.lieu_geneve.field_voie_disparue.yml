@@ -10,7 +10,7 @@ field_name: field_voie_disparue
 entity_type: node
 bundle: lieu_geneve
 label: 'Voie disparue'
-description: 'La case doit être cochée pour signaler que la voie n''existe plus.'
+description: "La case doit être cochée pour signaler que la voie n'existe plus."
 required: false
 translatable: false
 default_value:

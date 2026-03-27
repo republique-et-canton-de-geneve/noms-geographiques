@@ -52,7 +52,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_anecdotes
     type: text
-    boost: !!float 2
+    boost: 2.0
     dependencies:
       config:
         - field.storage.node.field_anecdotes
@@ -81,7 +81,7 @@ field_settings:
       config:
         - field.storage.node.field_communes_ref
   field_date_ac_en_vigueur:
-    label: 'Date de l''Arrêté du Conseil d''État en vigueur'
+    label: "Date de l'Arrêté du Conseil d'État en vigueur"
     datasource_id: 'entity:node'
     property_path: field_date_ac_en_vigueur
     type: date
@@ -89,11 +89,11 @@ field_settings:
       config:
         - field.storage.node.field_date_ac_en_vigueur
   field_definition_arrete_ce:
-    label: 'Définition de l''Arrêté du Conseil d''État'
+    label: "Définition de l'Arrêté du Conseil d'État"
     datasource_id: 'entity:node'
     property_path: field_definition_arrete_ce
     type: text
-    boost: !!float 3
+    boost: 3.0
     dependencies:
       config:
         - field.storage.node.field_definition_arrete_ce
@@ -102,12 +102,12 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_description_courte
     type: text
-    boost: !!float 8
+    boost: 8.0
     dependencies:
       config:
         - field.storage.node.field_description_courte
   field_domaine_activite_ref:
-    label: 'Domaine d''activité'
+    label: "Domaine d'activité"
     datasource_id: 'entity:node'
     property_path: field_domaine_activite_ref
     type: integer
@@ -135,7 +135,7 @@ field_settings:
     datasource_id: 'entity:node'
     property_path: field_nom_complet
     type: text
-    boost: !!float 21
+    boost: 21.0
     dependencies:
       config:
         - field.storage.node.field_nom_complet
@@ -268,7 +268,7 @@ processor_settings:
       - field_description_courte
       - field_nom_complet
       - title
-    ignorable: '[''¿¡!?,.:;]'
+    ignorable: "['¿¡!?,.:;]"
     ignorable_classes:
       - Pc
       - Pd

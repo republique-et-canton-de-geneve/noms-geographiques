@@ -9,7 +9,7 @@ id: node.lieu_geneve.field_definition_arrete_ce
 field_name: field_definition_arrete_ce
 entity_type: node
 bundle: lieu_geneve
-label: 'Définition de l''Arrêté du Conseil d''État'
+label: "Définition de l'Arrêté du Conseil d'État"
 description: ''
 required: false
 translatable: false

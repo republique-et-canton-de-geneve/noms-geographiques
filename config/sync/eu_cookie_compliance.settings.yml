@@ -18,7 +18,7 @@ mobile_popup_info:
   format: basic_html
 popup_info_template: new
 popup_agree_button_message: Accepter
-popup_more_info_button_message: 'Plus d''informations'
+popup_more_info_button_message: "Plus d'informations"
 mobile_breakpoint: 768
 popup_agreed_enabled: false
 popup_hide_agreed: false

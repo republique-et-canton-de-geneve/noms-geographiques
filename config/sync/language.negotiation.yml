@@ -8,6 +8,7 @@ url:
   prefixes:
     fr: ''
     en: en
+    '': null
   domains:
     fr: ''
     en: ''

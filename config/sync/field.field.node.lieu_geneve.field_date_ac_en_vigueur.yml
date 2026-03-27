@@ -11,7 +11,7 @@ id: node.lieu_geneve.field_date_ac_en_vigueur
 field_name: field_date_ac_en_vigueur
 entity_type: node
 bundle: lieu_geneve
-label: 'Date de l''Arrêté du Conseil d''État en vigueur'
+label: "Date de l'Arrêté du Conseil d'État en vigueur"
 description: ''
 required: false
 translatable: false

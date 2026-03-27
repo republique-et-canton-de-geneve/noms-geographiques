@@ -33,7 +33,7 @@ facets:
     weight: 0
   domaines_activite:
     checked: true
-    label: 'Domaine d''activité'
+    label: "Domaine d'activité"
     separator: ', '
     show_count: false
     weight: 0
