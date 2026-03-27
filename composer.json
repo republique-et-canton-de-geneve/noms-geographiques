@@ -186,7 +186,7 @@
         "drupal/devel": "^5.5",
         "drupal/drupal-extension": " ^5.3",
         "drupal/twig_vardumper": "^3.2",
-        "drupal/upgrade_status": "^4.3",
+        "drupal/upgrade_status": " ^4.3",
         "emuse/behat-html-formatter": "~2.0",
         "fenetikm/autoload-drupal": "dev-master",
         "genesis/behat-fail-aid": "^3.7",
