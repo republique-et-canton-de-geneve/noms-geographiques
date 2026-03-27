@@ -804,7 +804,8 @@ $config = [
   'language.cookie.secure' => false,
   'language.cookie.httponly' => false,
   'language.cookie.lifetime' => (60 * 60 * 24 * 900),
-  'language.cookie.samesite' => \SimpleSAML\Utils\HTTP::canSetSameSiteNone() ? 'None' : null,
+  // 'language.cookie.samesite' => \SimpleSAML\Utils\HTTP::canSetSameSiteNone() ? 'None' : null,
+  'language.cookie.samesite' => null,
 
   /**
    * Custom getLanguage function called from SimpleSAML\Locale\Language::getLanguage().
