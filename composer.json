@@ -71,6 +71,7 @@
         "drupal/token": "^1.17",
         "drupal/views_bulk_edit": "^2.9",
         "drupal/views_bulk_operations": "^4.4",
+        "drush/drush": " ^13",
         "twig/twig": "^3.0"
     },
     "conflict": {
