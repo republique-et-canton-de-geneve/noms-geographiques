@@ -105,6 +105,9 @@
             "drupal/core": "-p2"
         },
         "patches": {
+            "drupal/core": {
+                "[342109-1] In drupal 10 AssertionError giving site encountered error": "https://www.drupal.org/files/issues/2024-02-13/3421029-1.patch"
+            },
             "drupal/adminimal_admin_toolbar": {
                 "[3285987] Automated Drupal 10 compatibility fixes": "https://www.drupal.org/files/issues/2022-06-15/adminimal_admin_toolbar.1.x-dev.rector.patch"
             },
