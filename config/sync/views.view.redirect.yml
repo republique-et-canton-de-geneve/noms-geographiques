@@ -270,7 +270,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'Il n''y a pas encore de redirection.'
+          content: "Il n'y a pas encore de redirection."
           tokenize: false
       sorts: {  }
       arguments: {  }

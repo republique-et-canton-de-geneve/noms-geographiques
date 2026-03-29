@@ -431,7 +431,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Date de l''Arrêté du Conseil d''État en vigueur'
+          label: "Date de l'Arrêté du Conseil d'État en vigueur"
           exclude: false
           alter:
             alter_text: false
@@ -495,7 +495,7 @@ display:
           group_type: group
           admin_label: ''
           plugin_id: field
-          label: 'Domaine d''activité'
+          label: "Domaine d'activité"
           exclude: false
           alter:
             alter_text: false
@@ -976,7 +976,7 @@ display:
           admin_label: ''
           plugin_id: text_custom
           empty: true
-          content: 'Aucun contenu modéré disponible. Seules les versions de contenu en attente, telles que ''Brouillon'', sont listées ici.'
+          content: "Aucun contenu modéré disponible. Seules les versions de contenu en attente, telles que 'Brouillon', sont listées ici."
           tokenize: false
       sorts: {  }
       arguments: {  }
@@ -1300,7 +1300,7 @@ display:
           exposed: true
           expose:
             operator_id: field_date_ac_en_vigueur_value_op
-            label: 'Date de l''Arrêté du Conseil d''État en vigueur'
+            label: "Date de l'Arrêté du Conseil d'État en vigueur"
             description: ''
             use_operator: false
             operator: field_date_ac_en_vigueur_value_op
@@ -1345,7 +1345,7 @@ display:
           exposed: true
           expose:
             operator_id: field_domaine_activite_ref_target_id_op
-            label: 'Domaine d''activité'
+            label: "Domaine d'activité"
             description: ''
             use_operator: false
             operator: field_domaine_activite_ref_target_id_op

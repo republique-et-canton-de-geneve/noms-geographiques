@@ -11,7 +11,7 @@ id: node.lieu_geneve.field_date_ac_originel
 field_name: field_date_ac_originel
 entity_type: node
 bundle: lieu_geneve
-label: 'Date de l''Arrêté du Conseil d''État originel'
+label: "Date de l'Arrêté du Conseil d'État originel"
 description: ''
 required: false
 translatable: false

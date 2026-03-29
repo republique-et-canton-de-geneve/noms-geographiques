@@ -8,7 +8,7 @@ dependencies:
   module:
     - search_api
 id: domaines_activite
-name: 'Domaine d''activité'
+name: "Domaine d'activité"
 weight: 0
 min_count: 1
 missing: false

@@ -9,6 +9,9 @@ display:
         title:
           label: Title
           separator: ', '
+        type:
+          label: 'Content type'
+          separator: ', '
         name:
           label: Author
           separator: ', '

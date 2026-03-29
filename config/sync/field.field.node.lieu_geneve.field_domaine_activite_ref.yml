@@ -10,7 +10,7 @@ id: node.lieu_geneve.field_domaine_activite_ref
 field_name: field_domaine_activite_ref
 entity_type: node
 bundle: lieu_geneve
-label: 'Domaine d''activité'
+label: "Domaine d'activité"
 description: ''
 required: false
 translatable: false

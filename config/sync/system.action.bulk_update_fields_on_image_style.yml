@@ -5,7 +5,7 @@ dependencies:
   module:
     - bulk_update_fields
 id: bulk_update_fields_on_image_style
-label: 'Bulk Update Style d''image Fields'
+label: "Bulk Update Style d'image Fields"
 type: image_style
 plugin: bulk_update_fields_action_base
 configuration: {  }

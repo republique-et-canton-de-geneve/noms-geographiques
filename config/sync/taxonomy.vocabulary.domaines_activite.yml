@@ -2,7 +2,7 @@ uuid: dc83da3c-d567-4e64-9c81-3215c5d44749
 langcode: en
 status: true
 dependencies: {  }
-name: 'Domaines d''activité'
+name: "Domaines d'activité"
 vid: domaines_activite
 description: ''
 weight: 0

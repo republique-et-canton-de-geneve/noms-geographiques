@@ -8,26 +8,26 @@ seckit_xss:
       x: false
       webkit: false
     report-only: false
-    default-src: '''self'''
-    script-src: '''self'' ''unsafe-eval'' ''unsafe-inline'' https://ge.ch *.etat-ge.ch'
-    object-src: '''self'''
-    style-src: '''self'' ''unsafe-inline'''
-    img-src: '''self'' ''unsafe-inline'' data: https://ge.ch https://*.infomaniak.com https://*.infomaniak.ch *.etat-ge.ch https://www.etat.ge.ch'
-    media-src: '''self'' https://*.infomaniak.com https://*.infomaniak.ch'
-    frame-src: '''self'' https://map.sitg.ch https://vod.infomaniak.com https://player.infomaniak.com https://*.ge.ch https://ge.ch'
+    default-src: "'self'"
+    script-src: "'self' 'unsafe-eval' 'unsafe-inline' https://ge.ch *.etat-ge.ch"
+    object-src: "'self'"
+    style-src: "'self' 'unsafe-inline'"
+    img-src: "'self' 'unsafe-inline' data: https://ge.ch https://*.infomaniak.com https://*.infomaniak.ch *.etat-ge.ch https://www.etat.ge.ch"
+    media-src: "'self' https://*.infomaniak.com https://*.infomaniak.ch"
+    frame-src: "'self' https://map.sitg.ch https://vod.infomaniak.com https://player.infomaniak.com https://*.ge.ch https://ge.ch"
     frame-ancestors: 'https://*.ge.ch'
-    child-src: '''self'' https://vod.infomaniak.com https://*.ge.ch https://ge.ch'
-    font-src: '''self'''
-    connect-src: '''self'' *.etat-ge.ch ge.ch *.ge.ch *.geneveid.ch'
+    child-src: "'self' https://vod.infomaniak.com https://*.ge.ch https://ge.ch"
+    font-src: "'self'"
+    connect-src: "'self' *.etat-ge.ch ge.ch *.ge.ch *.geneveid.ch"
     report-uri: /report-csp-violation
     upgrade-req: false
     policy-uri: ''
   x_xss:
+    select: 2
     seckit_x_xss_option_disable: Disabled
     seckit_x_xss_option_0: '0'
     seckit_x_xss_option_1: 1;
     seckit_x_xss_option_1_block: '1; mode=block'
-    select: 2
 seckit_csrf:
   origin: true
   origin_whitelist: 'https://www.ge.ch'
