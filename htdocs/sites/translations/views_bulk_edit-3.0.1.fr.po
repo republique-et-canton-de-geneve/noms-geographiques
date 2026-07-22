@@ -1,10 +1,10 @@
-# French translation of Views Bulk Edit (8.x-2.9)
-# Copyright (c) 2023 by the French translation team
+# French translation of Views Bulk Edit (3.0.1)
+# Copyright (c) 2026 by the French translation team
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Views Bulk Edit (8.x-2.9)\n"
-"POT-Creation-Date: 2023-07-24 18:46+0000\n"
+"Project-Id-Version: Views Bulk Edit (3.0.1)\n"
+"POT-Creation-Date: 2026-01-26 12:46+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
@@ -13,15 +13,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n>1);\n"
 
 msgid "Create new revision"
-msgstr "Créer une nouvelle révision"
+msgstr "Créer une nouvelle version"
 msgid "Edit content"
 msgstr "Modifier le contenu"
 msgid "Revision information"
-msgstr "Informations sur les révisions"
+msgstr "Informations sur les versions"
 msgid "Views Bulk Operations"
 msgstr "Views Bulk Operations"
 msgid "Revision log message"
-msgstr "Message du journal de révision"
+msgstr "Message du journal de version"
 msgid "Edit media"
 msgstr "Modifier le média"
 msgid "Briefly describe the changes you have made."
