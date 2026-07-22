@@ -1,10 +1,10 @@
-# French translation of Memcache API and Integration (8.x-2.7)
-# Copyright (c) 2024 by the French translation team
+# French translation of Memcache API and Integration (8.x-2.8)
+# Copyright (c) 2026 by the French translation team
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Memcache API and Integration (8.x-2.7)\n"
-"POT-Creation-Date: 2024-08-14 18:46+0000\n"
+"Project-Id-Version: Memcache API and Integration (8.x-2.8)\n"
+"POT-Creation-Date: 2026-04-15 02:54+0000\n"
 "PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
 "Language-Team: French\n"
 "MIME-Version: 1.0\n"
