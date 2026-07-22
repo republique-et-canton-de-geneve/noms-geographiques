@@ -22,6 +22,10 @@ docker/*.bak
 media/**
 !media/.htaccess
 
+# Ignore .htaccess copied from ngeo_assets
+htdocs/.htaccess
+htdocs/.htaccess.orig
+
 # Front-end assets
 */.sass-cache/**
 tmp/*
