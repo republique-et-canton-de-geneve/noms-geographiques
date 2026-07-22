@@ -1,0 +1,119 @@
+@mixin btn-reset {
+  background-image: none !important;
+  box-shadow: none;
+  text-shadow: none;
+  font-weight: $font-weight-base;
+  border-radius: 0;
+}
+
+@mixin line-height($fontsize: $font-size-base, $ratio: $lineheight-ratio-base) {
+  line-height: calc($fontsize / $ratio) + px;
+}
+
+@mixin font-size($sizeValue, $ratio: $lineheight-ratio-base) {
+  font-size: $sizeValue + px;
+  @include line-height($sizeValue, $ratio);
+}
+
+@mixin title-style($sizeValue, $fontValue) {
+  font-size: $sizeValue + px;
+  font-weight: $fontValue;
+  @include line-height($sizeValue, $lineheight-ratio-tiny);
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+@mixin horizontal-align($position: relative) {
+  position: $position;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin center-align($position: relative) {
+  position: $position;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin small-font {
+  color: $color-gray-400;
+  @include font-size($font-size-tiny, $lineheight-ratio-small);
+}
+
+@mixin link-break {
+  /* These are technically the same, but use both */
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  /* This is the dangerous one in WebKit, as it breaks things wherever */
+  word-break: break-all;
+  /* Instead use this non-standard one: */
+  word-break: break-word;
+  /* Adds a hyphen where the word breaks, if supported (No Blink) */
+  hyphens: auto;
+}
+
+@mixin title-with-border {
+  display: block;
+  border-bottom: solid 1px $color-gray-250;
+  margin-bottom: $margin-base;
+}
+
+@mixin hide-text {
+  //position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  white-space: nowrap;
+  border: 0;
+}
+
+@mixin effect {
+  @include transition(all);
+}
+
+// pe for Pseudo-element.
+@mixin pe-vertical-border {
+  content: '';
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 1px;
+  background-color: $color-gray-200;
+  z-index: 0;
+}
+
+@mixin pe-fontawesome-icon($code, $font-weight: $font-weight-fa-solid) {
+  font-family: $font-family-fontawesome;
+  -webkit-font-smoothing: antialiased;
+  font-weight: $font-weight;
+  content: $code;
+}
+
+// Overrides Bootstrap's badge-variant mixin.
+@mixin badge-variant($color) {
+  color: $color;
+  background-color: transparent;
+  border-color: $color !important;
+
+
+  @at-root a#{&} {
+    @include hover-focus {
+      color: darken($body-color, 10%);
+      background-color: transparent;
+      border-color: darken($color, 10%) !important;
+    }
+
+    &:focus,
+    &.focus {
+      outline: 0;
+      box-shadow: 0 0 0 $badge-focus-width rgba($color, .5);
+    }
+  }
+}

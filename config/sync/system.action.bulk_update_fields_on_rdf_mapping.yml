@@ -1,0 +1,11 @@
+uuid: 59540edc-4c21-4432-b33b-84588b26e069
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_rdf_mapping
+label: 'Bulk Update Correspondance RDF Fields'
+type: rdf_mapping
+plugin: bulk_update_fields_action_base
+configuration: {  }

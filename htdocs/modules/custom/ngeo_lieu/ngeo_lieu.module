@@ -1,0 +1,75 @@
+<?php
+
+/**
+ * @file
+ * Contains ngeo_lieu.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use Drupal\Core\Form\FormStateInterface;
+use Drupal\node\NodeInterface;
+use Drupal\field\Entity\FieldConfig;
+use Drupal\edg_core\Service\EdgUtilsService;
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ *
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
+ */
+function ngeo_lieu_form_node_form_alter(&$form, FormStateInterface $form_state, $form_id) {
+  if ($form_id === 'node_lieu_geneve_form'
+    || $form_id === 'node_lieu_geneve_edit_form') {
+    $form['#entity_builders'][] = '_ngeo_lieu_node_builder';
+  }
+}
+
+/**
+ * Build and set the title of nodes on creation and update.
+ *
+ * @param $entity_type
+ * @param \Drupal\node\NodeInterface $node
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function _ngeo_lieu_node_builder($entity_type, NodeInterface $node, $form, FormStateInterface $form_state) {
+  // Use a standalone function that only needs a $node parameter,
+  // so we can call it outside of the form handling context.
+  _ngeo_lieu_set_field_nom_complet($node);
+}
+
+/**
+ * Set node field_nom_complet automatically when needed.
+ * Rule: [field_type_de_voie_ref][-space-][field_liant][-space if necessary-][title]"
+ *
+ * @param \Drupal\node\NodeInterface $node
+ */
+function _ngeo_lieu_set_field_nom_complet(NodeInterface $node) {
+  $titleName = '';
+
+  // Type de voie:
+  $typeVoieTerms = $node->get('field_type_de_voie_ref')->referencedEntities();
+  if (!empty($typeVoieTerms)) {
+    $titleName .= $typeVoieTerms[0]->getName();
+  }
+
+  // Espace + Liant:
+  if ($node->hasField('field_liant') && !$node->get('field_liant')->isEmpty()) {
+    $titleName .= ' ' . $node->get('field_liant')->value;
+  }
+
+  // Espace si besoin.
+  $lastCharacter = substr($titleName, -1);
+  if (!in_array($lastCharacter, ["'", "-"])) {
+    $titleName .= ' ';
+  }
+
+  // Titre.
+  $titleName .= $node->getTitle();
+
+  // Set the field.
+  if (!empty($titleName)) {
+    $node->set('field_nom_complet', $titleName);
+  }
+}

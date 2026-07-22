@@ -1,0 +1,22 @@
+uuid: c743c413-0e8f-456b-be1c-262a072f1029
+langcode: fr
+status: true
+dependencies:
+  theme:
+    - gech_app
+_core:
+  default_config_hash: nGE3EoPQQaQCuqTUtZgw0-KIzmrqdKDzdNQf2JyPUt4
+id: gech_app_primary_local_tasks
+theme: gech_app
+region: highlighted
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: 'Onglets principaux'
+  label_display: '0'
+  provider: core
+  primary: true
+  secondary: false
+visibility: {  }

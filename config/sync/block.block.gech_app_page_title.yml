@@ -1,0 +1,34 @@
+uuid: 37d80c7e-52f6-422b-a4b9-a36cefcee6ff
+langcode: fr
+status: true
+dependencies:
+  module:
+    - node
+    - system
+  theme:
+    - gech_app
+_core:
+  default_config_hash: 6aOgWsNTXjqrDm98TXSAjP6qd2nCijD1xw45MrnbK-Y
+id: gech_app_page_title
+theme: gech_app
+region: content
+weight: -7
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Titre de page'
+  label_display: '0'
+  provider: core
+visibility:
+  request_path:
+    id: request_path
+    negate: true
+    pages: /search
+  'entity_bundle:node':
+    id: 'entity_bundle:node'
+    negate: true
+    context_mapping:
+      node: '@node.node_route_context:node'
+    bundles:
+      lieu_geneve: lieu_geneve

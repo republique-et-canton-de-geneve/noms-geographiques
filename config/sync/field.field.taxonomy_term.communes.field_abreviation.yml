@@ -1,0 +1,19 @@
+uuid: cf2b9cfa-31d1-40a9-b8e5-e743e757eb99
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_abreviation
+    - taxonomy.vocabulary.communes
+id: taxonomy_term.communes.field_abreviation
+field_name: field_abreviation
+entity_type: taxonomy_term
+bundle: communes
+label: Abréviation
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

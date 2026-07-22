@@ -1,0 +1,29 @@
+uuid: fb1390ac-2ffc-4090-a19b-6e30c51caad8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_evenement_ref
+    - node.type.lieu_geneve
+    - taxonomy.vocabulary.evenements
+id: node.lieu_geneve.field_evenement_ref
+field_name: field_evenement_ref
+entity_type: node
+bundle: lieu_geneve
+label: Événement
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      evenements: evenements
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

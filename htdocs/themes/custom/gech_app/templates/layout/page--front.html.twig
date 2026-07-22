@@ -1,0 +1,63 @@
+{% extends '@gech_app/layout/page.html.twig' %}
+
+{% block inside_main %}
+    <div class="layout-content">
+
+        <div id="home-banner" class="col-12">
+            <div class="d-flex align-items-center">
+                <div id="welcome-text" class="card with-border-bottom">
+                    <div class="card-body">
+                        <h1 class="card-title">{{ "Découvrez l'histoire des noms de rues du canton de Genève"|t }}</h1>
+                        <p>
+                            {{ "Les noms géographiques désignent toutes les dénominations de communes, de localités,
+                            de rues, d'arrêts ou stations de transports publics et d'objets topographiques (ponts,
+                            écoles...) au sens de l'Ordonnance fédérale sur les noms géographiques."|t }}
+                        </p>
+                        <p>
+                            <a href="https://www.ge.ch/publication?type=229&organisation=2018" target="_blank" rel="noopener noreferer" class="btn btn-outline-primary external-link">{{ "Voir les actualités"|t }}</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row home-search-cols">
+            <div class="col-lieu col-12 col-lg-6">
+                <div class="card with-border-top with-border-bottom mb-5 mb-lg-0">
+                    <div class="card-body">
+                        <h2 class="card-title mb-4">{{ "Rechercher un lieu"|t }}</h2>
+
+                        {{ attach_library('gech_app/ngeo-search') }}
+
+                        {# Affichage de l'input text et du bouton submit #}
+                        {{ bamboo_render_block('views_exposed_filter_block:search-page_recherche') }}
+
+                        <div class="d-grid gap-2 d-block d-lg-none mt-3">
+                            <button type="button" class="btn btn-sm btn-outline-primary" data-bs-toggle="modal" data-bs-target="#modal-filters">{{ "Filtres"|t }}</button>
+                        </div>
+
+                        <div class="facets-listing d-none d-lg-flex">
+                            {% include '@gech_app/partials/all-facets-list.html.twig' %}
+                        </div>
+                    </div>
+
+                    {# Filters modal #}
+                    {% include '@gech_app/partials/search-filters--modal.html.twig' %}
+                </div>
+            </div>
+
+            <div class="col-commune col-12 col-lg-6">
+                <div class="card with-border-top with-border-bottom">
+                    <div class="card-body">
+                        <h2 class="card-title">{{ "Rechercher une commune"|t }}</h2>
+                        <figure class="mb-1">
+                            {% include '@gech_app/misc/geneve_map.html.twig' %}
+                        </figure>
+                        {# Form. #}
+                        {{ bamboo_render_form('ngeo_core', 'CommuneAutocompleteForm') }}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

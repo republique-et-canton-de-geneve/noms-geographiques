@@ -1,0 +1,42 @@
+uuid: 9b2fd614-c2d7-4e4b-bba0-f21ea8929b6f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.paragraph_document.field_fichier_joint
+    - field.field.paragraph.paragraph_document.field_title
+    - field.field.paragraph.paragraph_document.field_type_de_document_ref
+    - paragraphs.paragraphs_type.paragraph_document
+  module:
+    - file
+id: paragraph.paragraph_document.default
+targetEntityType: paragraph
+bundle: paragraph_document
+mode: default
+content:
+  field_fichier_joint:
+    type: file_default
+    label: above
+    settings:
+      use_description_as_link_text: true
+    third_party_settings: {  }
+    weight: 2
+    region: content
+  field_title:
+    type: string
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    weight: 5
+    region: content
+  field_type_de_document_ref:
+    type: entity_reference_label
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    weight: 4
+    region: content
+hidden:
+  search_api_excerpt: true

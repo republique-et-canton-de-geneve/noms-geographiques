@@ -1,0 +1,22 @@
+uuid: 878f68fc-4271-4432-a372-55782de5a601
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gech_app
+_core:
+  default_config_hash: erQSEZF2XUjNmgTl0uNRBzmg18ZGXwUcw2FhApoeuHk
+id: gech_app_content
+theme: gech_app
+region: content
+weight: -6
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Contenu de la page principale'
+  label_display: '0'
+  provider: system
+visibility: {  }

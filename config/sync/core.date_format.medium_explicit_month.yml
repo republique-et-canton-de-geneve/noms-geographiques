@@ -1,0 +1,8 @@
+uuid: fb2f2f1d-71b6-453f-a7a4-f0823a26afd7
+langcode: fr
+status: true
+dependencies: {  }
+id: medium_explicit_month
+label: 'Date moyenne avec mois explicite'
+locked: false
+pattern: 'j F Y'

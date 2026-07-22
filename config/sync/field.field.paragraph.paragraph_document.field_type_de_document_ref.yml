@@ -1,0 +1,29 @@
+uuid: a2302f43-86ac-4f5e-bac1-6dee8aebcc94
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_type_de_document_ref
+    - paragraphs.paragraphs_type.paragraph_document
+    - taxonomy.vocabulary.types_document_joint
+id: paragraph.paragraph_document.field_type_de_document_ref
+field_name: field_type_de_document_ref
+entity_type: paragraph
+bundle: paragraph_document
+label: 'Type de document'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      types_document_joint: types_document_joint
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

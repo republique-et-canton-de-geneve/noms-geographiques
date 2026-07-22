@@ -1,0 +1,34 @@
+{% extends '@gech_app/content/taxonomy-term.html.twig' %}
+
+{% block term_title %}
+    <h1>{{ name }}</h1>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div{{ content_attributes.addclass('col-lg-9') }}>
+
+            {{ content|without('field_ecusson') }}
+
+            <h2>{{ "Lieux géographiques"|t }}</h2>
+            {{ bamboo_render_views('lieux_geneve_commune', 'liste_lieux_par_commune') }}
+        </div>
+
+        <aside class="col-lg-3 mt-lg-0 mt-4">
+            <div class="card with-border-top">
+              <div class="card-body">
+
+                <div id="commune-map" data-alias="{{ path('<current>') }}" class="mb-1">
+                  {{ content.field_ecusson }}
+                  {{ attach_library('gech_app/ngeo-svg-highlight') }}
+                  {% include '@gech_app/misc/geneve_map.html.twig' %}
+                </div>
+              </div>
+            </div>
+
+            <div class="mt-4">
+                {{ bamboo_render_block('ngeo_sharing_links', {'entity_type': 'taxonomy_term', 'id': id}) }}
+            </div>
+        </aside>
+    </div>
+{% endblock %}

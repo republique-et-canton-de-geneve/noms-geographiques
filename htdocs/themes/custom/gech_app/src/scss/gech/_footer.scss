@@ -1,0 +1,106 @@
+footer.footer {
+  padding: 10px 0;
+
+  h2 {
+    margin: 0 0 $margin-base;
+  }
+
+  @include media-breakpoint-down(sm) {
+    padding: 0;
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media-breakpoint-down(md) {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+
+    .footer-link {
+      ul {
+        padding-left: 0;
+        margin-bottom: 0;
+        display: flex;
+
+        @include media-breakpoint-down(md) {
+          flex-direction: column;
+        }
+
+        li {
+          list-style: none;
+          break-inside: avoid;
+          padding: 0 1rem;
+          border-left: 1px solid $color-gray-200;
+          line-height: 1rem;
+
+          &:first-child {
+            border-left: none;
+            padding-left: 0;
+          }
+
+          @include media-breakpoint-down(md) {
+            border-left: none !important;
+            padding-left: 0;
+            padding-bottom: 1rem;
+
+            &:first-child {
+              padding-top: 30px;
+            }
+
+            &:last-child {
+              padding-bottom: 2rem;
+            }
+          }
+
+          a {
+            display: block;
+            transition: $transition-base;
+            font-size: 14px;
+
+            &:hover {
+              text-decoration: none !important;
+            }
+          }
+        }
+      }
+    }
+
+    .footer-logo {
+      @include media-breakpoint-down(sm) {
+        padding-bottom: 30px;
+      }
+
+      svg {
+        width: 72px;
+        height: 53px;
+      }
+    }
+  }
+}
+
+
+// LIGHT MODE.
+footer.footer {
+  border-top: 1px solid $color-gray-200;
+  ul {
+    li {
+      border-color: $color-gray-200;
+      a {
+        color: $color-gray-600;
+        &:hover {
+          color: $color-gray-500;
+        }
+      }
+    }
+  }
+  .footer-logo {
+    svg {
+      path.cls-5 {
+        fill: $color-black;
+      }
+    }
+  }
+}

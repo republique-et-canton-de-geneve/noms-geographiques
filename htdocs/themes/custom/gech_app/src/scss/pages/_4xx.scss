@@ -1,0 +1,161 @@
+.error-page {
+  .title-text {
+    background: #ededed;
+    background-color: rgb(237, 237, 237);
+    background-image: none;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-clip: border-box;
+    background-origin: padding-box;
+    background-position-x: 0;
+    background-position-y: 0;
+    background-size: auto auto;
+    margin-bottom: 1rem;
+
+    &:before {
+      font-size: 150px;
+      color: $color-white;
+      position: absolute;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    .row-top:before {
+      display: block;
+      content: "";
+      background-repeat: no-repeat;
+      background-position: right;
+      background-color: transparent;
+      margin-right: 150px;
+      opacity: 0.95;
+      position: absolute;
+    }
+  }
+
+  .error-content {
+    min-height: 200px;
+  }
+
+  .space-404 {
+    height: 120px;
+  }
+
+  &.page-404,
+  &.page-410,
+  &.page-500 {
+    .title-text {
+      position: relative;
+      min-height: 300px;
+      margin-bottom: 2rem;
+
+      &:before {
+        left: 36%;
+        padding-top: 215px;
+
+        @include media-breakpoint-down(xs) {
+          left: initial;
+          right: 0;
+        }
+
+        @include media-breakpoint-up(sm) {
+          font-size: 200px;
+          padding-top: 200px;
+        }
+
+        @include media-breakpoint-up(lg) {
+          font-size: 300px;
+          padding-top: 0;
+        }
+      }
+
+      & > .region-title {
+        width: 100%;
+        @include media-breakpoint-up(md) {
+          position: absolute;
+          bottom: 0;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .row-top:before {
+        background: url('../images/splash.png');
+        margin-top: -245px;
+        width: 400px;
+        height: 400px;
+        left: 50%;
+      }
+    }
+  }
+
+  &.page-404 {
+    .title-text {
+      &:before {
+        content: "404";
+      }
+    }
+  }
+
+  &.page-410 {
+    .title-text {
+      &:before {
+        content: "410";
+      }
+    }
+  }
+
+  &.page-403 {
+    .title-text {
+      &:before {
+        content: "403";
+        left: 47%;
+        padding-top: 235px;
+
+        @include media-breakpoint-up(sm) {
+          font-size: 200px;
+          padding-top: 220px;
+        }
+
+        @include media-breakpoint-up(lg) {
+          font-size: 300px;
+          padding-top: 15px;
+        }
+      }
+    }
+
+    @include media-breakpoint-up(md) {
+      .row-top:before {
+        background: url('../images/cadenas.png');
+        margin-top: -275px;
+        width: 335px;
+        height: 385px;
+        left: 60%;
+      }
+    }
+
+    .error-content {
+      margin-top: 11px;
+      margin-bottom: 11px;
+      font-weight: $font-weight-bold;
+      @include font-size($font-size-big);
+    }
+
+    .row-top {
+      margin: 66px 0;
+    }
+  }
+
+  &.page-500 {
+    .title-text {
+      &:before {
+        content: "500";
+      }
+    }
+  }
+}
+
+// custom for saml error.
+.path-saml-error {
+  min-height: 100vh;
+}
+

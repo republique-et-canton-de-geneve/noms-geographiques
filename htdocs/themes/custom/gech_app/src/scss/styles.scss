@@ -1,0 +1,51 @@
+// FontAwesome 5 Free
+$fa-font-path: "../src/fontawesome/webfonts";
+@import "../fontawesome/scss/fontawesome.scss";
+@import "../fontawesome/scss/solid.scss";
+@import "../fontawesome/scss/brands.scss";
+
+// Override Bootstrap.
+@import 'gech/gech_variables';
+@import 'utils/variables';
+
+// Bootstrap and its default variables
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import 'gech/gech_mixins';
+@import 'utils/mixins';
+
+@import 'base/font_icon';
+@import 'base/fonts';
+@import 'base/global';
+@import 'base/typography';
+
+@import 'gech/header';
+@import 'gech/menu';
+@import 'gech/popover';
+@import 'gech/footer';
+@import 'gech/utils_gech';
+
+@import 'layout/geneve_map';
+@import 'layout/layout';
+@import 'layout/content';
+@import 'layout/navigation';
+@import 'layout/print';
+@import 'layout/subheader';
+
+@import 'components/badge';
+@import 'components/button';
+@import 'components/card';
+@import 'components/facet';
+@import 'components/facet-summary';
+@import 'components/form';
+@import 'components/modal';
+@import 'components/pagination';
+@import 'components/popup';
+
+@import 'pages/front';
+@import 'pages/4xx';
+@import 'pages/commune';
+@import 'pages/search';
+@import 'pages/lieu-geneve';
+
+

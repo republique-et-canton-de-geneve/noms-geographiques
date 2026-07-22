@@ -1,0 +1,19 @@
+uuid: 3e8e5a16-0402-4426-bd8c-cc32af5319c8
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_nom_complet
+    - node.type.lieu_geneve
+id: node.lieu_geneve.field_nom_complet
+field_name: field_nom_complet
+entity_type: node
+bundle: lieu_geneve
+label: 'Nom complet'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,24 @@
+// Card variables overriden in _variables.scss file.
+
+.card {
+  &.with-border-top {
+    border-top: $border-green;
+  }
+
+  &.with-border-bottom {
+    border-bottom: $border-green;
+  }
+
+  &.with-border-top.with-border-bottom {
+    // Only tablet & mobile.
+    @include media-breakpoint-down(lg) {
+      border-bottom: $border-gray;
+    }
+  }
+}
+
+.path-front .card {
+  .card-body {
+    padding-bottom: 25px;
+  }
+}

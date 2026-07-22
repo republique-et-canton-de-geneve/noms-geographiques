@@ -1,0 +1,10 @@
+services:
+  edg_saml_behavior.event_subscriber:
+    class: Drupal\edg_saml_behavior\EventSubscriber\EdgSamlBehaviorSubscriber
+    arguments: ['@current_user']
+    tags:
+      - { name: event_subscriber }
+  edg_saml_behavior.route_subscriber:
+    class: 'Drupal\edg_saml_behavior\Routing\RouteSubscriber'
+    tags:
+      - { name: event_subscriber }

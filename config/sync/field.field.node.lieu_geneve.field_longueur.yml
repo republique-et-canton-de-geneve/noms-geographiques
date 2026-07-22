@@ -1,0 +1,23 @@
+uuid: bd569795-82ea-45ea-9c24-1528192a2b0a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_longueur
+    - node.type.lieu_geneve
+id: node.lieu_geneve.field_longueur
+field_name: field_longueur
+entity_type: node
+bundle: lieu_geneve
+label: Longueur
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: m
+field_type: integer

@@ -1,0 +1,42 @@
+uuid: 774a16e0-03e8-455c-b7ef-ba0c801ad4d5
+langcode: fr
+status: true
+dependencies: {  }
+id: taxonomy_term__communes
+label: 'Taxonomy term: Communes'
+tags:
+  abstract: '[term:description]'
+  canonical_url: 'https://www.ge.ch'
+  description: '[term:description]'
+  geo_placename: Genève
+  geo_position: '46.20096; 6.146897'
+  geo_region: CH-GE
+  icbm: '46.20096; 6.146897'
+  og_description: '[term:description]'
+  og_determiner: auto
+  og_image: '[site:url]themes/custom/gech_app/images/share_noms_geographiques_landscape.jpg'
+  og_image_alt: 'Panorama de Genève'
+  og_image_height: '630'
+  og_image_secure_url: '[site:url]themes/custom/gech_app/images/share_noms_geographiques_landscape.jpg'
+  og_image_type: image/jpeg
+  og_image_url: '[site:url]themes/custom/gech_app/images/share_noms_geographiques_landscape.jpg'
+  og_image_width: '1200'
+  og_site_name: '[site:name]'
+  og_title: '[term:name]'
+  og_type: place
+  og_url: '[term:url:unaliased:absolute]'
+  rights: 'République et canton de Genève'
+  robots: 'index, follow'
+  schema_place_description: '[term:description]'
+  schema_place_name: '[term:name]'
+  schema_place_type: Place
+  schema_place_url: '[term:url:unaliased:absolute]'
+  title: '[current-page:title] | [site:name]'
+  twitter_cards_description: '[term:description]'
+  twitter_cards_image: '[site:url]themes/custom/gech_app/images/share_noms_geographiques_landscape.jpg'
+  twitter_cards_image_alt: 'Panorama de Genève'
+  twitter_cards_image_height: '630'
+  twitter_cards_image_width: '1200'
+  twitter_cards_page_url: '[term:url:unaliased:absolute]'
+  twitter_cards_title: '[term:name]'
+  twitter_cards_type: summary_large_image

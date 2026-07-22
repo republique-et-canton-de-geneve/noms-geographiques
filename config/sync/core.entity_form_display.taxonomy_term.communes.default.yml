@@ -1,0 +1,86 @@
+uuid: 93ab09a7-cc79-42cb-8c88-1067c0911178
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.communes.field_abreviation
+    - field.field.taxonomy_term.communes.field_ecusson
+    - field.field.taxonomy_term.communes.field_numero_cantonal
+    - field.field.taxonomy_term.communes.field_numero_federal
+    - image.style.thumbnail
+    - taxonomy.vocabulary.communes
+  module:
+    - image
+    - path
+    - text
+id: taxonomy_term.communes.default
+targetEntityType: taxonomy_term
+bundle: communes
+mode: default
+content:
+  description:
+    type: text_textarea
+    weight: 1
+    region: content
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+  field_abreviation:
+    type: string_textfield
+    weight: 4
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ecusson:
+    type: image_image
+    weight: 5
+    region: content
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+  field_numero_cantonal:
+    type: number
+    weight: 2
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  field_numero_federal:
+    type: number
+    weight: 3
+    region: content
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+  name:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 7
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  simple_sitemap:
+    weight: 10
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 6
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+hidden:
+  langcode: true

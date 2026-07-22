@@ -1,0 +1,36 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for edg_saml_behavior module.
+ */
+
+/**
+ * Implements hook_form_alter().
+ */
+function edg_saml_behavior_form_alter(&$form, &$form_state, $form_id) {
+
+  // Si non php cli.
+  if (PHP_SAPI !== 'cli') {
+    // Disable all forms.
+    $disabled_form_ids = [
+      // Formulaire login dans page + block.
+      'user_login_form',
+      // Edition user.
+      'user_form',
+      // Modification passwd.
+      'user_pass',
+      // Register : utilisé aussi pour la création manuelle de compte par admin.
+      'user_register_form',
+      // Form contact user.
+      'contact_message_personal_form',
+    ];
+
+    $active_environment = Drupal::config('environment_indicator.indicator');
+    $title = $active_environment->get('name');
+
+    if (in_array($form_id, $disabled_form_ids)) {
+      $form['#access'] = FALSE;
+    }
+  }
+}

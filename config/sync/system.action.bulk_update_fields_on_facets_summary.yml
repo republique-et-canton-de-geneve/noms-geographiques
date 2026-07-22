@@ -1,0 +1,11 @@
+uuid: 3720a9de-1f4d-4eaf-8137-ea48351da2b1
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_facets_summary
+label: 'Bulk Update Facet summary Fields'
+type: facets_summary
+plugin: bulk_update_fields_action_base
+configuration: {  }

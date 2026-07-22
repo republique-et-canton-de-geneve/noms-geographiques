@@ -1,0 +1,23 @@
+# services:
+    # php:
+    # environment:
+    #   PHP_FPM_CLEAR_ENV: "no"
+    # volumes:
+    #   - codebase:/var/www/html
+
+    #crond:
+    #environment:
+      # PHP_FPM_CLEAR_ENV: "no"
+    #volumes:
+    #  - codebase:/var/www/html
+
+#  nginx:
+#    volumes:
+#    - codebase:/var/www/html
+
+#  webgrind:
+#    volumes:
+#    - codebase:/mnt/codebase
+
+#volumes:
+#  codebase:

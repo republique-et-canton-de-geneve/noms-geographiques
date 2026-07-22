@@ -1,0 +1,22 @@
+uuid: 859eab7e-edb9-41d4-9687-0146dc45ba29
+langcode: fr
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - gech_app
+_core:
+  default_config_hash: BZ5tpW7H8X4PVGRm3MImTIHd2tN0eF7zOtp4SpRYUA0
+id: gech_app_messages
+theme: gech_app
+region: highlighted
+weight: -4
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Messages de statut'
+  label_display: '0'
+  provider: system
+visibility: {  }

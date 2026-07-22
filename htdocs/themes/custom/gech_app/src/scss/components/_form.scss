@@ -1,0 +1,19 @@
+// Form variables overriden in _variables.scss file.
+
+form {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  textarea {
+    &.form-control,
+    &.form-control:focus {
+      background-color: $color-gray-100;
+      border-color: $color-gray-100;
+    }
+  }
+}
+
+.form-select-sm,
+.col-form-label-sm {
+  @include font-size($font-size-small);
+}

@@ -1,0 +1,23 @@
+uuid: 3f1d4c97-ea75-4a9c-9290-00f7a081aedc
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.lieu_geneve
+  module:
+    - text
+id: node.lieu_geneve.body
+field_name: body
+entity_type: node
+bundle: lieu_geneve
+label: Description
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

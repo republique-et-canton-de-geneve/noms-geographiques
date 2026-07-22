@@ -1,0 +1,12 @@
+label: Éditorial
+type_settings:
+  states:
+    draft:
+      label: Brouillon
+    published:
+      label: Publié
+  transitions:
+    create_new_draft:
+      label: 'Créer un Nouveau Brouillon'
+    publish:
+      label: Publier

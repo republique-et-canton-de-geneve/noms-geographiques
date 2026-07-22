@@ -1,0 +1,114 @@
+/**
+ * NGEO Style Variables.
+ */
+
+// Override ge.ch.
+$font-size-h1:     40;
+$font-size-h2:     28;
+$font-size-h3:     22;
+$font-mobile-size-h1:     26;
+$font-mobile-size-h2:     23;
+$font-mobile-size-h3:     21;
+
+// Override ge.ch.
+$color-gray-450:  #808080;
+$color-green-400: #15452C;
+$color-green-300: #227D5F;
+$color-green-200: #8BCE7E;
+$color-green-100: #F2F9F2;
+
+$border-green: 7px solid $color-green-200;
+$border-gray: 1px solid $color-gray-200;
+
+$subheader-mb: 2rem;
+
+$iframe-height: 370px;
+
+// Override Boostrap colors.
+$primary: $color-green-300;
+$secondary: $color-green-200;
+$light: $color-gray-200;
+
+// Useful to remove XXL new breakpoint.
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+$btn-input-padding-y:       10px;
+
+// Alert overrides.
+$alert-border-radius:       0;
+
+// Button overrides.
+$btn-padding-y:             $btn-input-padding-y;
+$btn-padding-x:             22px;
+$btn-font-size:             13px;
+
+// Badge overrides.
+$badge-color:               $color-black;
+$badge-font-size:           13px;
+//$badge-padding-y:         .35em;
+$badge-padding-y:           .15em;
+//$badge-padding-x:         .35em;
+$badge-padding-x:           .25em;
+
+// Card overrides.
+$card-border-color:         $color-gray-200;
+$card-border-radius:        0;
+
+// Dropdown overrrides.
+$dropdown-color:                $color-black;
+$dropdown-border-radius:        0;
+$dropdown-border-color:         $color-gray-250;
+$dropdown-link-hover-bg:        $color-gray-100;
+$dropdown-link-active-bg:       $color-gray-100;
+$dropdown-link-active-color:    $color-black;
+
+// Form overrides.
+$input-border-radius:       0;
+$input-border-radius-sm:    0;
+$input-border-radius-lg:    0;
+
+// Form-control overrides.
+$input-padding-y:           $btn-input-padding-y;
+
+// List overrides.
+$list-inline-padding:       .25rem;
+
+// Modal overrides.
+$modal-content-border-radius:       0;
+$modal-header-border-width:         0;
+$modal-backdrop-opacity:            .7;
+
+// Nav overrides.
+// tabs.
+$nav-tabs-border-radius:              0;
+$nav-tabs-border-color:               $color-gray-200;
+$nav-tabs-link-active-border-color:   $color-gray-200 $color-gray-200 #fff;
+
+// Table overrides.
+$table-border-width:        0;
+
+// Image overrides.
+$thumbnail-padding:         0;
+$thumbnail-border-width:    0;
+$thumbnail-border-radius:   0;
+
+// Pagination overrides.
+$pagination-border-color:         $color-gray-200;
+$pagination-border-radius:        0;
+$pagination-hover-bg:             $color-green-100;
+$pagination-hover-border-color:   $color-green-300;
+$pagination-active-bg:            $primary;
+$pagination-active-border-color:  $primary;
+$pagination-padding-x:            15px;

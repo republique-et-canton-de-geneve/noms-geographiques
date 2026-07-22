@@ -1,0 +1,20 @@
+{#
+/**
+ * @file
+ * Theme overriden to display primary and secondary local tasks with Bootstrap classes.
+ *
+ * Available variables:
+ * - primary: HTML list items representing primary tasks.
+ * - secondary: HTML list items representing secondary tasks.
+ */
+#}
+<div class="container">
+    {% if primary %}
+        <h2 class="visually-hidden">{{ 'Primary tabs'|t }}</h2>
+        <ul class="nav nav-tabs">{{ primary }}</ul>
+    {% endif %}
+    {% if secondary %}
+        <h2 class="visually-hidden">{{ 'Secondary tabs'|t }}</h2>
+        <ul class="nav nav-tabs">{{ secondary }}</ul>
+    {% endif %}
+</div>

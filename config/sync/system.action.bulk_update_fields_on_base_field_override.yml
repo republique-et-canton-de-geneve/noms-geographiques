@@ -1,0 +1,11 @@
+uuid: beaa37ef-357c-40d9-aa0a-df126bf67a18
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_base_field_override
+label: 'Bulk Update Surcharge de champ de base Fields'
+type: base_field_override
+plugin: bulk_update_fields_action_base
+configuration: {  }

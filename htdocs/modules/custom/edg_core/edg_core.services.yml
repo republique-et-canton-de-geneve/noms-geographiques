@@ -1,0 +1,4 @@
+services:
+  edg_core.json_service:
+    class: Drupal\edg_core\Service\JsonService
+    arguments: []

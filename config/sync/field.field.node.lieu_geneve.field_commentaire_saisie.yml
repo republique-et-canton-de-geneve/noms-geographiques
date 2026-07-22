@@ -1,0 +1,19 @@
+uuid: b5d0f683-5892-4c08-b12a-ac3f7c62f75d
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_commentaire_saisie
+    - node.type.lieu_geneve
+id: node.lieu_geneve.field_commentaire_saisie
+field_name: field_commentaire_saisie
+entity_type: node
+bundle: lieu_geneve
+label: 'Commentaire de saisie'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

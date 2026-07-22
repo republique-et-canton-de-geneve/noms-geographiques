@@ -1,0 +1,14 @@
+_core:
+  default_config_hash: VDJxTZtQR21qB4lvOq8zszJZLvLKrSPQpdn2E3T71Ww
+langcode: fr
+uuid: 3faed5be-9210-4829-a6dc-ae104f9d7df8
+name: 'Noms géographiques du canton de Genève'
+mail: no-reply-ge.ch@etat.ge.ch
+slogan: 'Un répertoire collaboratif des noms de rues du canton de Genève'
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+default_langcode: fr

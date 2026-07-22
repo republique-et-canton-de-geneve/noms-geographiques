@@ -1,0 +1,23 @@
+uuid: f36829da-acbc-4bfb-9391-25a9ce0e3711
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.taxonomy_term.field_numero_cantonal
+    - taxonomy.vocabulary.communes
+id: taxonomy_term.communes.field_numero_cantonal
+field_name: field_numero_cantonal
+entity_type: taxonomy_term
+bundle: communes
+label: 'Numéro cantonal'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

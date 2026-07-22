@@ -1,0 +1,13 @@
+{% extends '@gech_app/content/node.html.twig' %}
+
+{% block content %}
+    <div class="row">
+        <div{{ content_attributes.addclass('col-md-9') }}>
+            {{ content }}
+        </div>
+
+        <aside class="col-md-3">
+            {{ bamboo_render_block('ngeo_sharing_links', {'entity_type': 'node', 'id': node.id()}) }}
+        </aside>
+    </div>
+{% endblock %}

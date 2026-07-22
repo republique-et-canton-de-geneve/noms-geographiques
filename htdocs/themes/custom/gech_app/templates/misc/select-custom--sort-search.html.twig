@@ -1,0 +1,25 @@
+{#
+/**
+ * @file
+ * Template of custom select element used on search page.
+ *
+ * Allow to select a sorting type.
+ * This element is listenned by JS and triggers the form submission.
+ */
+#}
+<div class="search-custom-sort mb-4 mb-sm-0">
+  <div class="row d-flex justify-content-end">
+    <div class="col-auto">
+      <label for="edit-sort-filters" class="col-form-label-sm">
+        {{  "Tri"|t }}
+      </label>
+    </div>
+    <div class="col-auto flex-grow-1 flex-sm-grow-0">
+      <select data-drupal-selector="edit-sort-filters" id="edit-sort-filters" name="sort_filters" class="form-select form-select-sm">
+        <option value="pertinence_DESC" selected="selected">{{ "Par défaut"|t }}</option>
+        <option value="title_ASC">{{ "Alphabétique (ascendant)"|t }}</option>
+        <option value="title_DESC">{{ "Alphabétique (descendant)"|t }}</option>
+      </select>
+    </div>
+  </div>
+</div>

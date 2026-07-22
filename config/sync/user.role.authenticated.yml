@@ -1,0 +1,24 @@
+uuid: 48677f68-3d61-4a54-a692-73db5ef63b00
+langcode: fr
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+  module:
+    - eu_cookie_compliance
+    - filter
+    - search
+    - shortcut
+    - system
+_core:
+  default_config_hash: I44QAB4es39lNzMQWiJLq2dfjX7VRSOzT_5KzAcUq_M
+id: authenticated
+label: 'Utilisateur authentifié'
+weight: 1
+is_admin: false
+permissions:
+  - 'access content'
+  - 'access shortcuts'
+  - 'display eu cookie compliance popup'
+  - 'search content'
+  - 'use text format basic_html'

@@ -1,0 +1,121 @@
+{% extends '@gech_app/layout/page.html.twig' %}
+
+{% block inside_main %}
+    <h1 class="mt-3">{{ "Découvrez l'histoire des noms de rues du canton de Genève"|t }}</h1>
+    <p>
+        {{ "Les noms géographiques désignent toutes les dénominations de communes, de localités, de rues,
+            d'arrêts ou stations de transports publics et d'objets topographiques (ponts, écoles...)
+            au sens de l'Ordonnance fédérale sur les noms géographiques."|t }}
+    </p>
+    <p>
+        Puis, viennent un <a href="#">lien</a> et un <em>texte en italique</em>.
+    </p>
+
+    <p>
+        <a href="#" class="btn btn-primary">Exemple bouton primary</a>
+    </p>
+
+    <p>
+        <a href="#" class="btn btn-outline-primary">Exemple bouton outline</a>
+    </p>
+
+    <p>
+        Une étiquette <span class="badge bg-secondary">Nature</span> et <span class="badge bg-light">Nature</span>
+    </p>
+
+    <p>
+        <span class="badge big">Voie disparue</span>
+    </p>
+    <div>
+        <img src="{{ base_path ~ directory }}/images/exemple.jpg" class="img-thumbnail" alt="Exemple">
+    </div>
+
+    <div class="row mb-5 mt-3">
+        <div class="col-sm-8">
+            <div class="card with-border-top">
+                <div class="card-body">
+                    <h2 class="card-title">Rechercher une commune</h2>
+                    <figure class="mb-5">
+                        <img src="{{ base_path ~ directory }}/images/carte_communes-ge_VGA-Sitg.png" class="img-fluid" alt="Carte du canton de Genève" />
+                    </figure>
+                    <form>
+                        <div class="input-group">
+                            <label for="text" class="visually-hidden">Text</label>
+                            <input type="text" class="form-control me-2" id="text" placeholder="Some text...">
+
+                            <button type="submit" class="btn btn-primary btn-icon-only">
+                                <span class="fas fa-arrow-right" title="Rechercher" aria-hidden="true"></span>
+                                <span class="sr-only">Rechercher</span>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card with-border-bottom">
+                <div class="card-body">
+                    <h2 class="card-title">Special title treatment</h2>
+                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                    <div class="d-grid">
+                        <a href="#" class="btn btn-outline-primary btn-sm">Plus de filtres</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form class="row g-2 mb-5">
+        <div class="col-auto">
+            <label for="text" class="visually-hidden">Choose</label>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Open this select menu</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+        </div>
+        <div class="col-auto">
+            <label for="text" class="visually-hidden">Text</label>
+            <input type="text" class="form-control" id="text" placeholder="Some text...">
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-primary mb-3">
+                Rechercher
+                <span class="fas fa-search ms-1" aria-hidden="true"></span>
+            </button>
+        </div>
+    </form>
+
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Lieu</th>
+            <th scope="col" class="d-sm-block d-md-none d-lg-none">Type de voie</th>
+            <th scope="col" class="d-none d-sm-none d-md-block">Nom complet</th>
+            <th scope="col">Commune(s)</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">Ancienne-Tannerie</th>
+            <td class="d-sm-block d-md-none d-lg-none">Chemin</td>
+            <td class="d-none d-sm-none d-md-block">Chemin de l'Ancienne-Tannerie</td>
+            <td>Chancy</td>
+        </tr>
+        <tr>
+            <th scope="row">Ancienne-Tannerie</th>
+            <td class="d-sm-block d-md-none d-lg-none">Chemin</td>
+            <td class="d-none d-sm-none d-md-block">Chemin de l'Ancienne-Tannerie</td>
+            <td>Chancy</td>
+        </tr>
+        <tr>
+            <th scope="row">Ancienne-Tannerie</th>
+            <td class="d-sm-block d-md-none d-lg-none">Chemin</td>
+            <td class="d-none d-sm-none d-md-block">Chemin de l'Ancienne-Tannerie</td>
+            <td>Chancy</td>
+        </tr>
+        </tbody>
+
+    </table>
+{% endblock %}

@@ -1,0 +1,33 @@
+<?php
+
+/**
+ * @file
+ * ngeo_core.module.
+ */
+
+
+/**
+ * Implements hook_theme().
+ */
+function ngeo_core_theme($existing, $type, $theme, $path) {
+  $theme = [];
+
+  // Sharing Links Block.
+  $theme['ngeo_sharing_links'] = [
+    'template' => 'block--ngeo--sharing-links',
+    'variables' => [
+      'links' => [],
+      'url' => NULL,
+    ],
+  ];
+
+  // Breadcrumb Block.
+  $theme['ngeo_breadcrumb'] = [
+    'variables' => [
+      'slogan' => NULL,
+      'breadcrumb' => NULL,
+    ],
+  ];
+
+  return $theme;
+}

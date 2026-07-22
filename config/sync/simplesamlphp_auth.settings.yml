@@ -1,0 +1,30 @@
+_core:
+  default_config_hash: RMy8ch2MOT68bCD63OGZQRdMk2pD6UXPEZMuCIisbfs
+langcode: fr
+activate: true
+auth_source: ngeo-sp
+login_link_display_name: 'Se connecter via Gina'
+login_link_show: true
+user_name: FullName
+unique_id: Login
+mail_attr: Email
+header_no_cache: true
+role:
+  population: 'administrator:Roles,=,SITEOFFICIEL.NGEO-GE.ADMINISTRATEUR|admin_site:Roles,=,SITEOFFICIEL.NGEO-GE.ADMIN-SITE|contributeur:Roles,=,SITEOFFICIEL.NGEO-GE.CONTRIBUTEUR'
+  eval_every_time: true
+register_users: true
+allow:
+  set_drupal_pwd: false
+  default_login: false
+  default_login_roles:
+    administrator: administrator
+  default_login_users: '1'
+logout_goto_url: ''
+user_register_original: visitors_admin_approval
+sync:
+  mail: true
+  user_name: true
+autoenablesaml: true
+debug: true
+secure: true
+httponly: false

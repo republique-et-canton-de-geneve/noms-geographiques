@@ -1,0 +1,40 @@
+.popup-content {
+  padding: $margin-base 0;
+  @include font-size($font-size-small);
+
+  // Override eu_cookie_compliance:
+  &.eu-cookie-compliance-content {
+    #popup-text {
+      margin-top: 0;
+
+      & > p {
+        font-weight: $font-weight-base;
+        @include font-size($font-size-small);
+      }
+    }
+
+    #popup-buttons {
+      margin: 0;
+    }
+
+    button {
+      margin-top: 5px;
+
+      &.find-more-button {
+        color: $color-blue;
+        font-weight: $font-weight-bold;
+      }
+
+      &.agree-button {
+        @include btn-reset;
+        background-color: $color-blue;
+        border-color: $color-blue;
+        color: $color-white;
+      }
+
+      &.decline-button {
+        display: none !important;
+      }
+    }
+  }
+}

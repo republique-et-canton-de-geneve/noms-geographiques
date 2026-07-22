@@ -1,0 +1,22 @@
+uuid: 3d3ef306-1b77-4c0a-90ce-27c02375bb28
+langcode: fr
+status: true
+dependencies:
+  module:
+    - taxonomy
+id: communes_pattern
+label: 'Communes pattern'
+type: 'canonical_entities:taxonomy_term'
+pattern: 'geneve/commune/[term:name]'
+selection_criteria:
+  4823834a-dff3-4ca5-b180-83140f4bad22:
+    id: 'entity_bundle:taxonomy_term'
+    negate: false
+    uuid: 4823834a-dff3-4ca5-b180-83140f4bad22
+    context_mapping:
+      taxonomy_term: taxonomy_term
+    bundles:
+      communes: communes
+selection_logic: and
+weight: -5
+relationships: {  }

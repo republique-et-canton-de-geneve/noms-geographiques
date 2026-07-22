@@ -1,0 +1,20 @@
+uuid: 031eaee8-f4c5-4662-8799-87df615bd02a
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - taxonomy
+id: node.field_evenement_ref
+field_name: field_evenement_ref
+entity_type: node
+type: entity_reference
+settings:
+  target_type: taxonomy_term
+module: core
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,83 @@
+.vocabulary-communes {
+
+  #commune-map {
+    a {
+      pointer-events: none;
+    }
+
+    .field_ecusson {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+
+      @include media-breakpoint-up(lg) {
+        & > img {
+          width: 70%;
+          height: auto;
+        }
+      }
+    }
+  }
+
+  table {
+    .views-field-field-communes-ref {
+      max-width: 20%;
+    }
+
+    .views-field-field-nom-complet-1 {
+      width: 60%;
+
+      a {
+        display: block;
+      }
+    }
+
+    // Only for big devices: force min-width for cols.
+    @include media-breakpoint-up(lg) {
+      .views-field-title {
+        min-width: 160px;
+      }
+      .views-field-field-nom-complet {
+        min-width: 300px;
+      }
+    }
+
+    // Only for medium devices: force min-width for col.
+    @include media-breakpoint-up(md) {
+      .views-field-field-nom-complet {
+        min-width: 220px;
+      }
+    }
+
+    // Only for medium & big devices.
+    .views-field-field-nom-complet,
+    .views-field-title {
+      display: none;
+
+      @include media-breakpoint-up(sm) {
+        display: none;
+      }
+
+      @include media-breakpoint-up(md) {
+        display: table-cell;
+      }
+    }
+
+    // Only for small devices.
+    .views-field-field-type-de-voie-ref,
+    .views-field-field-nom-complet-1 {
+      @include media-breakpoint-up(sm) {
+        display: table-cell;
+      }
+
+      @include media-breakpoint-up(md) {
+        display: none !important;
+      }
+
+      @include media-breakpoint-up(lg) {
+        display: none !important;
+      }
+    }
+  }
+}
+

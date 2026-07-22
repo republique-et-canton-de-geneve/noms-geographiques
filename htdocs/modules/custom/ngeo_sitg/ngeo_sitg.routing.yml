@@ -1,0 +1,7 @@
+ngeo_sitg.settings:
+  path: '/admin/config/content/sitg_config'
+  defaults:
+    _form: '\Drupal\ngeo_sitg\Form\SettingsForm'
+    _title: 'Paramétrage des cartes SITG'
+  requirements:
+    _permission: 'administer site configuration'

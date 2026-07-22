@@ -1,0 +1,11 @@
+uuid: 48dd3b31-ab9c-48fe-9208-fb16b92b194a
+langcode: fr
+status: true
+dependencies:
+  module:
+    - bulk_update_fields
+id: bulk_update_fields_on_crop_type
+label: 'Bulk Update Type de recadrage Fields'
+type: crop_type
+plugin: bulk_update_fields_action_base
+configuration: {  }

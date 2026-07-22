@@ -1,0 +1,231 @@
+1:
+  id:
+    value: '1'
+  uuid:
+    value: d11596b7-952c-45f1-b939-61553d56c86e
+  revision_id:
+    value: '1'
+  langcode:
+    value: fr
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1661265313'
+  revision_user:
+    target_id: '0'
+  revision_log_message: false
+  enabled:
+    value: '1'
+  title:
+    value: Sources
+  description: false
+  menu_name:
+    value: main
+  link:
+    uri: 'entity:node/9998'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '0'
+  weight:
+    value: '-49'
+  expanded:
+    value: '0'
+  parent: false
+  changed:
+    value: '1669042046'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+  metatag: false
+2:
+  id:
+    value: '2'
+  uuid:
+    value: b789b07a-a3b5-4485-ba12-bf4ed87fbf7e
+  revision_id:
+    value: '2'
+  langcode:
+    value: fr
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1664981937'
+  revision_user:
+    target_id: '0'
+  revision_log_message: false
+  enabled:
+    value: '0'
+  title:
+    value: 'Règles & classement orthographiques'
+  description: false
+  menu_name:
+    value: main
+  link:
+    uri: 'entity:node/17288'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '0'
+  weight:
+    value: '-48'
+  expanded:
+    value: '0'
+  parent: false
+  changed:
+    value: '1669042059'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+  metatag: false
+3:
+  id:
+    value: '3'
+  uuid:
+    value: 20adeb18-648b-48ba-ba41-b9100dcddfc6
+  revision_id:
+    value: '3'
+  langcode:
+    value: fr
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1664981989'
+  revision_user:
+    target_id: '0'
+  revision_log_message: false
+  enabled:
+    value: '1'
+  title:
+    value: Actualités
+  description: false
+  menu_name:
+    value: main
+  link:
+    uri: 'https://www.ge.ch/publication?type=229&organisation=2018'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '0'
+  weight:
+    value: '-47'
+  expanded:
+    value: '0'
+  parent: false
+  changed:
+    value: '1669042196'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+  metatag: false
+4:
+  id:
+    value: '4'
+  uuid:
+    value: c3e105c0-13f1-427e-8c57-509896c77822
+  revision_id:
+    value: '4'
+  langcode:
+    value: fr
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1664982016'
+  revision_user:
+    target_id: '0'
+  revision_log_message:
+    value: ''
+  enabled:
+    value: '1'
+  title:
+    value: FAQ
+  description:
+    value: ''
+  menu_name:
+    value: main
+  link:
+    uri: 'entity:node/17290'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '0'
+  weight:
+    value: '-46'
+  expanded:
+    value: '0'
+  parent:
+    value: ''
+  changed:
+    value: '1665050666'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+  metatag: false
+5:
+  id:
+    value: '5'
+  uuid:
+    value: f38c48fe-a660-4be1-b706-635e19940a56
+  revision_id:
+    value: '5'
+  langcode:
+    value: fr
+  bundle:
+    value: menu_link_content
+  revision_created:
+    value: '1664982044'
+  revision_user:
+    target_id: '0'
+  revision_log_message:
+    value: ''
+  enabled:
+    value: '1'
+  title:
+    value: Contact
+  description:
+    value: ''
+  menu_name:
+    value: main
+  link:
+    uri: 'internal:/contact'
+    title: ''
+    options: {  }
+  external:
+    value: '0'
+  rediscover:
+    value: '1'
+  weight:
+    value: '-45'
+  expanded:
+    value: '0'
+  parent:
+    value: ''
+  changed:
+    value: '1666678040'
+  default_langcode:
+    value: '1'
+  revision_default:
+    value: '1'
+  revision_translation_affected:
+    value: '1'
+  metatag: false

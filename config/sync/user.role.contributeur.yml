@@ -1,0 +1,33 @@
+uuid: 4c400f58-0d37-423c-9d81-667412d3e94d
+langcode: en
+status: true
+dependencies:
+  config:
+    - filter.format.basic_html
+    - node.type.lieu_geneve
+    - workflows.workflow.editorial
+  module:
+    - content_moderation
+    - filter
+    - node
+    - system
+    - toolbar
+id: contributeur
+label: Contributeur
+weight: 5
+is_admin: null
+permissions:
+  - 'access content overview'
+  - 'access toolbar'
+  - 'administer nodes'
+  - 'create lieu_geneve content'
+  - 'edit any lieu_geneve content'
+  - 'edit own lieu_geneve content'
+  - 'use editorial transition create_new_draft'
+  - 'use editorial transition not_validated'
+  - 'use editorial transition to_validate'
+  - 'use text format basic_html'
+  - 'view any unpublished content'
+  - 'view latest version'
+  - 'view own unpublished content'
+  - 'view the administration theme'

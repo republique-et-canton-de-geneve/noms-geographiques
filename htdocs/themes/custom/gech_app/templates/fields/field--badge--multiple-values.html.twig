@@ -1,0 +1,9 @@
+{% if multiple %}
+  {% for item in items %}
+    <span{{ attributes.addClass(['badge', 'bg-secondary']) }}>{{ item.content }}</span>
+  {% endfor %}
+{% else %}
+  {% for item in items %}
+    <span{{ attributes.addClass(['badge', 'bg-secondary']) }}>{{ item.content }}</span>
+  {% endfor %}
+{% endif %}

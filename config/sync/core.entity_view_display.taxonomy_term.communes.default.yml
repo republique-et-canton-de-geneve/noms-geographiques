@@ -1,0 +1,42 @@
+uuid: e9b6d99b-40ed-49a9-b87a-1f11378a5652
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.taxonomy_term.communes.field_abreviation
+    - field.field.taxonomy_term.communes.field_ecusson
+    - field.field.taxonomy_term.communes.field_numero_cantonal
+    - field.field.taxonomy_term.communes.field_numero_federal
+    - taxonomy.vocabulary.communes
+  module:
+    - image
+    - text
+id: taxonomy_term.communes.default
+targetEntityType: taxonomy_term
+bundle: communes
+mode: default
+content:
+  description:
+    type: text_default
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ecusson:
+    type: image
+    label: hidden
+    settings:
+      image_link: ''
+      image_style: ''
+      image_loading:
+        attribute: lazy
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  field_abreviation: true
+  field_numero_cantonal: true
+  field_numero_federal: true
+  langcode: true
+  search_api_excerpt: true

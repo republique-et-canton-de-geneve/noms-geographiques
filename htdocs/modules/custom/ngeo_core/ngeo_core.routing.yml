@@ -1,0 +1,7 @@
+ngeo_core.autocomplete.communes:
+  path: '/admin/ngeo_core/autocomplete/communes'
+  defaults:
+    _controller: '\Drupal\ngeo_core\Controller\CommuneAutoCompleteController::handleAutocomplete'
+    _format: json
+  requirements:
+    _permission: 'access content'
